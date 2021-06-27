@@ -8,10 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) in School of Computer Science at Carnegie Mellon University, advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). My research focuses on leveraging weak supervision and domain knowledge from experts to affordably annotate large datasets. Ultimately, I expect my research to make the process of acquiring training data cost-efficient, less subjective, reliable yet grounded in domain expert intuition, to harness the power of modern Machine Learning to fuel advances in data-driven decision support. 
+I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) in School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). My research focuses on leveraging weak supervision and domain knowledge from experts to affordably annotate large datasets. Ultimately, I expect my research to make the process of acquiring training data cost-efficient, less subjective, reliable yet grounded in domain expert intuition, to harness the power of modern Machine Learning to fuel advances in data-driven decision support. 
 
-Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from Delhi Technological University (erstwhile Delhi College of Engineering) in India.
+Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
+My CV can be found [here](files/MononitoGoswami_CV.pdf).
 
 Awards
 ------
