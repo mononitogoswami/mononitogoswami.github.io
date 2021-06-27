@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Mononito Goswami"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,45 +8,106 @@ redirect_from:
   - /about.html
 ---
 
+I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) in School of Computer Science at Carnegie Mellon University, advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). My research focuses on leveraging weak supervision and domain knowledge from experts to affordably annotate large datasets. Ultimately, I expect my research to make the process of acquiring training data cost-efficient, less subjective, reliable yet grounded in domain expert intuition, to harness the power of modern Machine Learning to fuel advances in data-driven decision support. 
+
+Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from Delhi Technological University (erstwhile Delhi College of Engineering) in India.
 
 
-<!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io). -->
-
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
-
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
-
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-
-Site-wide configuration
+Awards
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Center for Machine Learning and Health (CMLH) Fellowship 2021
 
-Create content & metadata
+Publications
 ------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+### Weak Supervision for Affordable Modeling of Electrocardiogram Data.
+*M Goswami*^, B Boecking, A Dubrawski
+AMIA 2021 Annual Symposium. American Medical Informatics Association.
 
-**Markdown generator**
+### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
+AA McReynolds, SP Naderzad, *M Goswami*, J Mostow
+ACM Conference on Learning@Scale 2020
+[[pdf](https://dl.acm.org/doi/abs/10.1145/3386527.3405920)]
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+### A binary PSO approach for improving the performance of wireless sensor networks
+A Kaushik^, *M Goswami*^, M Manuja^, S Indu, D Gupta
+Wireless Personal Communications 113 (1), 263-297
+[[pdf](https://doi.org/10.1007/s11277-020-07188-3)]
 
-How to edit your site's GitHub repository
+### A multi-task approach to open domain suggestion mining using language model for text over-sampling
+M Leekha^, *M Goswami*^, M Jain
+European Conference on Information Retrieval (ECIR) 2020
+[[pdf](https://doi.org/10.1007/978-3-030-45442-5_28)]
+
+### Discriminating Cognitive Disequilibrium and Flow in Problem Solving: A Semi-Supervised Approach Using Involuntary Dynamic Behavioral Signals
+*M Goswami*, L Chen, A Dubrawski
+AAAI Conference on Artificial Intelligence (Social Impact Track) 2020
+[[pdf](https://ojs.aaai.org/index.php/AAAI/article/view/5378/5234)]
+
+### Modeling Involuntary Dynamic Behaviors to Support Intelligent Tutoring (Student Abstract)
+*M Goswami*, L Chen, C Gao, A Dubrawski
+AAAI Conference on Artificial Intelligence (Student Abstract) 2020
+[[pdf](https://ojs.aaai.org/index.php/AAAI/article/download/7171/7025)]
+
+### A multi-task approach to open domain suggestion mining (Student abstract)
+M Jain^, M Leekha^, *M Goswami*^
+AAAI Conference on Artificial Intelligence (Student Abstract) 2020
+[[pdf](https://ojs.aaai.org/index.php/AAAI/article/download/7180/7034)]
+
+### Detecting intrusive transactions in databases using partially-ordered sequential rule mining and fractional-distance based anomaly detection
+I Singh, M Manuja^, R Mathur^, *M Goswami*^
+International Journal of Intelligent Engineering Informatics 8 (2), 138-171
+[[pdf](https://www.inderscience.com/info/inarticle.php?artid=109098)]
+
+### What makes a better companion? towards social & engaging peer learning
+R Jindal, M Leekha^, M Manuja^, *M Goswami*^
+European Conference on Artificial Intelligence (ECAI) 2020
+[[pdf](http://ecai2020.eu/papers/1459_paper.pdf)]
+
+### Detecting Patterns of Physiological Response to Hemodynamic Stress via Unsupervised Deep Learning
+C Gao, F Falck, *M Goswami*, A Wertz, MR Pinsky, A Dubrawski
+NeurIPS Machine Learning for Health (ML4H) Workshop 2020 (Short Paper)
+[[pdf](https://arxiv.org/pdf/1911.05121)]
+
+### Are you paying attention? detecting distracted driving in real-time
+M Leekha^, *M Goswami*^, RR Shah, Y Yin, R Zimmermann
+IEEE Fifth International Conference on Multimedia Big Data (BigMM) 2019
+[[pdf](https://ieeexplore.ieee.org/abstract/document/8919430/)]
+
+### What’s Most Broken? A Tool to Assist Data-Driven Iterative Improvement of an Intelligent Tutoring System
+*M Goswami*^, S Mian^, J Mostow
+AAAI Conference on Artificial Intelligence (Student Abstract) 2019
+[[pdf](https://ojs.aaai.org/index.php/AAAI/article/download/5107/4980)]
+
+### What’s Most Broken? Design and Evaluation of a Tool to Guide Improvement of an Intelligent Tutor
+S Mian^, *M Goswami*^, J Mostow
+International Conference on Artificial Intelligence in Education (AIED) 2019
+[[pdf](https://doi.org/10.1007/978-3-030-23204-7_24)]
+
+^ *indicates equal contribution*
+
+Preprints
 ------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
+*M Goswami*^, M Manuja^, M Leekha^
+arXiv preprint arXiv:2007.11346
+[[pdf](https://arxiv.org/pdf/2007.11346.pdf)]
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
+Working Papers
 ------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+### Towards Knowledge-driven Clinical Data Annotation Quality Assessment.
+*M Goswami*, B Boecking, P Coppler, J Elmer, A Dubrawski
+
+
+Professional Service
+------
+### Reviewer
+2021  Neural Information Processing Systems (NeuRIPS)
+2021  ICML Machine Learning for Data (ML4data) workshop
+2021  American Medical Informatics Association (AMIA) 2021 Annual Symposium
+2021- Journal of Educational Data Mining (JEDM)
+2020  AAAI Conference on Artificial Intelligence
+
+
+<!-- Hobbies
+------
+Cooking, Photography -->
