@@ -12,6 +12,8 @@ I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswam
 
 Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
+You can contact me at mgoswami [at] andrew [dot] cmu [dot] edu.
+
 My CV can be found [here](files/MononitoGoswami_CV.pdf).
 
 Awards
@@ -129,15 +131,15 @@ M Goswami, B Boecking, P Coppler, J Elmer, A Dubrawski
 Professional Service
 ------
 ### Reviewer
-2021  Neural Information Processing Systems (NeuRIPS)  
+2021     Neural Information Processing Systems (NeuRIPS)  
 
-2021  ICML Machine Learning for Data (ML4data) workshop  
+2021     ICML Machine Learning for Data (ML4data) workshop  
 
-2021  American Medical Informatics Association (AMIA) 2021 Annual Symposium  
+2021     American Medical Informatics Association (AMIA) 2021 Annual Symposium  
 
-2021- Journal of Educational Data Mining (JEDM)  
+2021-    Journal of Educational Data Mining (JEDM)  
 
-2020  AAAI Conference on Artificial Intelligence  
+2020     AAAI Conference on Artificial Intelligence  
 
 
 <!-- Hobbies
