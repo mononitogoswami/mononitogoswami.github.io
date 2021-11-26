@@ -88,10 +88,6 @@ S Mian\*, M Goswami\*, J Mostow
 
 \* *indicates equal contribution*
 
-Preprints
-------
-
-
 Working Papers
 ------
 ### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
