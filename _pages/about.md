@@ -61,7 +61,7 @@ I Singh, M Manuja\*, R Mathur\*, M Goswami\*
 *International Journal of Intelligent Engineering Informatics 8 (2), 138-171*  
 [[pdf](https://www.inderscience.com/info/inarticle.php?artid=109098)]
 
-### What makes a better companion? towards social & engaging peer learning
+### What makes a better companion? Towards Social & Engaging Peer Learning
 R Jindal, M Leekha\*, M Manuja\*, M Goswami\*  
 *European Conference on Artificial Intelligence (ECAI) 2020*  
 [[pdf](http://ecai2020.eu/papers/1459_paper.pdf)]
@@ -90,20 +90,37 @@ S Mian\*, M Goswami\*, J Mostow
 
 Preprints
 ------
-### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
-M Goswami\*, M Manuja\*, M Leekha\*  
-arXiv preprint arXiv:2007.11346  
-[[pdf](https://arxiv.org/pdf/2007.11346.pdf)]
+
 
 Working Papers
 ------
-### Towards Knowledge-driven Clinical Data Annotation Quality Assessment.
+### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
 M Goswami, B Boecking, P Coppler, J Elmer, A Dubrawski  
+*In Submission.*
+
+### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
+C Gao*, M Goswami\*, J Chen, A Dubrawski  
+*In Submission.*
+
+### Active Refinement of Weakly Supervised Models
+M Goswami\*, C Gao*, B Boecking, S Ray, A Dubrawski
+*In Submission.*
+
+### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
+A Dey, M Goswami, J H Yoon, G Clermont, M R. Pinsky, M Hravnak, A Dubrawski.
+*In Submission.*
+
+### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
+M Goswami\*, M Manuja\*, M Leekha\*  
+*In Submission.*
+[[pdf](https://arxiv.org/pdf/2007.11346.pdf)]
 
 
 Professional Service
 ------
 ### Reviewer
+2021&nbsp; &nbsp; &nbsp; &nbsp;International Conference on Learning Representations (ICLR) 
+
 2021&nbsp; &nbsp; &nbsp; &nbsp;Neural Information Processing Systems (NeuRIPS)  
 
 2021&nbsp; &nbsp; &nbsp; &nbsp;ICML Machine Learning for Data (ML4data) workshop  
