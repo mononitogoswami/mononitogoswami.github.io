@@ -23,66 +23,66 @@ Center for Machine Learning and Health (CMLH) Fellowship 2021
 Publications
 ------
 ### Weak Supervision for Affordable Modeling of Electrocardiogram Data.
-M Goswami, B Boecking, A Dubrawski  
+Mononito Goswami, Benedikt Boecking, Artur Dubrawski  
 *AMIA 2021 Annual Symposium. American Medical Informatics Association.*
 
 ### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
-AA McReynolds, SP Naderzad, M Goswami, J Mostow  
+Andrew A, McReynolds, Sheba P Naderzad, Mononito Goswami, Jack Mostow  
 *ACM Conference on Learning@Scale 2020*  
 [[pdf](https://dl.acm.org/doi/abs/10.1145/3386527.3405920)]
 
 ### A binary PSO approach for improving the performance of wireless sensor networks
-A Kaushik\*, M Goswami\*, M Manuja\*, S Indu, D Gupta  
+Ajay Kaushik\*, Mononito Goswami\*, Minkush Manuja\*, S Indu, Daya Gupta  
 *Wireless Personal Communications 113 (1), 263-297*  
 [[pdf](https://doi.org/10.1007/s11277-020-07188-3)]
 
 ### A multi-task approach to open domain suggestion mining using language model for text over-sampling
-M Leekha\*, M Goswami\*, M Jain  
+Maitree Leekha\*, Mononito Goswami\*, Minni Jain  
 *European Conference on Information Retrieval (ECIR) 2020*  
 [[pdf](https://doi.org/10.1007/978-3-030-45442-5_28)]
 
 ### Discriminating Cognitive Disequilibrium and Flow in Problem Solving: A Semi-Supervised Approach Using Involuntary Dynamic Behavioral Signals
-M Goswami\*, L Chen\*, A Dubrawski  
+Mononito Goswami\*, Lujie Chen\*, Artur Dubrawski  
 *AAAI Conference on Artificial Intelligence (Social Impact Track) 2020*  
 [[pdf](https://ojs.aaai.org/index.php/AAAI/article/view/5378/5234)]
 
 ### Modeling Involuntary Dynamic Behaviors to Support Intelligent Tutoring (Student Abstract)
-M Goswami, L Chen, C Gao, A Dubrawski  
+Mononito Goswami, Lujie Chen, Chufan Gao, Artur Dubrawski  
 *AAAI Conference on Artificial Intelligence (Student Abstract) 2020*  
 [[pdf](https://ojs.aaai.org/index.php/AAAI/article/download/7171/7025)]
 
 ### A multi-task approach to open domain suggestion mining (Student abstract)
-M Jain\*, M Leekha\*, M Goswami\*  
+M Jain\*, Maitree Leekha\*, Mononito Goswami\*  
 *AAAI Conference on Artificial Intelligence (Student Abstract) 2020*  
 [[pdf](https://ojs.aaai.org/index.php/AAAI/article/download/7180/7034)]
 
 ### Detecting intrusive transactions in databases using partially-ordered sequential rule mining and fractional-distance based anomaly detection
-I Singh, M Manuja\*, R Mathur\*, M Goswami\*  
+Indu Singh, Minkush Manuja\*, Rishabh Mathur\*, Mononito Goswami\*  
 *International Journal of Intelligent Engineering Informatics 8 (2), 138-171*  
 [[pdf](https://www.inderscience.com/info/inarticle.php?artid=109098)]
 
 ### What makes a better companion? Towards Social & Engaging Peer Learning
-R Jindal, M Leekha\*, M Manuja\*, M Goswami\*  
+Rajni Jindal, Maitree Leekha\*, Minkush Manuja\*, Mononito Goswami\*  
 *European Conference on Artificial Intelligence (ECAI) 2020*  
 [[pdf](http://ecai2020.eu/papers/1459_paper.pdf)]
 
 ### Detecting Patterns of Physiological Response to Hemodynamic Stress via Unsupervised Deep Learning
-C Gao, F Falck, M Goswami, A Wertz, MR Pinsky, A Dubrawski  
+Chufan Gao, Fabian Falck, Mononito Goswami, Anthony Wertz, Michael R. Pinsky, Artur Dubrawski  
 *NeurIPS Machine Learning for Health (ML4H) Workshop 2020 (Short Paper)*  
 [[pdf](https://arxiv.org/pdf/1911.05121)]
 
 ### Are you paying attention? detecting distracted driving in real-time
-M Leekha\*, M Goswami\*, RR Shah, Y Yin, R Zimmermann  
+Maitree Leekha\*, Mononito Goswami\*, Rajiv Ratn Shah, Yifang Yin, Roger Zimmermann  
 *IEEE Fifth International Conference on Multimedia Big Data (BigMM) 2019*  
 [[pdf](https://ieeexplore.ieee.org/abstract/document/8919430/)]
 
 ### What’s Most Broken? A Tool to Assist Data-Driven Iterative Improvement of an Intelligent Tutoring System
-M Goswami\*, S Mian\*, J Mostow  
+Mononito Goswami\*, Shiven Mian\*, Jack Mostow  
 *AAAI Conference on Artificial Intelligence (Student Abstract) 2019*  
 [[pdf](https://ojs.aaai.org/index.php/AAAI/article/download/5107/4980)]
 
 ### What’s Most Broken? Design and Evaluation of a Tool to Guide Improvement of an Intelligent Tutor
-S Mian\*, M Goswami\*, J Mostow  
+Shiven Mian\*, Mononito Goswami\*, Jack Mostow  
 *International Conference on Artificial Intelligence in Education (AIED) 2019*  
 [[pdf](https://doi.org/10.1007/978-3-030-23204-7_24)]
 
@@ -91,24 +91,19 @@ S Mian\*, M Goswami\*, J Mostow
 Working Papers
 ------
 ### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
-M Goswami, B Boecking, P Coppler, J Elmer, A Dubrawski  
-*In Submission.*
+Mononito Goswami, Benedikt Boecking, Patrick J. Coppler, Jonathan Elmer, Artur Dubrawski  
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
-C Gao\*, M Goswami\*, J Chen, A Dubrawski  
-*In Submission.*
+Chufan Gao\*, Mononito Goswami\*, J Chen, Artur Dubrawski  
 
 ### Active Refinement of Weakly Supervised Models
-M Goswami\*, C Gao\*, B Boecking, S Ray, A Dubrawski
-*In Submission.*
+Mononito Goswami\*, Chufan Gao\*, Benedikt Boecking, Saswati Ray, Artur Dubrawski
 
 ### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
-A Dey, M Goswami, J H Yoon, G Clermont, M R. Pinsky, M Hravnak, A Dubrawski.
-*In Submission.*
+Arnab Dey, Mononito Goswami, Joo Heung Yoon, Gilles Clermont, Michael R. Pinsky, Marilyn Hravnak, Artur Dubrawski.
 
 ### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
-M Goswami\*, M Manuja\*, M Leekha\*  
-*In Submission.*
+Mononito Goswami\*, Minkush Manuja\*, Maitree Leekha\*  
 [[pdf](https://arxiv.org/pdf/2007.11346.pdf)]
 
 
@@ -126,8 +121,8 @@ M Goswami\*, M Manuja\*, M Leekha\*
 2021&nbsp; &nbsp; &nbsp; &nbsp;Journal of Educational Data Mining (JEDM)  
 
 2020&nbsp; &nbsp; &nbsp; &nbsp;AAAI Conference on Artificial Intelligence  
- -->
 
-<!-- Hobbies
+
+Hobbies
 ------
 Cooking, Photography -->
