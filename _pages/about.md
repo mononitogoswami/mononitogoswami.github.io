@@ -18,7 +18,7 @@ My CV can be found [here](files/MononitoGoswami_CV.pdf).
 
 Awards
 ------
-Center for Machine Learning and Health (CMLH) Fellowship 2021
+[Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021)
 
 Publications
 ------
@@ -94,7 +94,7 @@ Working Papers
 Mononito Goswami, Benedikt Boecking, Patrick J. Coppler, Jonathan Elmer, Artur Dubrawski  
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
-Chufan Gao\*, Mononito Goswami\*, J Chen, Artur Dubrawski  
+Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
 
 ### Active Refinement of Weakly Supervised Models
 Mononito Goswami\*, Chufan Gao\*, Benedikt Boecking, Saswati Ray, Artur Dubrawski
