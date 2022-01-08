@@ -12,7 +12,7 @@ I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswam
 
 Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
-You can contact me at mgoswami [at] andrew [dot] cmu [dot] edu.
+Feel free to drop me an email at mgoswami [at] andrew [dot] cmu [dot] edu if you are interested in my research and would like to collaborate! 
 
 My CV can be found [here](files/MononitoGoswami_CV.pdf).
 
@@ -23,7 +23,7 @@ Center for Machine Learning and Health (CMLH) Fellowship 2021
 Publications
 ------
 ### Weak Supervision for Affordable Modeling of Electrocardiogram Data.
-M Goswami\*, B Boecking, A Dubrawski  
+M Goswami, B Boecking, A Dubrawski  
 *AMIA 2021 Annual Symposium. American Medical Informatics Association.*
 
 ### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
@@ -42,7 +42,7 @@ M Leekha\*, M Goswami\*, M Jain
 [[pdf](https://doi.org/10.1007/978-3-030-45442-5_28)]
 
 ### Discriminating Cognitive Disequilibrium and Flow in Problem Solving: A Semi-Supervised Approach Using Involuntary Dynamic Behavioral Signals
-M Goswami, L Chen, A Dubrawski  
+M Goswami\*, L Chen\*, A Dubrawski  
 *AAAI Conference on Artificial Intelligence (Social Impact Track) 2020*  
 [[pdf](https://ojs.aaai.org/index.php/AAAI/article/view/5378/5234)]
 
@@ -95,11 +95,11 @@ M Goswami, B Boecking, P Coppler, J Elmer, A Dubrawski
 *In Submission.*
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
-C Gao*, M Goswami\*, J Chen, A Dubrawski  
+C Gao\*, M Goswami\*, J Chen, A Dubrawski  
 *In Submission.*
 
 ### Active Refinement of Weakly Supervised Models
-M Goswami\*, C Gao*, B Boecking, S Ray, A Dubrawski
+M Goswami\*, C Gao\*, B Boecking, S Ray, A Dubrawski
 *In Submission.*
 
 ### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
@@ -112,7 +112,7 @@ M Goswami\*, M Manuja\*, M Leekha\*
 [[pdf](https://arxiv.org/pdf/2007.11346.pdf)]
 
 
-Professional Service
+<!-- Professional Service
 ------
 ### Reviewer
 2021&nbsp; &nbsp; &nbsp; &nbsp;International Conference on Learning Representations (ICLR) 
@@ -126,7 +126,7 @@ Professional Service
 2021&nbsp; &nbsp; &nbsp; &nbsp;Journal of Educational Data Mining (JEDM)  
 
 2020&nbsp; &nbsp; &nbsp; &nbsp;AAAI Conference on Artificial Intelligence  
-
+ -->
 
 <!-- Hobbies
 ------
