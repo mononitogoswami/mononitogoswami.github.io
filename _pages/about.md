@@ -24,12 +24,12 @@ Publications
 ------
 ### Weak Supervision for Affordable Modeling of Electrocardiogram Data.
 Mononito Goswami, Benedikt Boecking, Artur Dubrawski  
-*AMIA 2021 Annual Symposium. American Medical Informatics Association.*
+*AMIA 2021 Annual Symposium. American Medical Informatics Association.*. 
 [[pdf](https://arxiv.org/abs/2201.02936)]
 
 ### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
 Andrew A, McReynolds, Sheba P Naderzad, Mononito Goswami, Jack Mostow  
-*ACM Conference on Learning@Scale 2020*  
+*ACM Conference on Learning@Scale 2020*. 
 [[pdf](https://dl.acm.org/doi/abs/10.1145/3386527.3405920)]
 
 ### A binary PSO approach for improving the performance of wireless sensor networks
