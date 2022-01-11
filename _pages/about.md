@@ -25,6 +25,7 @@ Publications
 ### Weak Supervision for Affordable Modeling of Electrocardiogram Data.
 Mononito Goswami, Benedikt Boecking, Artur Dubrawski  
 *AMIA 2021 Annual Symposium. American Medical Informatics Association.*
+[[pdf](https://arxiv.org/abs/2201.02936)]
 
 ### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
 Andrew A, McReynolds, Sheba P Naderzad, Mononito Goswami, Jack Mostow  
