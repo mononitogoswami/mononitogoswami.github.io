@@ -14,7 +14,7 @@ Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from 
 
 Feel free to drop me an email at mgoswami [at] andrew [dot] cmu [dot] edu if you are interested in my research and would like to collaborate! 
 
-My CV can be found [here](../files/MononitoGoswami_CV.pdf).
+My CV can be found [here](../files/CV_Mononito_Goswami.pdf).
 
 Awards
 ------
