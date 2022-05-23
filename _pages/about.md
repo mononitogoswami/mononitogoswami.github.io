@@ -23,7 +23,7 @@ Awards
 Publications
 ------
 ### Counterfactual Phenotyping with Censored Time-to-Events
-Chirag Nagpal, Mononito Goswami, Keith Dufendach, Artur Dubrawski
+Chirag Nagpal, Mononito Goswami, Keith Dufendach, Artur Dubrawski   
 *ACM Conference on Knowledge Discovery and Data Mining 2022*.   
 [[pdf](https://arxiv.org/abs/2202.11089), [code](https://autonlab.github.io/auton-survival/cmhe/)]
 
