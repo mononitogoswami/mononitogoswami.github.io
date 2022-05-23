@@ -22,9 +22,14 @@ Awards
 
 Publications
 ------
-### Weak Supervision for Affordable Modeling of Electrocardiogram Data.
+### Counterfactual Phenotyping with Censored Time-to-Events
+Chirag Nagpal, Mononito Goswami, Keith Dufendach, Artur Dubrawski
+*ACM Conference on Knowledge Discovery and Data Mining 2022*.   
+[[pdf](https://arxiv.org/abs/2202.11089), [code](https://autonlab.github.io/auton-survival/cmhe/)]
+
+### Weak Supervision for Affordable Modeling of Electrocardiogram Data
 Mononito Goswami, Benedikt Boecking, Artur Dubrawski  
-*AMIA 2021 Annual Symposium. American Medical Informatics Association.*.   
+*AMIA 2021 Annual Symposium. American Medical Informatics Association*.   
 [[pdf](https://arxiv.org/abs/2201.02936)]
 
 ### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
