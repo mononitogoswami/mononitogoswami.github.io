@@ -24,7 +24,7 @@ Publications
 ------
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
 Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
-*Machine Learning for Healthcare Conference 2022.*
+<!-- *Machine Learning for Healthcare Conference 2022.* -->
 
 ### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
 Arnab Dey, Mononito Goswami, Joo Heung Yoon, Gilles Clermont, Michael R. Pinsky, Marilyn Hravnak, Artur Dubrawski.
