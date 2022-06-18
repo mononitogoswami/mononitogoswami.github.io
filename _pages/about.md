@@ -22,6 +22,14 @@ Awards
 
 Publications
 ------
+### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
+Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
+*Machine Learning for Healthcare Conference 2022.*
+
+### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
+Arnab Dey, Mononito Goswami, Joo Heung Yoon, Gilles Clermont, Michael R. Pinsky, Marilyn Hravnak, Artur Dubrawski.
+*AMIA 2022 Annual Symposium. American Medical Informatics Association*.   
+
 ### Counterfactual Phenotyping with Censored Time-to-Events
 Chirag Nagpal, Mononito Goswami, Keith Dufendach, Artur Dubrawski   
 *ACM Conference on Knowledge Discovery and Data Mining 2022*.   
@@ -99,14 +107,8 @@ Working Papers
 ### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
 Mononito Goswami, Benedikt Boecking, Patrick J. Coppler, Jonathan Elmer, Artur Dubrawski  
 
-### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
-Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
-
 ### Active Refinement of Weakly Supervised Models
 Mononito Goswami\*, Chufan Gao\*, Benedikt Boecking, Saswati Ray, Artur Dubrawski
-
-### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
-Arnab Dey, Mononito Goswami, Joo Heung Yoon, Gilles Clermont, Michael R. Pinsky, Marilyn Hravnak, Artur Dubrawski.
 
 ### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
 Mononito Goswami\*, Minkush Manuja\*, Maitree Leekha\*  
