@@ -26,6 +26,11 @@ Awards
 
 Publications
 ------
+### Unsupervised Model Selection for Time-series Anomaly Detection
+Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan  
+*International Conference of Learning Representations 2023.*.   
+[[arXiv](https://arxiv.org/pdf/2210.01078.pdf), code coming up soon!]
+
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
 Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
 *Machine Learning for Healthcare Conference 2022.*.   
@@ -108,12 +113,8 @@ Shiven Mian\*, Mononito Goswami\*, Jack Mostow
 
 \* *indicates equal contribution*
 
-Working Papers
+Preprints
 ------
-### Unsupervised Model Selection for Time-series Anomaly Detection
-Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan.   
-[[arXiv](https://arxiv.org/pdf/2007.11346.pdf)]
-
 ### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
 Mononito Goswami, Benedikt Boecking, Patrick J. Coppler, Jonathan Elmer, Artur Dubrawski  
 
