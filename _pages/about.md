@@ -28,7 +28,7 @@ Publications
 ------
 ### Unsupervised Model Selection for Time-series Anomaly Detection
 Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan  
-*International Conference of Learning Representations 2023 (spotlight).*   
+*International Conference of Learning Representations 2023 (Spotlight).*   
 [[arXiv](https://arxiv.org/pdf/2210.01078.pdf), code coming up soon!]
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
