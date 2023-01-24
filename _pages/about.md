@@ -29,7 +29,7 @@ Publications
 ### Unsupervised Model Selection for Time-series Anomaly Detection
 Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan  
 *International Conference of Learning Representations 2023 (Spotlight).*   
-[[arXiv](https://arxiv.org/pdf/2210.01078.pdf), code coming up soon!]
+[[arXiv](https://arxiv.org/pdf/2210.01078.pdf)]
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
 Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
@@ -39,7 +39,7 @@ Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski
 ### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
 Arnab Dey, Mononito Goswami, Joo Heung Yoon, Gilles Clermont, Michael R. Pinsky, Marilyn Hravnak, Artur Dubrawski.
 *AMIA 2022 Annual Symposium. American Medical Informatics Association*.   
-[[arXiv](https://arxiv.org/pdf/2206.09074.pdf)]
+[[arXiv](https://arxiv.org/pdf/2206.09074.pdf), [code](https://github.com/autonlab/weakVSAlertsAdjudicator)]
 
 ### Counterfactual Phenotyping with Censored Time-to-Events
 Chirag Nagpal, Mononito Goswami, Keith Dufendach, Artur Dubrawski   
