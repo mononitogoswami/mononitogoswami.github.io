@@ -18,7 +18,7 @@ Feel free to drop me an email at mgoswami [at] andrew [dot] cmu [dot] edu if you
 
 I am a member of the Robotics Institute Climate Committee, so if you're an RI student facing issues, let's chat!
 
-My CV can be found [here](../files/CV_Mononito_Goswami.pdf).
+My CV can be found [here](../CV_Mononito_Goswami.pdf).
 
 Awards
 ------
