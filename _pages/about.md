@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) in School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). My research focuses on leveraging weak supervision and domain knowledge from experts to affordably annotate large datasets. Ultimately, I expect my research to make the process of acquiring training data cost-efficient, less subjective, reliable yet grounded in domain expert intuition, to harness the power of modern Machine Learning to fuel advances in data-driven decision support. 
 
-I was an Applied Scientist Intern at [Amazon Web Services (AWS)](https://aws.amazon.com/) in the Summer of 2022!
+I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the Summer of 2022 and 2023!
 
 Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
@@ -29,27 +29,31 @@ Publications
 ### Unsupervised Model Selection for Time-series Anomaly Detection
 Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan  
 *International Conference of Learning Representations 2023 (Spotlight).*   
-[[arXiv](https://arxiv.org/pdf/2210.01078.pdf)]
+[[ArXiv](https://arxiv.org/pdf/2210.01078.pdf)]
+
+### Encoding Expert Knowledge into Federated Learning Using Weak Supervision
+Sebastian Caldas, Mononito Goswami, Artur Dubrawski
+*International Conference of Learning Representations 2023 Workshop on Machine Learning for Internet of Things (ML4IoT).*
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
 Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
 *Machine Learning for Healthcare Conference 2022.*   
-[[arXiv](https://arxiv.org/pdf/2206.12088v1.pdf), [code](https://autonlab.github.io/KeyClass)]
+[[ArXiv](https://arxiv.org/pdf/2206.12088v1.pdf), [code](https://autonlab.github.io/KeyClass)]
 
 ### Weakly Supervised Classification of Vital Sign Alerts as Real or Artifact
 Arnab Dey, Mononito Goswami, Joo Heung Yoon, Gilles Clermont, Michael R. Pinsky, Marilyn Hravnak, Artur Dubrawski.
 *AMIA 2022 Annual Symposium. American Medical Informatics Association*.   
-[[arXiv](https://arxiv.org/pdf/2206.09074.pdf), [code](https://github.com/autonlab/weakVSAlertsAdjudicator)]
+[[ArXiv](https://arxiv.org/pdf/2206.09074.pdf), [code](https://github.com/autonlab/weakVSAlertsAdjudicator)]
 
 ### Counterfactual Phenotyping with Censored Time-to-Events
 Chirag Nagpal, Mononito Goswami, Keith Dufendach, Artur Dubrawski   
 *ACM Conference on Knowledge Discovery and Data Mining 2022*.   
-[[arXiv](https://arxiv.org/abs/2202.11089), [code](https://autonlab.github.io/auton-survival/cmhe/)]
+[[ArXiv](https://arxiv.org/abs/2202.11089), [code](https://autonlab.github.io/auton-survival/cmhe/)]
 
 ### Weak Supervision for Affordable Modeling of Electrocardiogram Data
 Mononito Goswami, Benedikt Boecking, Artur Dubrawski  
 *AMIA 2021 Annual Symposium. American Medical Informatics Association*.   
-[[arXiv](https://arxiv.org/abs/2201.02936)]
+[[ArXiv](https://arxiv.org/abs/2201.02936)]
 
 ### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
 Andrew A, McReynolds, Sheba P Naderzad, Mononito Goswami, Jack Mostow  
@@ -94,7 +98,7 @@ Rajni Jindal, Maitree Leekha\*, Minkush Manuja\*, Mononito Goswami\*
 ### Detecting Patterns of Physiological Response to Hemodynamic Stress via Unsupervised Deep Learning
 Chufan Gao, Fabian Falck, Mononito Goswami, Anthony Wertz, Michael R. Pinsky, Artur Dubrawski  
 *NeurIPS Machine Learning for Health (ML4H) Workshop 2020 (Short Paper)*  
-[[arXiv](https://arxiv.org/pdf/1911.05121)]
+[[ArXiv](https://arxiv.org/pdf/1911.05121)]
 
 ### Are you paying attention? detecting distracted driving in real-time
 Maitree Leekha\*, Mononito Goswami\*, Rajiv Ratn Shah, Yifang Yin, Roger Zimmermann  
@@ -115,6 +119,13 @@ Shiven Mian\*, Mononito Goswami\*, Jack Mostow
 
 Preprints
 ------
+### AQuA: A Benchmarking Tool for Label Quality Assessment
+Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski
+[[ArXiv](https://arxiv.org/pdf/2306.09467.pdf)]
+
+### Encoding Expert Knowledge into Federated Learning Using Weak Supervision
+Sebastian Caldas, Mononito Goswami, Artur Dubrawski
+
 ### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
 Mononito Goswami, Benedikt Boecking, Patrick J. Coppler, Jonathan Elmer, Artur Dubrawski  
 
@@ -123,7 +134,7 @@ Mononito Goswami\*, Chufan Gao\*, Benedikt Boecking, Saswati Ray, Artur Dubrawsk
 
 ### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
 Mononito Goswami\*, Minkush Manuja\*, Maitree Leekha\*  
-[[arXiv](https://arxiv.org/pdf/2007.11346.pdf)]
+[[ArXiv](https://arxiv.org/pdf/2007.11346.pdf)]
 
 
 <!-- Professional Service
