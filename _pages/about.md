@@ -13,7 +13,7 @@ I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswam
 I am broadly interested machine learning with imperfect data with an emphasis on healthcare. Specifically, my research focusses on settings where labeled data is either unavailable or unreliable, data is physically distributed, or insufficient to train complex models from scratch. I am also interested in time-series modeling, and evaluating trained machine learning models comprehensively and holistically in these challenging settings. 
 Recently, I am also interested in foundation modeling for temporal data and clinical applications. 
 
-I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! This summer, we pre-trained the first foundation model for modeling time-series data! 
+I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! This summer, we pre-trained the *first foundation model for modeling time-series data*! 
 
 Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
@@ -31,7 +31,7 @@ Publications
 ------
 ### AQuA: A Benchmarking Tool for Label Quality Assessment
 *Neural Information Processing Systems (NeurIPS) 2023 (Poster).*
-Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski
+Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski 
 [[ArXiv](https://arxiv.org/pdf/2306.09467.pdf)]
 
 ### Unsupervised Model Selection for Time-series Anomaly Detection
