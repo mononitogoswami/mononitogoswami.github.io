@@ -10,8 +10,7 @@ redirect_from:
 
 I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) in School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). 
 
-I am broadly interested machine learning with imperfect data with an emphasis on healthcare. Specifically, my research focusses on settings where labeled data is either unavailable or unreliable, data is physically distributed, or insufficient to train complex models from scratch. I am also interested in time-series modeling, and evaluating trained machine learning models comprehensively and holistically in these challenging settings. 
-Recently, I am also interested in foundation modeling for temporal data and clinical applications. 
+I am interested in machine learning using imperfect data with an emphasis on healthcare and time-series modeling. Specifically, my research focusses on settings which challenge common assumptions on data, i.e., data is (1) labeled accurately, (2) centrally located, (3) sufficient to train complex models from scratch. I am also interested in evaluating trained machine learning models comprehensively in these practical settings, and foundation modeling for temporal data and clinical applications. 
 
 I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! This summer, we pre-trained the *first foundation model for modeling time-series data*! 
 
