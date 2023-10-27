@@ -28,9 +28,13 @@ Awards
 
 Publications
 ------
+### JoLT: Jointly Learned Representations of Language and Time-Series.
+Yifu Cai, Mononito Goswami, Arjun Choudhry, Arvind Srinivasan, Artur Dubrawski.
+*Neural Information Processing Systems Workshop on Deep Generative Models for Health (DGM4H NeurIPS) (2023) (Poster).*
+
 ### AQuA: A Benchmarking Tool for Label Quality Assessment
-*Neural Information Processing Systems (NeurIPS) 2023 (Poster).*
 Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski   
+*Neural Information Processing Systems (NeurIPS) 2023 (Poster).*
 [[ArXiv](https://arxiv.org/pdf/2306.09467.pdf)]
 
 ### Unsupervised Model Selection for Time-series Anomaly Detection
