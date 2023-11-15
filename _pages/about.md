@@ -32,6 +32,14 @@ Publications
 Yifu Cai, Mononito Goswami, Arjun Choudhry, Arvind Srinivasan, Artur Dubrawski.
 *Neural Information Processing Systems Workshop on Deep Generative Models for Health (DGM4H NeurIPS) (2023) (Poster).*
 
+### PICSR: Prototype-Informed Cross-Silo Router for Federated Learning.
+Eric Enouen, Sebastian Caldas, Mononito Goswami, Artur Dubrawski.
+*AAAI Conference on Artificial Intelligence (Student Abstract) (2024).*
+
+### JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-series Interpretation.
+Yifu Cai, Arvind Srinivasan, Mononito Goswami, Arjun Choudhry, Artur Dubrawski.
+*AAAI Conference on Artificial Intelligence (Student Abstract) (2024). 3-min presentation contest finalist*
+
 ### AQuA: A Benchmarking Tool for Label Quality Assessment
 Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski   
 *Neural Information Processing Systems (NeurIPS) 2023 (Poster).*
