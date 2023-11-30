@@ -42,16 +42,16 @@ Yifu Cai, Arvind Srinivasan, Mononito Goswami, Arjun Choudhry, Artur Dubrawski.
 
 ### AQuA: A Benchmarking Tool for Label Quality Assessment
 Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski   
-*Neural Information Processing Systems (NeurIPS) 2023 (Poster).*
+*Neural Information Processing Systems (NeurIPS) 2023 Datasets & Benchmark Track (Poster).*
 [[ArXiv](https://arxiv.org/pdf/2306.09467.pdf)]
 
 ### Unsupervised Model Selection for Time-series Anomaly Detection
-Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan  
+Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan   
 *International Conference of Learning Representations (ICLR) 2023 (Spotlight).*   
 [[ArXiv](https://arxiv.org/pdf/2210.01078.pdf)]
 
 ### Encoding Expert Knowledge into Federated Learning Using Weak Supervision
-Sebastian Caldas, Mononito Goswami, Artur Dubrawski
+Sebastian Caldas, Mononito Goswami, Artur Dubrawski    
 *International Conference of Learning Representations 2023 Workshop on Machine Learning for Internet of Things (ML4IoT).*
 
 ### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
