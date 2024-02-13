@@ -1,7 +1,6 @@
 ---
 permalink: /
 title: "Mononito Goswami"
-excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
