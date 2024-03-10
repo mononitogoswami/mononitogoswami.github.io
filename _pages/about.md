@@ -43,7 +43,7 @@ Eric Enouen, Sebastian Caldas, Mononito Goswami, Artur Dubrawski.
 
 ### JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-series Interpretation.
 Yifu Cai, Arvind Srinivasan, Mononito Goswami, Arjun Choudhry, Artur Dubrawski.
-*AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **Best student abstract presentation award winner.** *
+*AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **Best student abstract presentation award winner.***
 
 ### AQuA: A Benchmarking Tool for Label Quality Assessment
 Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski   
