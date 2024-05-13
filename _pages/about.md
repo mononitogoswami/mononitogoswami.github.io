@@ -11,7 +11,7 @@ I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswam
 
 I am interested in machine learning using imperfect data with an emphasis on healthcare and time-series modeling. Specifically, my research focusses on settings which challenge common assumptions on data, i.e., data is (1) labeled accurately, (2) centrally located, (3) sufficient to train complex models from scratch. I am also interested in evaluating trained machine learning models comprehensively in these practical settings, and foundation modeling for temporal data and clinical applications. 
 
-I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! I'll be interning at [Google Cloud AI](https://cloud.google.com/products/ai) this summer!
+I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! I'll be interning at [Google Research](https://cloud.google.com/products/ai) this summer!
 
 Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
