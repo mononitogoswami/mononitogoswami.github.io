@@ -11,7 +11,7 @@ I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswam
 
 I am interested in machine learning using imperfect data with an emphasis on healthcare and time-series modeling. Specifically, my research focusses on settings which challenge common assumptions on data, i.e., data is (1) labeled accurately, (2) centrally located, (3) sufficient to train complex models from scratch. I am also interested in evaluating trained machine learning models comprehensively in these practical settings, and foundation modeling for temporal data and clinical applications. 
 
-I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! I'll be interning at [Google Research](https://cloud.google.com/products/ai) this summer!
+I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023! I'll be interning at [Google Research](https://research.google/) this summer!
 
 Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
 
@@ -23,9 +23,9 @@ My CV can be found [here](../CV_Mononito_Goswami.pdf).
 
 Time-series Foundation Models
 ------
-I worked on MOMENT, the **first family of open-source large pre-trained time-series models**! MOMENT serves as a building block for **multiple time-series analysis tasks** (forecasting, classification, anomaly detection, and imputation, etc.), is effective **out-of-the-box**, i.e. with no (or few) particular task-specific exemplars (enabling zero-shot forecasting, etc.), and (3) is **tunable** using in-distribution and task-specific data to improve performance! Check out our [preprint](https://arxiv.org/pdf/2402.03885.pdf) and code on [anomymous github](anonymous.4open.science/r/BETT-773F/).
+I worked on MOMENT, the **first family of open-source large pre-trained time-series models**! MOMENT serves as a building block for **multiple time-series analysis tasks** (forecasting, classification, anomaly detection, and imputation, etc.), is effective **out-of-the-box**, i.e. with no (or few) particular task-specific exemplars (enabling zero-shot forecasting, etc.), and (3) is **tunable** using in-distribution and task-specific data to improve performance! We made pre-trained weights of MOMENT-Large and pre-training data (The Time Series Pile) public on [Huggingface](https://huggingface.co/AutonLab)! 
 
-We are currently working on open-sourcing MOMENT, which includes EVERYTHING from the code to compile the Time-series Pile, pre-train, and fine-tune MOMENT, to the pre-trained model weights! If you're interested in our model, or have any questions or feature requests, please fill this [Google form](https://forms.gle/4MCFVHTHHzQqfvEd9), and we'll do our best to answer your questions, and update you as we open-source MOMENT and its subsequent improvements.
+MOMENT was accepted to ICML 2024, check out the latest pre-print [here](https://arxiv.org/abs/2402.03885)! We are working on making the research code, i.e. code for baselines, data loading and processing code, and scripts for pre-training and experiments, public. An initial version of our research code is available on [anomymous github](anonymous.4open.science/r/BETT-773F/). If you're interested in our model, or have any questions or feature requests, please fill this [Google form](https://forms.gle/4MCFVHTHHzQqfvEd9), and we'll do our best to answer your questions, and update you as we open-source MOMENT and its subsequent improvements.
 
 Awards
 ------
