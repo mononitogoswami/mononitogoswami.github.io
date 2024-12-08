@@ -25,102 +25,44 @@ Selected Publications
 ------
 A complete list of my papers can be found on my [Google Scholar](https://scholar.google.com/citations?hl=en&user=TgQ72t0AAAAJ&view_op=list_works&sortby=pubdate) and [Semantic Scholar](https://www.semanticscholar.org/author/Mononito-Goswami/147478215)
 
+### Time Series Foundation Models
 
-### MOMENT: A Family Of Open Time-series Foundation Models
+#### MOMENT: A Family Of Open Time-series Foundation Models
 Mononito Goswami, Konrad Szafer, Arjun Choudhry, Yifu Cai, Shuo Li, Artur Dubrawski.
-*International Conference of Machine Learning (ICML) 2024*
-[[ArXiv](https://arxiv.org/pdf/2402.03885.pdf), [code](https://github.com/moment-timeseries-foundation-model/moment), [HuggingFace weights](https://huggingface.co/AutonLab/MOMENT-1-large), [Time Series Pile](https://huggingface.co/datasets/AutonLab/Timeseries-PILE)]
+In International Conference of Machine Learning (ICML) 2024
+[[ArXiv](https://arxiv.org/pdf/2402.03885.pdf), [Code](https://github.com/moment-timeseries-foundation-model/moment), [HuggingFace Weights](https://huggingface.co/AutonLab/MOMENT-1-large), [Time Series Pile](https://huggingface.co/datasets/AutonLab/Timeseries-PILE)]
 
-### JoLT: Jointly Learned Representations of Language and Time-Series.
-Yifu Cai, Mononito Goswami, Arjun Choudhry, Arvind Srinivasan, Artur Dubrawski.
-*Neural Information Processing Systems Workshop on Deep Generative Models for Health (DGM4H NeurIPS) (2023) (Poster).*
-[[Paper](https://openreview.net/pdf?id=UVF1AMBj9u)]
+#### JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-series Interpretation.
+Yifu Cai, Arvind Srinivasan, **Mononito Goswami**, Arjun Choudhry, Artur Dubrawski.
+In AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **Best student abstract presentation award winner.***
+[[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/30423/32496)] and Neural Information Processing Systems Workshop on Deep Generative Models for Health (DGM4H NeurIPS) (2023) [[OpenReview]](https://openreview.net/pdf?id=UVF1AMBj9u).
 
-### PICSR: Prototype-Informed Cross-Silo Router for Federated Learning.
-Eric Enouen, Sebastian Caldas, Mononito Goswami, Artur Dubrawski.
-*AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **3-min presentation contest finalist**
-[[Paper](https://ojs.aaai.org/index.php/AAAI/article/download/30438/32524)]
+#### Implicit Reasoning in Deep Time Series Forecasting
+Willa Potosnak, Cristian Challu, **Mononito Goswami**, Michał Wiliński, Nina Żukowska, and Artur Dubrawski. 
+In NeurIPS 2024 Workshop on System 2 Reasoning At Scale and NeurIPS 2024 Workshop on Time Series in the Age of Large Models [[ArXiv]](https://arxiv.org/pdf/2409.10840).
 
-### JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-series Interpretation.
-Yifu Cai, Arvind Srinivasan, Mononito Goswami, Arjun Choudhry, Artur Dubrawski.
-*AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **Best student abstract presentation award winner.***
-[[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/30423/32496)]
+#### Exploring Representations and Interventions in Time Series Foundation Models
+Michał Wiliński, **Mononito Goswami**, Nina Żukowska, Willa Potosnak, and Artur Dubrawski. 
+In NeurIPS 2024 Workshop on Fine-Tuning in Modern Machine Learning: Principles and Scalability and NeurIPS 2024 Workshop on Time Series in the Age of Large Models.
+[[ArXiv]](https://arxiv.org/pdf/2409.12915)
 
-### AQuA: A Benchmarking Tool for Label Quality Assessment
+#### Towards Long-Context Time Series Foundation Models
+Nina Żukowska, **Mononito Goswami**, Michał Wiliński, Willa Potosnak, and Artur Dubrawski. 
+In NeurIPS 2024 Workshop on Fine-Tuning in Modern Machine Learning: Principles and Scalability and NeurIPS 2024 Workshop on Time Series in the Age of Large Models. 
+[[ArXiv]](https://arxiv.org/pdf/2409.13530?)
+
+#### TimeSeriesExam: A Time Series Understanding Exam
+Yifu Cai, Arjun Choudhry, **Mononito Goswami**, and Artur Dubrawski. 
+In NeurIPS 2024 Workshop on Time Series in the Age of Large Models (**Spotlight**) and ICAIF 2024 Foundation Models for Time Series: Exploring New Frontiers Workshop (**Oral**). [[ArXiv](https://arxiv.org/pdf/2410.14752), [TimeSeriesExam](https://huggingface.co/datasets/AutonLab/TimeSeriesExam1)]
+
+### Benchmarking and Evaluation
+
+#### AQuA: A Benchmarking Tool for Label Quality Assessment
 Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski   
-*Neural Information Processing Systems (NeurIPS) 2023 Datasets & Benchmark Track (Poster).*
-[[ArXiv](https://arxiv.org/pdf/2306.09467.pdf), [code](https://github.com/autonlab/aqua)]
+In Neural Information Processing Systems (NeurIPS) 2023 Datasets & Benchmark Track (Poster).
+[[ArXiv](https://arxiv.org/pdf/2306.09467.pdf), [Code](https://github.com/autonlab/aqua)]
 
-### Unsupervised Model Selection for Time-series Anomaly Detection
+#### Unsupervised Model Selection for Time-series Anomaly Detection
 Mononito Goswami, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan   
-*International Conference of Learning Representations (ICLR) 2023 (Spotlight).*   
-[[ArXiv](https://arxiv.org/pdf/2210.01078.pdf), [code](https://github.com/mononitogoswami/tsad-model-selection)]
-
-### Encoding Expert Knowledge into Federated Learning Using Weak Supervision
-Sebastian Caldas, Mononito Goswami, Artur Dubrawski    
-*International Conference of Learning Representations 2023 Workshop on Machine Learning for Internet of Things (ML4IoT).*
-
-### Classifying Unstructured Clinical Notes via Automatic Weak Supervision
-Chufan Gao\*, Mononito Goswami\*, Jieshi Chen, Artur Dubrawski  
-*Machine Learning for Healthcare Conference 2022.*   
-[[ArXiv](https://arxiv.org/pdf/2206.12088v1.pdf), [code](https://autonlab.github.io/KeyClass)]
-
-### Weak Supervision for Affordable Modeling of Electrocardiogram Data
-Mononito Goswami, Benedikt Boecking, Artur Dubrawski  
-*AMIA 2021 Annual Symposium. American Medical Informatics Association*.   
-[[ArXiv](https://arxiv.org/abs/2201.02936)]
-
-### Toward Learning at Scale in Developing Countries: Lessons from the Global Learning XPRIZE Field Study
-Andrew A, McReynolds, Sheba P Naderzad, Mononito Goswami, Jack Mostow  
-*ACM Conference on Learning@Scale 2020*.   
-[[ACM](https://dl.acm.org/doi/abs/10.1145/3386527.3405920)]
-
-### A binary PSO approach for improving the performance of wireless sensor networks
-Ajay Kaushik\*, Mononito Goswami\*, Minkush Manuja\*, S Indu, Daya Gupta  
-*Wireless Personal Communications 113 (1), 263-297*  
-[[Springer](https://doi.org/10.1007/s11277-020-07188-3)]
-
-### A multi-task approach to open domain suggestion mining using language model for text over-sampling
-Maitree Leekha\*, Mononito Goswami\*, Minni Jain  
-*European Conference on Information Retrieval (ECIR) 2020*  
-[[Springer](https://doi.org/10.1007/978-3-030-45442-5_28)]
-
-### Discriminating Cognitive Disequilibrium and Flow in Problem Solving: A Semi-Supervised Approach Using Involuntary Dynamic Behavioral Signals
-Mononito Goswami\*, Lujie Chen\*, Artur Dubrawski  
-*AAAI Conference on Artificial Intelligence (Social Impact Track) 2020*  
-[[AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/5378/5234)]
-
-### Modeling Involuntary Dynamic Behaviors to Support Intelligent Tutoring (Student Abstract)
-Mononito Goswami, Lujie Chen, Chufan Gao, Artur Dubrawski  
-*AAAI Conference on Artificial Intelligence (Student Abstract) 2020*  
-[[AAAI](https://ojs.aaai.org/index.php/AAAI/article/download/7171/7025)]
-
-### What makes a better companion? Towards Social & Engaging Peer Learning
-Rajni Jindal, Maitree Leekha\*, Minkush Manuja\*, Mononito Goswami\*  
-*European Conference on Artificial Intelligence (ECAI) 2020*  
-[[IOS Press](https://ebooks.iospress.nl/volumearticle/54924)]
-
-### Are you paying attention? detecting distracted driving in real-time
-Maitree Leekha\*, Mononito Goswami\*, Rajiv Ratn Shah, Yifang Yin, Roger Zimmermann  
-*IEEE Fifth International Conference on Multimedia Big Data (BigMM) 2019*  
-[[IEEE](https://ieeexplore.ieee.org/abstract/document/8919430/)]
-
-### What’s Most Broken? Design and Evaluation of a Tool to Guide Improvement of an Intelligent Tutor
-Shiven Mian\*, Mononito Goswami\*, Jack Mostow  
-*International Conference on Artificial Intelligence in Education (AIED) 2019*  
-[[Springer](https://doi.org/10.1007/978-3-030-23204-7_24)]
-
-\* *indicates equal contribution*
-
-Preprints
-------
-
-### Towards Knowledge-driven Clinical Data Annotation Quality Assessment
-Mononito Goswami, Benedikt Boecking, Patrick J. Coppler, Jonathan Elmer, Artur Dubrawski  
-
-### Active Refinement of Weakly Supervised Models
-Mononito Goswami\*, Chufan Gao\*, Benedikt Boecking, Saswati Ray, Artur Dubrawski
-
-### Towards Social & Engaging Peer Learning: Predicting Backchanneling and Disengagement in Children
-Mononito Goswami\*, Minkush Manuja\*, Maitree Leekha\*  
-[[ArXiv](https://arxiv.org/pdf/2007.11346.pdf)]
+In International Conference of Learning Representations (ICLR) 2023 (Spotlight).
+[[ArXiv](https://arxiv.org/pdf/2210.01078.pdf), [Code](https://github.com/mononitogoswami/tsad-model-selection)]
