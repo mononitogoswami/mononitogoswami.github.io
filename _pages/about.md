@@ -37,23 +37,23 @@ Yifu Cai, Arvind Srinivasan, **Mononito Goswami**, Arjun Choudhry, Artur Dubraws
 In AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **Best student abstract presentation award winner.***
 [[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/30423/32496)] and Neural Information Processing Systems Workshop on Deep Generative Models for Health (DGM4H NeurIPS) (2023) [[OpenReview]](https://openreview.net/pdf?id=UVF1AMBj9u).
 
-#### Implicit Reasoning in Deep Time Series Forecasting
-Willa Potosnak, Cristian Challu, **Mononito Goswami**, Michał Wiliński, Nina Żukowska, and Artur Dubrawski. 
-In NeurIPS 2024 Workshop on System 2 Reasoning At Scale and NeurIPS 2024 Workshop on Time Series in the Age of Large Models [[ArXiv]](https://arxiv.org/pdf/2409.10840).
-
 #### Exploring Representations and Interventions in Time Series Foundation Models
 Michał Wiliński, **Mononito Goswami**, Nina Żukowska, Willa Potosnak, and Artur Dubrawski. 
 In NeurIPS 2024 Workshop on Fine-Tuning in Modern Machine Learning: Principles and Scalability and NeurIPS 2024 Workshop on Time Series in the Age of Large Models.
 [[ArXiv]](https://arxiv.org/pdf/2409.12915)
+
+#### TimeSeriesExam: A Time Series Understanding Exam
+Yifu Cai, Arjun Choudhry, **Mononito Goswami**, and Artur Dubrawski. 
+In NeurIPS 2024 Workshop on Time Series in the Age of Large Models (**Spotlight**) and ICAIF 2024 Foundation Models for Time Series: Exploring New Frontiers Workshop (**Oral, Best Paper Honorable Mention**). [[ArXiv](https://arxiv.org/pdf/2410.14752), [TimeSeriesExam](https://huggingface.co/datasets/AutonLab/TimeSeriesExam1)]
 
 #### Towards Long-Context Time Series Foundation Models
 Nina Żukowska, **Mononito Goswami**, Michał Wiliński, Willa Potosnak, and Artur Dubrawski. 
 In NeurIPS 2024 Workshop on Fine-Tuning in Modern Machine Learning: Principles and Scalability and NeurIPS 2024 Workshop on Time Series in the Age of Large Models. 
 [[ArXiv]](https://arxiv.org/pdf/2409.13530?)
 
-#### TimeSeriesExam: A Time Series Understanding Exam
-Yifu Cai, Arjun Choudhry, **Mononito Goswami**, and Artur Dubrawski. 
-In NeurIPS 2024 Workshop on Time Series in the Age of Large Models (**Spotlight**) and ICAIF 2024 Foundation Models for Time Series: Exploring New Frontiers Workshop (**Oral**). [[ArXiv](https://arxiv.org/pdf/2410.14752), [TimeSeriesExam](https://huggingface.co/datasets/AutonLab/TimeSeriesExam1)]
+#### Implicit Reasoning in Deep Time Series Forecasting
+Willa Potosnak, Cristian Challu, **Mononito Goswami**, Michał Wiliński, Nina Żukowska, and Artur Dubrawski. 
+In NeurIPS 2024 Workshop on System 2 Reasoning At Scale and NeurIPS 2024 Workshop on Time Series in the Age of Large Models [[ArXiv]](https://arxiv.org/pdf/2409.10840).
 
 ### Benchmarking and Evaluation
 
