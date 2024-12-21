@@ -7,19 +7,27 @@ redirect_from:
   - /about.html
 ---
 
-I am a Robotics [Ph.D. Student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) in School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). I am interested in building foundation models for time series and tabular data. I am also interested in questions around data to (pre-)train machine learning model and also questions around model evaluation. I am excited about applications of ML to healthcare. 
+Hi, I’m Mononito! I’m a Robotics [Ph.D. student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) within the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I am advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). My research focuses on developing smart multimodal foundation models to tackle real-world challenges. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 800K times on [HuggingFace](https://huggingface.co/AutonLab). The second year of my Ph.D. was generously supported by the [Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021).
 
-I'm currently a Student Researcher at [Google Research](https://research.google/). Previously, I was an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/) in the summer of 2022 and 2023.
+I had the privilege of working as a Student Researcher in [Athena](https://research.google/teams/athena/) within [Google Research](https://research.google/) in the latter half of 2024. Earlier, I spent two wonderful summers as an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/). Before starting my Ph.D., I completed my undergraduate studies in computer engineering at [Delhi Technological University](http://dtu.ac.in/) (formerly Delhi College of Engineering) in India.
 
-Prior to pursuing my Ph.D., I earned my bachelor's in computer engineering from [Delhi Technological University](http://dtu.ac.in/) (erstwhile Delhi College of Engineering) in India.
+Feel free to reach out [✉](mailto:mgoswami@andrew.cmu.edu) if you’re interested in my research or would like to collaborate!
 
-Feel free to drop me an email at mgoswami [at] andrew [dot] cmu [dot] edu if you are interested in my research and would like to collaborate! 
+You can find my CV [here](../CV_Mononito_Goswami.pdf). 
 
-My CV can be found [here](../CV_Mononito_Goswami.pdf).
+I am actively seeking research scientist positions and would love to connect if our research interests align!
 
-Awards
+Research Experience
 ------
-[Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021)
+**Foundation Models**
+- _Core capabilities:_ Structured Data ([MOMENT](https://arxiv.org/pdf/2402.03885), [IngesTables]()), Multimodality ([JoLT](https://ojs.aaai.org/index.php/AAAI/article/view/30423})), Long-context ([Infini-Channel Mixer](https://arxiv.org/pdf/2409.13530?))
+- _Emergent capabilities:_ Reasoning ([TimeSeriesExam](https://arxiv.org/pdf/2410.14752), [Implicit Reasoning in Deep Time Series Models](https://arxiv.org/pdf/2409.10840})), Agents
+- _Pragmatic Advancements:_ Interpretability \& Steerability ([P1](https://arxiv.org/pdf/2409.12915?)), Efficiency
+
+**Machine Learning in the Real World**
+- _Considerations:_ Distributed data ([WSHFL](https://openreview.net/pdf?id=OqLrv5oH6r), [PICSR](https://ojs.aaai.org/index.php/AAAI/article/view/30438})), Label Noise ([AQuA](https://proceedings.neurips.cc/paper_files/paper/2023/file/fc20ea8d104cab737a5561096f9bde9b-Paper-Datasets_and_Benchmarks.pdf}), Model Selection ([TSADMS](https://arxiv.org/pdf/2210.01078})), Unlabeled Data ([Programmatic Weak Supervision](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861672/))
+- _Applications:_ Healthcare ([ECG](https://pmc.ncbi.nlm.nih.gov/articles/PMC8861672/), [Pleth](https://pmc.ncbi.nlm.nih.gov/articles/PMC10148368/), EEG, [Clinical Notes](https://proceedings.mlr.press/v182/gao22a/gao22a.pdf), [Survival Analysis](https://dl.acm.org/doi/pdf/10.1145/3534678.3539110)), Education ([Peer Learning](https://ebooks.iospress.nl/volumearticle/54924), [Problem Solving](\href{https://ojs.aaai.org/index.php/AAAI/article/view/5378), [Intelligent Tutoring Systems](https://link.springer.com/chapter/10.1007/978-3-030-23204-7_24))
+
 
 Selected Publications
 ------
