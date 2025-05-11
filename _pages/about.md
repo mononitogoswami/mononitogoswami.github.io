@@ -7,15 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I’m Mononito! I’m a Robotics [Ph.D. student](https://www.ri.cmu.edu/ri-people/mononito-goswami/) at the [Auton Lab](https://www.autonlab.org/) within the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I am advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). My research is driven by a commitment to making foundation models useful, efficient, and safe, particularly in high-stakes domains. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 900K times on [HuggingFace](https://huggingface.co/AutonLab). The second year of my Ph.D. was generously supported by the [Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021).
+Hi, I’m Mononito! I recently graduated with a [Ph.D. in Robotics](https://www.ri.cmu.edu/ri-people/mononito-goswami/) from the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I was advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). I'll soon be joining Amazon as an Applied Scientist in the Coding Agents team, which is driving the development of [Amazon Q](https://aws.amazon.com/).  
 
-I had the privilege of working as a Student Researcher in [Athena](https://research.google/teams/athena/) within [Google Research](https://research.google/) in the latter half of 2024. Earlier, I spent two wonderful summers as an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/). Before starting my Ph.D., I completed my undergraduate studies in computer engineering at [Delhi Technological University](http://dtu.ac.in/) (formerly Delhi College of Engineering) in India.
+My research is driven by a commitment to making foundation models useful, efficient, and safe, particularly in high-stakes domains. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 2.2M times on [HuggingFace](https://huggingface.co/AutonLab), and attracted over USD 2.5 million in government and industrial funding. My thesis on pragmatic time series intelligence is available [online](https://www.ri.cmu.edu/publications/towards-pragmatic-time-series-intelligence/).
+
+I had the privilege of working as a Student Researcher in [Athena](https://research.google/teams/athena/) within [Google Research](https://research.google/) in the latter half of 2024. Earlier, I spent two wonderful summers as an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/). Before starting my Ph.D., I completed my B.Tech. in computer engineering at [Delhi Technological University](http://dtu.ac.in/) (formerly Delhi College of Engineering) in India. The second year of my Ph.D. was generously supported by the [Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021).
 
 Feel free to reach out [✉](mailto:mgoswami@andrew.cmu.edu) if you’re interested in my research or would like to collaborate!
 
 You can find my CV [here](../CV_Mononito_Goswami.pdf). 
-
-I am actively seeking research scientist positions and would love to connect if our research interests align!
 
 Research Experience
 ------
@@ -47,7 +47,7 @@ In AAAI Conference on Artificial Intelligence (Student Abstract) (2024). **Best 
 
 #### Exploring Representations and Interventions in Time Series Foundation Models
 Michał Wiliński, **Mononito Goswami**, Nina Żukowska, Willa Potosnak, and Artur Dubrawski. 
-In NeurIPS 2024 Workshop on Fine-Tuning in Modern Machine Learning: Principles and Scalability and NeurIPS 2024 Workshop on Time Series in the Age of Large Models.
+In International Conference of Learning Representations (ICLR) 2025 (Poster).
 [[ArXiv]](https://arxiv.org/pdf/2409.12915)
 
 #### TimeSeriesExam: A Time Series Understanding Exam
