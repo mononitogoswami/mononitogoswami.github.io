@@ -11,11 +11,11 @@ Hi, I’m Mononito! I am an Applied Scientist at Amazon, where I am researching 
 
 I recently graduated with a [Ph.D. in Robotics](https://www.ri.cmu.edu/ri-people/mononito-goswami/) from the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I was advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). I'll soon be joining Amazon as an Applied Scientist in the Coding Agents team, which is driving the development of [Amazon Q](https://aws.amazon.com/).  
 
-My research is driven by a commitment to making foundation models useful, efficient, and safe, particularly in high-stakes domains. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 2.2M times on [HuggingFace](https://huggingface.co/AutonLab), and attracted over USD 2.5 million in government and industrial funding. My thesis on pragmatic time series intelligence is available [online](https://www.ri.cmu.edu/publications/towards-pragmatic-time-series-intelligence/).
+My Ph.D. research was driven by the commitment to making foundation models useful, efficient, and safe, particularly in high-stakes domains. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 2.2M times on [HuggingFace](https://huggingface.co/AutonLab), and attracted over USD 2.5 million in government and industrial funding. My thesis on pragmatic time series intelligence is available [online](https://www.ri.cmu.edu/publications/towards-pragmatic-time-series-intelligence/).
 
-I had the privilege of working as a Student Researcher in [Athena](https://research.google/teams/athena/) within [Google Research](https://research.google/) in the latter half of 2024. Earlier, I spent two wonderful summers as an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/). Before starting my Ph.D., I completed my B.Tech. in computer engineering at [Delhi Technological University](http://dtu.ac.in/) (formerly Delhi College of Engineering) in India. The second year of my Ph.D. was generously supported by the [Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021).
+During my Ph.D., I had the privilege of working as a Student Researcher in [Athena](https://research.google/teams/athena/) within [Google Research](https://research.google/) in the latter half of 2024. Earlier, I spent two wonderful summers as an Applied Scientist Intern at [Amazon Web Services (AWS) AI Labs](https://aws.amazon.com/). Before starting my Ph.D., I completed my B.Tech. in computer engineering at [Delhi Technological University](http://dtu.ac.in/) (formerly Delhi College of Engineering) in India. The second year of my Ph.D. was generously supported by the [Center for Machine Learning and Health (CMLH) Fellowship 2021](https://www.cs.cmu.edu/cmlh-cfp/cmlh-fellows_2021).
 
-Feel free to reach out [✉](mailto:mgoswami@andrew.cmu.edu) if you’re interested in my research or would like to collaborate!
+Feel free to reach out [✉](mailto:mononitogoswami98@gmail.com) if you’re interested in my research or would like to collaborate!
 
 You can find my CV [here](../CV_Mononito_Goswami.pdf). 
 
@@ -66,6 +66,10 @@ Willa Potosnak, Cristian Challu, **Mononito Goswami**, Michał Wiliński, Nina �
 In NeurIPS 2024 Workshop on System 2 Reasoning At Scale and NeurIPS 2024 Workshop on Time Series in the Age of Large Models [[ArXiv]](https://arxiv.org/pdf/2409.10840).
 
 ### Benchmarking and Evaluation
+
+#### TimeSeriesGym: A Scalable Benchmark for (Time Series) Machine Learning Engineering Agents
+Yifu Cai, Xinyu Li, **Mononito Goswami**, Michał Wiliński, Gus Welter, Artur Dubrawski
+[[ArXiv](https://arxiv.org/abs/2505.13291), [Code](https://github.com/moment-timeseries-foundation-model/TimeSeriesGym)]
 
 #### AQuA: A Benchmarking Tool for Label Quality Assessment
 Mononito Goswami, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski   
