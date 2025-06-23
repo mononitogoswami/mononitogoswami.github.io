@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I’m Mononito! I recently graduated with a [Ph.D. in Robotics](https://www.ri.cmu.edu/ri-people/mononito-goswami/) from the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I was advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). I'll soon be joining Amazon as an Applied Scientist in the Coding Agents team, which is driving the development of [Amazon Q](https://aws.amazon.com/).  
+Hi, I’m Mononito! I am an Applied Scientist at Amazon, where I am researching ways to build and evaluate capable and useful software engineering agents. 
+
+I recently graduated with a [Ph.D. in Robotics](https://www.ri.cmu.edu/ri-people/mononito-goswami/) from the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I was advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). I'll soon be joining Amazon as an Applied Scientist in the Coding Agents team, which is driving the development of [Amazon Q](https://aws.amazon.com/).  
 
 My research is driven by a commitment to making foundation models useful, efficient, and safe, particularly in high-stakes domains. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 2.2M times on [HuggingFace](https://huggingface.co/AutonLab), and attracted over USD 2.5 million in government and industrial funding. My thesis on pragmatic time series intelligence is available [online](https://www.ri.cmu.edu/publications/towards-pragmatic-time-series-intelligence/).
 
