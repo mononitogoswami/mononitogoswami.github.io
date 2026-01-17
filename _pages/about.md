@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I’m Mononito! I am an Applied Scientist at Amazon, where I am researching ways to build and evaluate capable and useful software engineering agents. 
+Hi, I'm Mononito! I'm an Applied Scientist at Amazon, researching and building capable software engineering agents. I work on the [AWS DevOps Agent](https://aws.amazon.com/devops-agent/), focusing on incident response and software reliability. I had the priviledge of shaping the core on-call and incident-prevention mechanisms from the ground up. My research spans data-driven optimization of deep research LLM agents, long-context management, holistic benchmarking, continual learning, and agentic post-training.
 
-I recently graduated with a [Ph.D. in Robotics](https://www.ri.cmu.edu/ri-people/mononito-goswami/) from the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I was advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). 
+Prior to Amazon, I graduated with a [Ph.D. in Robotics](https://www.ri.cmu.edu/ri-people/mononito-goswami/) from the School of Computer Science at [Carnegie Mellon University](https://www.cmu.edu/), where I was advised by [Prof. Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/). I received the Robotics Institute Distinguished Dissertation Award and the RISS Outstanding Graduate Student Mentor and Engagement Award.
 
 My Ph.D. research was driven by the commitment to making foundation models useful, efficient, and safe, particularly in high-stakes domains. I led the development of [MOMENT](https://moment-timeseries-foundation-model.github.io/), a family of multi-task time series foundation models, which have been downloaded over 2.2M times on [HuggingFace](https://huggingface.co/AutonLab), and attracted over USD 2.5 million in government and industrial funding. My thesis on pragmatic time series intelligence is available [online](https://www.ri.cmu.edu/publications/towards-pragmatic-time-series-intelligence/).
 
