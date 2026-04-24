@@ -50,17 +50,6 @@ $radius-lg: 0.75rem;
 @mixin section-heading-accent($width: 2.5rem) {
   font-weight: 700;
   margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid $border-color;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: $width;
-    height: 2px;
-    background-color: $primary;
-  }
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid $border-color;
 }

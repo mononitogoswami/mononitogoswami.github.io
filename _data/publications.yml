@@ -42,7 +42,8 @@
   year: 2025
   venue_full: "ArXiv Preprint, 2025"
   theme: "Foundation Models"
-  selected: false
+  selected: true
+  selected_theme: "Foundation Models"
   description: "Extends the Chronos forecasting model to handle multivariate, covariate-conditioned, and probabilistic forecasting in a single unified architecture."
   badges: []
   links:

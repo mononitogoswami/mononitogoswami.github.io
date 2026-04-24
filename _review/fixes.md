@@ -163,3 +163,41 @@ All 15 publications now have descriptions (Sepsis Subphenotypes removed — pape
 
 ### Profile Layout
 14. Restructured to Jon Barron-style: text left (col-8), photo right (col-4), vertically centered, name/title/bio/social all in left column. Photo now 100% width (max 280px), `border-radius: $radius-lg`, no shadow/border
+
+## 2026-04-24 — Seventh Round Fixes (Critique R7 — Minimalist Consistency Pass)
+
+### Design Consistency (removing decorative elements to match Barron-minimal aesthetic)
+1. Removed `::after` blue accent bar from `section-heading-accent` mixin (`_sass/_variables.scss:50-66`) — now uses simple `1px solid $border-color` border-bottom, matching homepage `.section-heading`
+2. Removed award card hover effects — `.award-major-card` lost `border-left: 3px solid transparent`, hover background, border-radius; `.award-paper-card` lost hover background, border-radius (`_sass/_pages.scss:34-48, 105-117`)
+3. Flattened service workshop cards — removed `border`, `border-radius`, hover `box-shadow` from `.service-card`; now uses simple padding + `border-top` separator (`_sass/_pages.scss:322-334`)
+4. Removed teal stat badges — `.service-card-stat` stripped of `background-color: $accent-light`, `border-radius: 999px`, `padding`; now plain muted text (`_sass/_pages.scss:373-381`)
+5. Simplified `.service-card-papers-link` — removed pill border + background hover; now plain link (`_sass/_pages.scss:383-397`)
+6. Removed talk group left-border hover — `.talk-group` lost `border-left: 3px solid`, hover color transition; now simple padding + `border-top` separator (`_sass/_pages.scss:405-415`)
+7. Changed talk venue bullet dots to en-dash — `.talk-venue-item::before` was 4px circle, now `\2013` character (`_sass/_pages.scss:438-448`)
+
+### Color Consistency
+8. Award year colors changed from `$primary` (blue) to `$text-muted` — `.award-major-year`, `.award-paper-year` (`_sass/_pages.scss:59, 130`), `.award-year-compact` (`_sass/_homepage.scss:249`)
+9. Mentorship intro color changed from `$text-muted` to `$text-color` — primary content should not be grayed out (`_sass/_pages.scss:180`)
+10. Mentee "Now:" line changed from `$accent` (teal) to `$text-muted` — removes second brand color (`_sass/_pages.scss:259`)
+11. Footer social links hover — removed `background-color: $primary-light` circle effect; now plain color change, matching homepage social links (`_sass/_footer.scss:30-33`)
+
+### Typography
+12. Removed italic from `.mentee-topic` — topic is primary content, italic reduces prominence (`_sass/_pages.scss:253`)
+13. Removed italic from `.award-paper-name` — consistent with no-italic rule from earlier rounds (`_sass/_pages.scss:154`)
+
+### Performance
+14. Google Fonts — narrowed weight range from `0,300..900;1,300..900` to `wght@400;500;600;700` (only weights used) (`_includes/head.html:12`)
+
+### Print
+15. Added `scroll-margin-top: 0` for `.pub-theme-section` in print media query (`_sass/_base.scss:100-103`)
+
+### Content
+16. Changed "Selected from 40+ publications" to "Selected publications" on publications page intro (`_pages/publications.html:8`) — cannot substantiate the "40+" claim from listed papers
+
+### Not Fixed (require user input)
+- "science of agents" phrase in bio — subjective, user may want to keep
+- Forward-dated Jul 2026 news item at top — user may want to keep for CFP visibility
+- Career milestones hidden behind "Show more" — needs user decision on default count
+- SpIDER leading Agents section as 3rd-author preprint — needs user decision on ordering or deselection
+- Chronos-2 not in selected pubs — needs user decision (middle-author trade-off)
+- Homepage theme order (Agents first vs Foundation Models first) — needs user decision
