@@ -1,235 +1,168 @@
-# Website Review -- Round 6
+# Website Review -- 2026-04-24
 
-**Date:** 2026-04-23
+## Summary
 
----
+The site is well-structured and conveys a clear research identity. The content is factual, specific, and mostly avoids AI slop. The main production blockers are: (1) stale "Incoming Ph.D. Student" labels that are 8 months out of date, (2) a canonical URL mismatch between `_config.yml` and the built HTML, (3) a stale build producing a garbled venue name on the service page and inaccurate renderings in the news section, and (4) the awards page being unreachable from the navbar. The design is clean and professional, though some styling choices (colored badge pills, decorative border-left hover effects, teal stat badges, workshop cards with borders and shadows) drift from the Barron-style minimal aesthetic the site targets.
 
-## Status of Round 5 Issues
+## Must-Fix (blocks production)
 
-| R5 # | Issue | Status |
-|------|-------|--------|
-| 1 | Empty href on Dissertation Award | FIXED -- `url:` key removed from `_data/awards.yml` |
-| 2 | Publications not sorted reverse-chronologically within themes | FIXED -- `_pages/publications.html` line 33 now uses `sort: "year" | reverse` |
-| 3 | ICLR 2026 workshop news stale/premature | FIXED -- news items are now separate (ICLR 2026 Apr, ICML 2026 Jul), text is appropriate for each |
-| 4 | `aria-controls` references non-existent id | FIXED -- `_includes/news.html` line 4 now has `id="news-list"` on the `<ul>` |
-| 5 | Chronos-2 not marked as selected | STILL OPEN -- `_data/publications.yml` line 46: `selected: false`. Judgment call, likely intentional (middle author). |
-| 6 | Distinguished Dissertation not first among 2025 awards | FIXED -- on the rendered homepage, Distinguished Dissertation Award appears first among the 2025 awards |
-| 7 | "Incoming Ph.D. Student" labels may be stale | STILL OPEN -- `_data/students.yml` lines 5 and 12 still say "Incoming Ph.D. Student." If they started Fall 2025, they are now enrolled PhD students as of April 2026 |
-| 8 | `$text-light` fails WCAG AA contrast | FIXED -- `_sass/_variables.scss` line 10 now defines `$text-light: #6b7280` (approx 4.6:1 ratio), with comment confirming WCAG AA compliance |
-| 9 | Photo appears before text on mobile | FIXED -- `_layouts/home.html` now uses `order-1` for text column, `order-2` for photo column, with `order-md` classes for desktop layout. Verified in rendered HTML: text is `col-md-8 order-1`, photo is `col-md-4 order-2`. Text appears first on all screen sizes. |
-| 10 | Amazon Science talk has no link | STILL OPEN -- `_data/service.yml` line 68 still has no URL. May be intentional (internal talk). |
-| 11 | Line-height inconsistency | PARTIALLY ADDRESSED -- profile bio now uses 1.7 line-height (was 1.75). Some secondary text still at 1.4-1.55 (pub entries, award descriptions, mentee topics). This is acceptable as a hierarchy choice. |
-| 12 | Footer omits CV and Semantic Scholar links | STILL OPEN -- footer has 5 icons vs header's 7. Likely intentional. |
+1. **Stale build: rendered HTML does not match source data.** Multiple discrepancies between `_data/*.yml` source files and `_site/*.html` output indicate the built site is stale. Specific examples:
+   - `_site/service/index.html:278` renders "US Naval Center Warfare Center, Carderock Division" but `_data/service.yml:87` says "Naval Surface Warfare Center, Carderock Division." The official name is Naval Surface Warfare Center, Carderock Division (NSWCCD).
+   - `_site/index.html:169` renders the dissertation award news as "(1 of 35 recipients)" but `_data/news.yml:26` says "selected from ~35 graduating PhD students." The rendered phrasing implies 35 winners; the source phrasing is correct.
+   - `_site/index.html:217` describes AQuA as "our data-centric benchmark for time series anomaly detection" but `_data/news.yml:50` correctly says "our benchmark for label quality assessment." AQuA is about label quality, not anomaly detection.
+   - `_site/index.html:15` canonical URL is `https://mononitogoswami.github.io/` but `_config.yml:4` says `url: "https://mononito.com"` and `CNAME` contains `mononito.com`.
+   **Fix:** Rebuild the site with `bundle exec jekyll build` and verify output matches source data before deploying.
 
-**Summary:** 7 of 12 nice-to-have/must-fix items from Round 5 are resolved. 5 remain open but are all judgment calls or minor.
+2. **Stale "Incoming" labels on mentorship page.** `_data/students.yml:5` and `_data/students.yml:12` list Malgorzata Gwiazda and Michal Wilinski as "Incoming Ph.D. Student, Robotics Institute." It is April 2026 -- CMU's fall semester started August 2025. These students have been enrolled for 8 months. Update to "Ph.D. Student, Robotics Institute" or verify their actual current status.
 
----
+3. **Canonical URL mismatch.** `_config.yml:4` says `url: "https://mononito.com"` and `CNAME` contains `mononito.com`, but the built site's canonical URL, og:url, og:image, twitter:image, and JSON-LD structured data all use `https://mononitogoswami.github.io/`. This likely means GitHub Pages overrode the URL during build. When deploying to the custom domain `mononito.com`, all canonical URLs must point to `mononito.com`. Build locally with the correct URL and verify, or ensure the GitHub Pages build environment respects the `_config.yml` URL. This directly affects SEO indexing and social media card previews.
+
+4. **Awards page is an orphan -- not in navbar.** `_data/navigation.yml` lists Research, Mentorship, Service but not Awards. The awards page at `/awards/` is reachable only via the "View all awards & honors" link on the homepage (`_site/index.html:501`). A visitor landing on `/awards/` from a search engine has no navbar indication of where they are. Either add Awards to the navigation or add a visible breadcrumb/back link on the awards page.
+
+5. **"Evaluation & Benchmarks" vs. "Evaluation Science" label mismatch between homepage and publications page.** The homepage selected publications section (visible in `_site/index.html:387`) uses the heading "Evaluation Science" (from `selected_theme` in `_data/publications.yml`), and the publications page (`_site/publications/index.html:254`) also uses "Evaluation Science" (from `theme`). However, per the Round 6 review notes in the previous critique, this was flagged as a mismatch in earlier rounds. Verify that both pages now show the same label in the current build. If the labels differ, pick one name and use it consistently across `selected_theme` and `theme` fields in `_data/publications.yml`.
+
+## Should-Fix (important but not blocking)
+
+1. **Homepage bio contains branding jargon.** `_pages/index.html:9` -- the phrase "what I think of as the *science of agents*" is a self-coined term that adds no information. A hiring manager will not know what it means. The preceding sentence ("Foundation models provide the reasoning backbone; rigorous evaluation provides the trust layer") already makes the point. Cut "what I think of as the *science of agents*."
+
+2. **First news item is 3 months in the future.** `_data/news.yml:1-2` -- the top news item is dated July 2026: "Organizing Foundation Models for Structured Data at ICML 2026 (Seoul). Submissions open -- send us your best work!" Having a future-dated item as the first thing visitors see is unusual and makes the site look either pre-populated or auto-generated. Consider gating future items (only show news where `date <= today`) or moving this below the already-happened items.
+
+3. **Important career milestones are hidden behind "Show more."** The first 5 visible news items are: ICML 2026 workshop (future), ICLR 2026 workshop, ICLR 2026 paper, Chronos-2, ICML 2025 workshop. The PhD defense with Distinguished Dissertation Award (`_site/index.html:169`) and AWS hire (`_site/index.html:163`) are hidden. These are the two most impactful career events for a recruiter or prospective student. Consider increasing the default visible count from 5 to 8, or reordering to surface milestones.
+
+4. **SpIDER leads the "Agents" section on homepage and publications page, but Mononito is 3rd author.** `_data/publications.yml:124` -- SpIDER is a preprint where Mononito is 3rd of 6 authors. Leading with it in the selected publications on the homepage dilutes the signal compared to first-author or more established work. TimeSeriesGym (3rd author but with a released codebase and benchmark) or omitting SpIDER from selected pubs would be stronger.
+
+5. **Chronos-2 absent from homepage selected publications despite 11M downloads.** `_data/publications.yml:46` has `selected: false`. The news section prominently mentions 11M downloads (`_data/news.yml:11`). Including Chronos-2 as a selected paper under Foundation Models would strengthen the homepage, even with a middle-author position, because the scale of impact is exceptional.
+
+6. **Publications page claims "Selected from 40+ publications."** `_site/publications/index.html:84` -- the page actually lists 14 papers. The 40+ claim should be verifiable against Google Scholar. If accurate, the gap is large. If not accurate, it is a factual error.
+
+7. **No /cv/ page -- navigating to /cv/ returns 404.** The CV link in the social bar points to `/cv.pdf` (direct download, file exists). But if someone types or follows a link to `/cv/`, they get a 404. Either create a redirect page or accept this as a known gap.
+
+8. **NeurIPS venue_full is inconsistent.** `_data/service.yml:9` says `venue_full: "Neural Information Processing Systems"` but the standard name is "Conference on Neural Information Processing Systems." The publications data (`_data/publications.yml:77`) uses "Neural Information Processing Systems (NeurIPS), 2023" which also drops "Conference on." Minor inconsistency but worth standardizing.
+
+## Nice-to-Have
+
+1. **Design: `section-heading-accent` mixin adds decorative blue underline.** `_sass/_variables.scss:50-66` -- the `::after` pseudo-element draws a blue 2px accent line under each h2. Sites like jonbarron.info and leonidk.com use no colored decorations on headings. Removing the `::after` accent and keeping only `border-bottom` would better match the minimal target.
+
+2. **Design: service cards have borders, rounded corners, and hover shadows.** `_sass/_pages.scss:322-334` -- workshop organization cards use `border: 1px solid`, `border-radius: $radius-md`, and hover `box-shadow: $shadow-sm`. This is more Material Design than Barron-minimal. A simpler approach: list workshops like the reviewing section, using only typography and whitespace.
+
+3. **Design: award years and award-major-year use blue (`$primary`).** `_sass/_homepage.scss:249` and `_sass/_pages.scss:59` -- colored year labels add visual noise. Barron-style sites use a single text color with bold/regular weight for hierarchy. Consider using `$text-muted` or `$text-color` for years.
+
+4. **Design: pub-theme-nav pills with colored active state.** `_sass/_publications.scss:52-76` -- the sticky theme nav uses pill-shaped links with blue active background. Simpler alternative: text links with bold or underline for active state.
+
+5. **Design: teal stat badges on service cards.** `_sass/_pages.scss:373-381` -- `service-card-stat` uses `$accent` teal on `$accent-light` background. This introduces a second brand color used only here and in `mentee-now` (`_sass/_pages.scss:258`). A single-accent palette would be cleaner.
+
+6. **Design: talk group border-left hover transitions to `$primary`.** `_sass/_pages.scss:410-414` -- the left border jumps from light gray to blue on hover. This decorative hover effect is unnecessary for a static reference page.
+
+7. **Design: footer social links have circle hover backgrounds; homepage social links do not.** `_sass/_footer.scss:30-33` adds `background-color: $primary-light` on hover, while `_sass/_homepage.scss:46-53` only changes color. Removing the footer background would make both consistent.
+
+8. **Design: homepage pub-description color.** `_sass/_homepage.scss:155` uses `color: $text-muted` (confirmed from the stylesheet). The equivalent on the publications page (`_sass/_publications.scss:125`) also uses `$text-muted`. Verify these match -- earlier review rounds flagged a discrepancy where the homepage used `$text-color`.
+
+9. **Google Fonts loads full weight range 300-900.** `_site/index.html:34` loads `wght@0,300..900;1,300..900`. The site only uses weights 500, 600, and 700. Requesting `wght@500;600;700` would reduce font payload.
+
+10. **Consider showing 8 news items by default instead of 5.** The PhD defense, AWS hire, and TimeSeriesGym release are all hidden behind "Show more." Increasing the visible count would surface the most impactful career events.
+
+11. **Mentorship intro uses `$text-muted` for primary content.** `_sass/_pages.scss:179` -- the mentorship intro paragraph is the first thing a visitor reads on the page, but its gray color (`#64748b`) makes it feel like a subtitle. The homepage bio uses `$text-color` (`#1e293b`). For consistency and readability, the mentorship intro should match.
+
+12. **Mentee topic text is italic at 0.87rem.** `_sass/_pages.scss:254` -- the topic line ("what did this person work on?") is the most interesting content on each mentee card. Italic at 0.87rem reduces its prominence. Consider removing `font-style: italic` or increasing to 0.9rem.
 
 ## Page Ratings
 
-| Page | Score | Change from R5 |
-|------|-------|-----------------|
-| Homepage (`/`) | 9/10 | +0.5 (broken link fixed, mobile photo order fixed) |
-| Publications (`/publications/`) | 9/10 | +1.5 (sorting fixed, clean thematic grouping) |
-| Awards (`/awards/`) | 8.5/10 | +0.5 (empty href fixed) |
-| Mentorship (`/mentorship/`) | 8.5/10 | -- (unchanged) |
-| Service (`/service/`) | 8/10 | -- (unchanged) |
+| Page | Designer | Recruiter | Notes |
+|------|----------|-----------|-------|
+| Homepage (/) | 8/10 | 8/10 | Clean layout, strong bio, good news section. Minor: blue accents, "science of agents" phrase, career milestones hidden by default, future-dated news on top. |
+| Publications (/publications/) | 8/10 | 7/10 | Well-organized by theme. Sticky nav is useful. SpIDER leads Agents section as 3rd-author preprint. "40+" claim needs verification. |
+| Awards (/awards/) | 7/10 | 7/10 | Good content. Card hover effects and blue accents drift from minimal aesthetic. Not in navbar -- orphan page. |
+| Mentorship (/mentorship/) | 7/10 | 8/10 | Strong mentorship record. Stale "Incoming" labels are the main issue. Good outcomes listed for past mentees. |
+| Service (/service/) | 7/10 | 7/10 | Workshop cards are visually heavier than needed. Talk grouping by topic is effective. Stale build shows wrong venue name. |
+| CV (/cv/) | N/A | 5/10 | Page does not exist. PDF download works via social icon but requires knowing to click the icon. |
 
----
+## Designer Critique
 
-## NEW MUST FIX
+### Homepage (/)
 
-### 1. Homepage "Evaluation & Benchmarks" label vs publications page "Evaluation Science" label
+The two-column layout (bio left, photo right) with 960px container is standard and well-executed. Source Sans 3 is a clean choice for an academic site.
 
-The homepage selected publications section (`_layouts/home.html` line 36) hard-codes the theme list as:
+**What works:**
+- Profile photo at max-width 280px with rounded corners is proportionate.
+- News section with date/text columns is scannable. The show/hide toggle keeps the page focused.
+- Selected publications grouped by theme with compact entries are dense but readable.
+- Social icon bar below the bio is unobtrusive.
+- Mobile: text appears before photo via `order-1`/`order-2` classes. News items stack date above text below 575px. No horizontal overflow.
 
-```
-"Agents,Foundation Models,Evaluation & Benchmarks"
-```
+**Issues:**
+- `_sass/_variables.scss:57-65`: The `section-heading-accent` mixin's `::after` blue bar is a decorative element that the reference sites (jonbarron.info, leonidk.com) avoid.
+- `_sass/_homepage.scss:144-151`: Theme sub-headings at 0.78rem uppercase with letter-spacing are small. On some screens this may be hard to read.
+- `_sass/_homepage.scss:249`: Blue year in award items is unnecessary color.
+- Line-height at 1.7 globally (`_sass/_variables.scss:25`) is generous for body text but makes the publications section feel loose. The publication entries use tighter 1.4 line-height which creates an inconsistency.
 
-This uses `selected_theme` from `_data/publications.yml`, where the evaluation papers have `selected_theme: "Evaluation & Benchmarks"`.
+### Publications (/publications/)
 
-The publications page (`_pages/publications.html` line 14) uses the `theme` field:
+- Sticky theme nav with pill links, scroll-spy, and horizontal scroll fade is technically well-done. Visually, the pills are heavier than needed -- compare to jonbarron.info which uses no sub-navigation at all.
+- Publication entries are compact: title (600 weight), authors, venue (600 weight), description (muted), links. The information density is appropriate.
+- Badge styling uses three colors (amber, green, blue) for Spotlight, Best Paper, and Oral. Reference sites use plain text labels or no badges at all.
+- The page lists 14 papers grouped into 4 themes. Each theme has 2-7 papers. The Healthcare & Education section (7 papers) is the longest and includes work from 2020-2024.
 
-```
-"Agents,Foundation Models,Evaluation Science,Healthcare & Education"
-```
+### Awards (/awards/)
 
-So the same group of papers is labeled "Evaluation & Benchmarks" on the homepage and "Evaluation Science" on the publications page. A visitor who reads both sees two different names for the same research area.
+- Major award cards with left-border hover (`_sass/_pages.scss:36-42`) and paper award cards with background hover (`_sass/_pages.scss:110-112`) add interactivity that a static reference page does not need.
+- The description text indented to 4.25rem (`_sass/_pages.scss:95`) aligns with the content after the year column. Good alignment.
+- The page uses two distinct card styles (major vs. paper awards). This creates visual variety but also inconsistency.
 
-**Fix:** Pick one label and use it in both places. Either:
-- Change `_layouts/home.html` line 36 to use `"Evaluation Science"` and update `selected_theme` values in `_data/publications.yml` to match, OR
-- Change `_pages/publications.html` line 14 theme name from `"Evaluation Science"` to `"Evaluation & Benchmarks"` and update `theme` values
+### Mentorship (/mentorship/)
 
-### 2. Homepage `pub-description` color breaks visual hierarchy
+- Card layout for mentees with name-years on a flex row is clean. Hover background is subtle (rgba primary at 0.02).
+- The teal "Now:" line (`_sass/_pages.scss:258`) is the only teal on this page. Using a neutral color would be more consistent.
+- Mobile stacking at 575px for mentee headers works correctly.
 
-**File:** `_sass/_homepage.scss` line 155
+### Service (/service/)
 
-```scss
-.pub-description {
-  font-size: 0.85rem;
-  color: $text-color;  // #1e293b — same as title and authors
-```
+- Workshop cards are the heaviest visual elements on the entire site: `border: 1px solid`, `border-radius`, hover `box-shadow`, teal stat badge, blue pill link. This page looks like it belongs to a different site than the homepage.
+- Talk grouping by topic with left border is an effective organizational device but the hover color change is unnecessary.
+- Reviewing list is the cleanest section -- simple text with no decoration. This should be the model for the other sections.
 
-On the publications page, the equivalent class `.pub-entry-description` uses `color: $text-muted` (`_sass/_publications.scss` line 125). The homepage descriptions have the same visual weight as titles, making them compete for attention instead of serving as supporting text.
+## Recruiter/Student Critique
 
-**Fix:** Change `_sass/_homepage.scss` line 155 to:
-```scss
-  color: $text-muted;
-```
+### 10-Second Impact Test
 
----
+The homepage passes. First paragraph: Applied Scientist at Amazon, AWS DevOps Agent. Second paragraph: MOMENT (ICML 2024, 2.5M+ downloads), three specific evaluation papers cited by name. Third paragraph: PhD in Robotics at CMU, Artur Dubrawski (linked), Distinguished Dissertation Award, Google Research, AWS AI Labs. Role, product, research impact, credentials, and advisor -- all within 3 paragraphs.
 
-## NEW NICE TO HAVE
+### Bio Quality
 
-### 3. Mentorship intro text uses `$text-muted` while it is primary content
-
-**File:** `_sass/_pages.scss` line 179
-
-```scss
-.mentorship-intro {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: $text-muted;
-```
-
-The mentorship intro paragraph is the main content a visitor reads first on the page. Using `$text-muted` (#64748b) makes it feel like a subtitle or caption. The homepage bio paragraph uses `$text-color` (#1e293b). For consistency and readability, the mentorship intro should also use `$text-color`.
-
-### 4. Mentee topic italic at small size
-
-**File:** `_sass/_pages.scss` line 254
-
-```scss
-.mentee-topic {
-  font-size: 0.87rem;
-  color: $text-color;
-  font-style: italic;
-```
-
-The topic is the most interesting line for a reader scanning mentee cards ("what did this person work on?"). Italic at 0.87rem is small and low-contrast against normal-weight text. Consider removing `font-style: italic` or bumping to `0.9rem`.
-
-### 5. Footer social links have circle hover backgrounds; homepage social links do not
-
-**File:** `_sass/_footer.scss` lines 30-33
-
-```scss
-&:hover {
-  color: $primary;
-  background-color: $primary-light;  // circle background appears on hover
-}
-```
-
-The homepage social links (`_sass/_homepage.scss` lines 46-53) only change color on hover with no background. Per the design intent of "plain icons, no circle backgrounds," the footer hover background creates an inconsistency. Removing `background-color: $primary-light` from `_sass/_footer.scss` line 33 would make both consistent.
-
-### 6. "Incoming Ph.D. Student" labels are likely stale
-
-**File:** `_data/students.yml` lines 5 and 12
-
-Both current mentees are labeled "Incoming Ph.D. Student, Robotics Institute, Carnegie Mellon University." If they started Fall 2025, they have been enrolled for ~8 months and should be "Ph.D. Student" without the "Incoming" prefix.
-
-### 7. Single-venue talk group looks sparse
-
-**File:** `_data/service.yml` lines 67-69
-
-The "Introduction to DevOps, AWS Agentic AI" talk group has only one venue (Amazon Science, Apr 2025). The visual format -- a group heading with left border, followed by a single bullet -- allocates more chrome to the container than to the content. This will naturally resolve as more talks are given. No action needed now, but if the list stays at one item for a while, consider inlining it or merging it into a "Recent Talks" group.
-
-### 8. Talk group `border-left` hover transition
-
-**File:** `_sass/_pages.scss` lines 406-414
-
-The talk group left border transitions from `$border-color` (#e2e8f0) to `$primary` (#2563eb) on hover. The color jump is large. A subtler intermediate like `rgba($primary, 0.4)` would make the transition less jarring, but this is purely aesthetic preference.
-
-### 9. No mobile padding reduction for talk groups
-
-**File:** `_sass/_pages.scss` lines 406-415
-
-Talk groups use `padding: 1rem 1.25rem` with a 3px left border. On a 320px screen, the combined left inset (3px + 1.25rem = ~23px) is ~7% of viewport width. Adding a mobile breakpoint to reduce to `padding: 0.75rem` below 575px would give more room for text.
-
----
-
-## DESIGN REVIEW (Website Designer Lens)
-
-### What's Working Well
-
-1. **Container width (960px)** is appropriate for text-heavy academic content. Not too wide, not cramped.
-
-2. **Sticky navbar** with `backdrop-filter: blur(8px)` and scroll shadow is polished. The translucent background reads well against content underneath.
-
-3. **Sticky theme navigation** on the publications page is excellent UX. Pill-style links with scroll-spy highlighting, gradient fade hint for horizontal scroll on narrow screens, and `position: static` on mobile to save vertical space.
-
-4. **Workshop organization cards** on the service page are the strongest design element on the site. The teal stat badges (`$accent` + `$accent-light`) provide visual interest without being garish. The "Accepted Papers" pill link is functional and compact.
-
-5. **Section heading accent mixin** (`_sass/_variables.scss` lines 50-66) with the blue `::after` pseudo-element provides consistent visual anchoring on subpages. The homepage's simpler `section-heading` (no accent) creates an appropriate hierarchy distinction.
-
-6. **Typography hierarchy** is well-calibrated:
-   - Page titles: 1.5rem / 700 weight
-   - Section headings: 1.15-1.2rem / 700 weight
-   - Body: 1rem / 1.7 line-height
-   - Pub titles: 0.93rem / 600 weight
-   - Metadata: 0.82-0.87rem
-   - Links/badges: 0.75rem
-
-7. **Color palette** is restrained: `$primary` blue for links, `$text-color` warm dark slate for content, three tiers of gray text, `$accent` teal used only for placements and stats. Badge colors (amber spotlight, green best-paper, blue oral) are distinct.
-
-8. **Print styles** (`_sass/_base.scss` lines 99-111) hide navbar, footer, social links, and news toggle. Good for printing the publications page.
-
-### Observations
-
-- The `border-light` (#f1f5f9) separator between pub items, award cards, and news items is very subtle -- almost invisible on some monitors. This is intentional (Barron-style near-zero visual separation), but on a non-retina display it may look like no separator at all.
-
-- Source Sans 3 variable font with weight range 300-900 gives full flexibility but adds font file weight. The site only uses 500, 600, and 700 weights. Specifying `wght@500;600;700` in the Google Fonts URL instead of `300..900` would reduce load.
-
----
-
-## RECRUITER / HIRING MANAGER REVIEW
-
-### Impact Within 10 Seconds
-
-The homepage delivers. First paragraph: "I build AI agents... AWS DevOps Agent." Second paragraph: "MOMENT, ICML 2024, 2.5M+ downloads." Third paragraph: "Ph.D. in Robotics, Carnegie Mellon, Distinguished Dissertation Award." That is role, product, research impact, and credentials in three short paragraphs.
+Direct and specific. Two flags:
+- "what I think of as the *science of agents*" -- this is the only phrase that reads like personal branding rather than description. A hiring manager scanning quickly will skip it because it is not a recognizable term of art. Cut it.
+- The second paragraph packs a lot of information. It names 5 specific papers/systems in one sentence. This is good for someone who wants to evaluate the work, but a skimmer might bounce off the density. The linking to specific papers helps.
 
 ### Publication Selection
 
-The homepage selected publications cover three themes with 7 papers:
-- **Agents (2):** SpIDER and TimeSeriesGym -- both preprints, which is the weakest section venue-wise but demonstrates the current industry research direction
-- **Foundation Models (2):** MOMENT (ICML 2024) and Representations paper (ICML 2025) -- two consecutive ICML papers, strong
-- **Evaluation & Benchmarks (3):** TimeSeriesExamAgent (ICLR 2026), AQuA (NeurIPS 2023), Unsupervised Model Selection (ICLR 2023 Spotlight) -- three top-venue papers spanning 3 years
+Seven selected papers across three themes:
+- **Agents:** SpIDER (preprint, 3rd author), TimeSeriesGym (preprint, 3rd author)
+- **Foundation Models:** Representations paper (ICML 2025, 2nd author), MOMENT (ICML 2024, 1st author)
+- **Evaluation Science:** TimeSeriesExamAgent (ICLR 2026, 3rd author), AQuA (NeurIPS 2023, 1st author), Model Selection (ICLR 2023 Spotlight, 1st author)
 
-Healthcare & Education papers are deliberately excluded from the homepage selection. This is the right call for someone positioned as an AI agents / foundation models researcher in industry. The full list is on the publications page for those who dig deeper.
+The Agents section is the weakest: two preprints, neither first-author. A hiring manager will notice. The Evaluation Science section is the strongest: three top-venue papers spanning 2023-2026 with first-author representation. MOMENT is the flagship paper with clear impact metrics.
 
-### News: Momentum Story
+Missing from selected: Chronos-2 (11M downloads, Amazon collaboration) would strengthen Foundation Models and signal industry-scale impact. JoLT (Best Student Abstract at AAAI) could add breadth. Counterfactual Phenotyping at KDD is a strong venue paper that is currently not selected.
 
-The visible 5 items (Jul 2026 to Oct 2025) show: workshop organizing at two top venues, ICLR 2026 acceptance, Chronos-2 with 11M downloads, and ICML workshop success. Expanding reveals the full arc from PhD start (2020) through fellowship, internships, ICLR Spotlight, MOMENT release, Google Research, dissertation defense, to AWS. Clean trajectory.
+### News Momentum
 
-### What's Not Present (Noting, Not Prescribing)
+The news section tells an upward trajectory from PhD start (Aug 2020) through ICLR Spotlight, MOMENT at ICML, Google Research internship, PhD defense with Distinguished Dissertation, AWS hire, continued publishing at ICLR 2026, and workshop organizing. But the default 5 visible items focus on workshops and papers (Jul 2026 to Oct 2025). The career-defining events -- PhD defense, dissertation award, industry hire -- require clicking "Show more."
 
-- No citation count or h-index
-- No teaching section
-- No blog or technical writing
-- No patent information
+### Prospective Student View
 
-These are all reasonable omissions for the target audience (industry research hiring, potential collaborators, prospective mentees).
+The mentorship page is the strongest signal for prospective students:
+- 8 past mentees with concrete outcomes: 3 went to PhD programs (Georgia Tech, Cornell, CMU), 1 to ETH Zurich, 1 to Millennium, 1 to UPenn MD. These are strong placements.
+- Research topics are specific (not generic "machine learning").
+- The mentoring award from RISS adds credibility.
+- The intro paragraph ("I care about giving mentees real ownership of research questions and helping them build the judgment to tackle open problems independently") is direct and sets expectations.
 
----
+The stale "Incoming" labels undermine this otherwise strong page. A visiting student will notice the site has not been updated.
 
-## SUMMARY OF ALL OPEN ITEMS
+### What's Missing (Noting, Not Prescribing)
 
-**Must fix (2 items):**
+- No citation count or h-index anywhere on the site.
+- No teaching record.
+- No blog or technical writing.
+- No patent information.
+- No explicit "I am hiring / looking for students" statement (the mentorship intro implies openness but does not state it directly).
 
-| # | Issue | File(s) |
-|---|-------|---------|
-| 1 | "Evaluation & Benchmarks" vs "Evaluation Science" label mismatch | `_layouts/home.html:36`, `_pages/publications.html:14`, `_data/publications.yml` |
-| 2 | Homepage `pub-description` uses `$text-color` instead of `$text-muted` | `_sass/_homepage.scss:155` |
-
-**Nice to have (7 new + 2 carried from R5):**
-
-| # | Issue | File(s) |
-|---|-------|---------|
-| 3 | Mentorship intro uses `$text-muted` for primary content | `_sass/_pages.scss:179` |
-| 4 | Mentee topic italic at 0.87rem is small | `_sass/_pages.scss:254` |
-| 5 | Footer hover has circle background; homepage social links do not | `_sass/_footer.scss:33` |
-| 6 | "Incoming Ph.D. Student" labels likely stale | `_data/students.yml:5,12` |
-| 7 | Single-venue talk group looks sparse | `_data/service.yml:67-69` |
-| 8 | Talk group left-border hover transition is abrupt | `_sass/_pages.scss:413` |
-| 9 | No mobile padding reduction for talk groups | `_sass/_pages.scss:406-415` |
-| R5-5 | Chronos-2 not selected (likely intentional) | `_data/publications.yml:46` |
-| R5-12 | Footer omits CV and Semantic Scholar links (likely intentional) | `_includes/footer.html` |
+These are all reasonable omissions for someone in an industry research role. The mentorship page's "reach out" link partially addresses the last point.

@@ -1,6 +1,8 @@
 main:
   - title: "Research"
     url: /publications/
+  - title: "Awards"
+    url: /awards/
   - title: "Mentorship"
     url: /mentorship/
   - title: "Service"

@@ -23,7 +23,7 @@
   text: "Joined **Amazon Web Services** as an Applied Scientist, leading development of the [AWS DevOps Agent](https://aws.amazon.com/devops-agent/)."
 
 - date: 2025-05-15
-  text: "Defended my **Ph.D.** at Carnegie Mellon and received the **Robotics Institute Distinguished Dissertation Award** (1 of 35 recipients)."
+  text: "Defended my **Ph.D.** at Carnegie Mellon and received the **Robotics Institute Distinguished Dissertation Award** (selected from ~35 graduating PhD students)."
 
 - date: 2025-05-01
   text: "[TimeSeriesGym](https://arxiv.org/abs/2505.13291) released -- a scalable benchmark for evaluating ML engineering agents."
@@ -47,7 +47,7 @@
   text: "[JoLT](https://ojs.aaai.org/index.php/AAAI/article/view/30423) won **Best Student Abstract** at **AAAI 2024**."
 
 - date: 2023-09-01
-  text: "[AQuA](https://arxiv.org/pdf/2306.09467.pdf), our data-centric benchmark for time series anomaly detection, accepted at **NeurIPS 2023** Datasets & Benchmarks."
+  text: "[AQuA](https://arxiv.org/pdf/2306.09467.pdf), our benchmark for label quality assessment, accepted at **NeurIPS 2023** Datasets & Benchmarks."
 
 - date: 2023-01-01
   text: "Our work on [unsupervised model selection for anomaly detection](https://arxiv.org/pdf/2210.01078.pdf) accepted as a **Spotlight** at **ICLR 2023**."

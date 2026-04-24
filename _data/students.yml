@@ -2,14 +2,14 @@
 
 current:
   - name: "Malgorzata Gwiazda"
-    role: "Incoming Ph.D. Student, Robotics Institute"
+    role: "Ph.D. Student, Robotics Institute"
     affiliation: "Carnegie Mellon University"
     topic: "Time series reasoning benchmarks and evaluation of foundation models"
     url: "https://www.linkedin.com/in/malgorzata-gwiazda-ab01a4330/"
     years: "2025 -- Present"
 
   - name: "Michal Wilinski"
-    role: "Incoming Ph.D. Student, Robotics Institute"
+    role: "Ph.D. Student, Robotics Institute"
     affiliation: "Carnegie Mellon University"
     topic: "Representations, interventions, and long-context modeling in time series foundation models"
     url: "https://michal-wilinski.com"
