@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<!-- Profile Section -->
+<section class="profile-section">
+  <div class="row align-items-center">
+    <div class="col-md-8 order-1">
+      <h1 class="profile-name">{{ site.author.name }}</h1>
+      <p class="profile-title">{{ site.author.bio }} &middot; {{ site.author.location }}</p>
+      <div class="profile-bio">
+        {{ content }}
+      </div>
+      {% include social-links.html %}
+    </div>
+    <div class="col-md-4 order-2 text-center mb-3 mb-md-0">
+      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-photo">
+    </div>
+  </div>
+</section>
+
+<!-- News Section -->
+{% if site.data.news.size > 0 %}
+<section class="news-section">
+  <h2 class="section-heading">News</h2>
+  {% include news.html limit=5 %}
+</section>
+{% endif %}
+
+<!-- Selected Publications — grouped by theme -->
+{% assign selected = site.data.publications | where: "selected", true %}
+{% if selected.size > 0 %}
+<section class="selected-pubs">
+  <h2 class="section-heading">Selected Publications</h2>
+
+  {% assign sel_themes = "Agents,Foundation Models,Evaluation Science" | split: "," %}
+  {% for sel_theme in sel_themes %}
+    {% assign theme_pubs = selected | where: "selected_theme", sel_theme | sort: "year" | reverse %}
+    {% if theme_pubs.size > 0 %}
+    <div class="selected-theme-group">
+      <h3 class="selected-theme-label">{{ sel_theme }}</h3>
+      {% for pub in theme_pubs %}
+      <div class="selected-pub-item">
+        <div class="pub-title">
+          {{ pub.title }}
+          {% include pub-badge.html badges=pub.badges %}
+        </div>
+        <div class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+        <div class="pub-venue">{{ pub.venue_full }}</div>
+        {% if pub.description %}
+        <div class="pub-description">{{ pub.description }}</div>
+        {% endif %}
+        {% if pub.links.size > 0 %}
+        <div class="pub-links">
+          {% for link in pub.links %}
+          <a href="{{ link.url }}" class="btn btn-outline-secondary btn-sm badge-venue" target="_blank" rel="noopener">{{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  <a href="{{ '/publications/' | relative_url }}" class="view-all-link">View all publications &rarr;</a>
+</section>
+{% endif %}
+
+<!-- Awards & Honors -->
+{% assign awards = site.data.awards | sort: "year" | reverse %}
+{% assign major_awards = awards | where: "type", "major" %}
+{% if awards.size > 0 %}
+<section class="awards-section">
+  <h2 class="section-heading">Awards & Honors</h2>
+  <ul class="award-list-compact">
+    {% for award in major_awards %}
+    <li class="award-item-compact">
+      <span class="award-year-compact">{{ award.year }}</span>
+      <span class="award-text-compact">
+        {% if award.url %}<a href="{{ award.url }}" target="_blank" rel="noopener"><strong>{{ award.title }}</strong></a>{% else %}<strong>{{ award.title }}</strong>{% endif %}
+        &mdash; {{ award.org }}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ '/awards/' | relative_url }}" class="view-all-link">View all awards & honors &rarr;</a>
+</section>
+{% endif %}

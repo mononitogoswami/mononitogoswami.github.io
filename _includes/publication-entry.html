@@ -1,0 +1,18 @@
+<div class="pub-entry">
+  <div class="pub-entry-title">
+    {{ include.pub.title }}
+    {% include pub-badge.html badges=include.pub.badges %}
+  </div>
+  <div class="pub-entry-authors">{{ include.pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+  <div class="pub-entry-venue">{{ include.pub.venue_full }}</div>
+  {% if include.pub.description %}
+  <div class="pub-entry-description">{{ include.pub.description }}</div>
+  {% endif %}
+  {% if include.pub.links.size > 0 %}
+  <div class="pub-entry-links">
+    {% for link in include.pub.links %}
+    <a href="{{ link.url }}" class="btn btn-outline-secondary btn-sm badge-venue" target="_blank" rel="noopener">{{ link.label }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

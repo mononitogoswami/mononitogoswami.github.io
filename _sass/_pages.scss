@@ -1,0 +1,511 @@
+// Generic page styles
+.page-content {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  color: $text-color;
+}
+
+// ============================================
+// Awards page
+// ============================================
+.awards-group {
+  margin-bottom: $section-spacing;
+}
+
+.awards-group-heading {
+  @include section-heading-accent;
+  font-size: 1.2rem;
+}
+
+// Major awards — card style with descriptions
+.awards-major-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.award-major-card {
+  padding: 1rem 1.25rem;
+  border-left: 3px solid transparent;
+  border-radius: $radius-sm;
+  transition: border-color $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    border-left-color: $primary;
+    background-color: rgba($primary, 0.02);
+  }
+
+  & + .award-major-card {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.award-major-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.award-major-year {
+  flex-shrink: 0;
+  width: 3.5rem;
+  color: $primary;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding-top: 0.15rem;
+}
+
+.award-major-info {
+  flex: 1;
+}
+
+.award-major-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: $text-color;
+  margin-bottom: 0.1rem;
+
+  a {
+    color: $primary;
+    font-weight: 600;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+.award-major-org {
+  font-size: 0.87rem;
+  color: $text-muted;
+}
+
+.award-major-description {
+  font-size: 0.87rem;
+  color: $text-muted;
+  line-height: 1.55;
+  margin-top: 0.4rem;
+  padding-left: 4.25rem;
+}
+
+// Paper awards — compact with paper links
+.awards-paper-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.award-paper-card {
+  padding: 0.85rem 1.25rem;
+  border-radius: $radius-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($primary, 0.02);
+  }
+
+  & + .award-paper-card {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.award-paper-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.award-paper-year {
+  flex-shrink: 0;
+  width: 3.5rem;
+  color: $primary;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding-top: 0.15rem;
+}
+
+.award-paper-info {
+  flex: 1;
+}
+
+.award-paper-title {
+  font-size: 0.93rem;
+  margin-bottom: 0.2rem;
+}
+
+.award-paper-badge {
+  font-weight: 600;
+  color: $text-color;
+}
+
+.award-paper-org {
+  color: $text-muted;
+}
+
+.award-paper-name {
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.15rem;
+
+  a {
+    color: $primary;
+    font-weight: 500;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+.award-paper-description {
+  font-size: 0.85rem;
+  color: $text-light;
+  line-height: 1.5;
+}
+
+// ============================================
+// Mentorship page
+// ============================================
+.mentorship-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: $text-muted;
+  margin-bottom: $section-spacing;
+}
+
+.student-section {
+  margin-bottom: $section-spacing;
+
+  h2 {
+    @include section-heading-accent;
+    font-size: 1.2rem;
+  }
+}
+
+// Card layout for mentees
+.mentee-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mentee-card {
+  padding: 0.9rem 1.1rem;
+  border-radius: $radius-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($primary, 0.02);
+  }
+
+  & + .mentee-card {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.mentee-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.15rem;
+}
+
+.mentee-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: $text-color;
+
+  a {
+    color: $primary;
+    font-weight: 600;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+.mentee-years {
+  font-size: 0.82rem;
+  color: $text-light;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.mentee-role {
+  font-size: 0.87rem;
+  color: $text-muted;
+  margin-bottom: 0.2rem;
+}
+
+.mentee-topic {
+  font-size: 0.87rem;
+  color: $text-color;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.mentee-now {
+  font-size: 0.84rem;
+  color: $accent;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+// Committee list
+.committee-list {
+  list-style: none;
+  padding: 0;
+}
+
+.committee-item {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.93rem;
+  border-radius: $radius-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($primary, 0.02);
+  }
+
+  & + .committee-item {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.committee-name {
+  font-weight: 600;
+  color: $text-color;
+
+  a {
+    color: $primary;
+    font-weight: 600;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+.committee-info {
+  color: $text-muted;
+  font-size: 0.88rem;
+}
+
+.committee-now {
+  color: $text-light;
+  font-size: 0.84rem;
+}
+
+// ============================================
+// Service page
+// ============================================
+.service-section {
+  margin-bottom: $section-spacing;
+
+  h2 {
+    @include section-heading-accent;
+    font-size: 1.2rem;
+  }
+}
+
+// Card-style for organizing section (workshop organization is notable)
+.service-card {
+  padding: 1rem 1.25rem;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  margin-bottom: 0.75rem;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    border-color: rgba($primary, 0.3);
+    box-shadow: $shadow-sm;
+  }
+}
+
+.service-card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+  color: $text-color;
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+.service-card-venue {
+  font-size: 0.85rem;
+  color: $text-muted;
+  margin-bottom: 0.35rem;
+}
+
+.service-card-description {
+  font-size: 0.87rem;
+  color: $text-muted;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.service-card-stat {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $accent;
+  background-color: $accent-light;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+}
+
+.service-card-papers-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $primary;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid rgba($primary, 0.25);
+  border-radius: 999px;
+  transition: background-color $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    background-color: $primary-light;
+    border-color: rgba($primary, 0.4);
+    text-decoration: none;
+  }
+}
+
+.service-card-meta {
+  font-size: 0.85rem;
+  color: $text-muted;
+}
+
+// Talk group styling (grouped by topic)
+.talk-group {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid $border-color;
+  border-radius: 0 $radius-sm $radius-sm 0;
+  transition: border-left-color $transition-fast;
+
+  &:hover {
+    border-left-color: $primary;
+  }
+}
+
+.talk-group-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: $text-color;
+}
+
+.talk-venue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talk-venue-item {
+  font-size: 0.87rem;
+  color: $text-muted;
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $border-color;
+    flex-shrink: 0;
+    position: relative;
+    top: -0.1em;
+  }
+
+  a {
+    color: $primary;
+    font-weight: 500;
+    font-size: 0.87rem;
+  }
+}
+
+.talk-venue-date {
+  color: $text-light;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+// Panels and reviewing - simple list items
+.service-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-item {
+  padding: 0.65rem 1rem;
+  font-size: 0.93rem;
+  border-radius: $radius-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($primary, 0.02);
+  }
+
+  & + .service-item {
+    border-top: 1px solid $border-light;
+  }
+}
+
+// ============================================
+// Mobile responsive stacking for flex layouts
+// ============================================
+@media (max-width: 575px) {
+  .mentee-header {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .mentee-years {
+    margin-left: 0;
+  }
+
+  .award-major-header,
+  .award-paper-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .award-major-year,
+  .award-paper-year {
+    width: auto;
+  }
+
+  .award-major-description {
+    padding-left: 0;
+  }
+}

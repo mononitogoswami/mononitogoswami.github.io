@@ -1,0 +1,126 @@
+reviewing:
+  - venue: "ICML"
+    venue_full: "International Conference on Machine Learning"
+    years: [2026, 2025, 2024]
+  - venue: "ICLR"
+    venue_full: "International Conference on Learning Representations"
+    years: [2026, 2025, 2024]
+  - venue: "NeurIPS"
+    venue_full: "Neural Information Processing Systems"
+    years: [2025, 2024, 2023]
+  - venue: "AAAI"
+    venue_full: "AAAI Conference on Artificial Intelligence"
+    years: [2025, 2024]
+  - venue: "KDD"
+    venue_full: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+    years: [2024, 2023]
+
+organizing:
+  - event: "ICLR Workshop on Time Series in the Age of Large Models"
+    venue: "ICLR"
+    year: 2026
+    url: "https://tsalm-workshop.github.io/"
+    venue_full: "International Conference on Learning Representations (ICLR), 2026"
+    description: "Prediction, reasoning, interpretability, and evaluation of time series foundation models."
+    stats: "75 accepted papers"
+    papers_url: "https://tsalm-workshop.github.io/accepted-papers/"
+
+  - event: "ICML Workshop on Foundation Models for Structured Data"
+    venue: "ICML"
+    year: 2026
+    url: "https://icml-structured-fm-workshop.github.io/"
+    venue_full: "International Conference on Machine Learning (ICML), 2026"
+    description: "Foundation models for tabular and time-series data: pretraining, evaluation, and deployment."
+    stats: "2nd edition"
+    papers_url: "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMSD"
+
+  - event: "ICML Workshop on Foundation Models for Structured Data"
+    venue: "ICML"
+    year: 2025
+    url: "https://icml-structured-fm-workshop.github.io/2025/"
+    venue_full: "International Conference on Machine Learning (ICML), 2025"
+    description: "Inaugural edition. Foundation models for tabular and time-series data."
+    stats: "99 submissions, 70 accepted papers, 500+ attendees"
+    papers_url: "https://icml-structured-fm-workshop.github.io/2025/accepted-papers/"
+
+  - event: "AAAI Spring Symposium on Clinical Foundation Models"
+    venue: "AAAI"
+    year: 2024
+    url: "https://clinicalfoundationmodels.github.io/"
+    venue_full: "AAAI Conference on Artificial Intelligence (AAAI), 2024"
+    description: "Foundation models for clinical applications: imaging, disease prediction, and clinical text."
+    stats: "32 accepted papers"
+    papers_url: "https://openreview.net/group?id=AAAI.org/2024/Spring_Symposium_Series/Clinical_FMs"
+
+panels:
+  - title: "Breaking Into Industry"
+    venue: "ICML 2025 Social"
+    date: 2025-07-15
+    url: "https://icml.cc/virtual/2025/49692"
+
+  - title: "Foundation Models for Time Series for Financial Applications"
+    venue: "ICAIF 2024 FM4TS Workshop"
+    date: 2024-11-15
+    url: "https://sites.google.com/view/fm4ts/home"
+
+talks:
+  - title: "Introduction to DevOps, AWS Agentic AI"
+    venue: "Amazon Science"
+    date: 2025-04-15
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "Datadog"
+    date: 2024-11-15
+    url: "https://www.datadoghq.com/"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "Salesforce Research Asia"
+    date: 2024-11-01
+    url: "https://www.salesforceairesearch.com/research"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "Commonwealth Bank of Australia"
+    date: 2024-10-15
+    url: "https://www.commbank.com.au/"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "US Naval Center Warfare Center, Carderock Division"
+    date: 2024-09-15
+    url: "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "Forecasting Impact Podcast, International Symposium of Forecasting"
+    date: 2024-07-15
+    url: "https://forecasters.org/publications/forecasting-impact-podcast/"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "Prof. Xiao Hu's Lab, Emory University"
+    date: 2024-04-20
+    url: "https://www.nursing.emory.edu/faculty-staff/xiao-hu"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "CMU Flame Seminar"
+    date: 2024-04-15
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "Gradient AI"
+    date: 2024-04-10
+    extra_url: "https://streamyard.com/watch/8iV7gy8fWKN5"
+    extra_label: "Webinar"
+
+  - title: "Time Series Foundation Models -- Challenges, Approaches, and Opportunities"
+    venue: "AAAI 2024 Spring Symposium on Clinical Foundation Models"
+    date: 2024-03-15
+    url: "https://clinicalfoundationmodels.github.io/"
+
+  - title: "Why, What, and How of Graduate School Applications"
+    venue: "Auton Lab RISS Interns"
+    date: 2023-06-15
+
+  - title: "Why, What, and How of Graduate School Applications"
+    venue: "RI Climate Committee Webinar"
+    date: 2022-10-15
+
+  - title: "Why, What, and How of Graduate School Applications"
+    venue: "Auton Lab RISS Interns"
+    date: 2022-06-15

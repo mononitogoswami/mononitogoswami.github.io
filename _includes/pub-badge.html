@@ -1,0 +1,13 @@
+{% for badge in include.badges %}
+  {% if badge == "Spotlight" %}
+    <span class="pub-badge spotlight">Spotlight</span>
+  {% elsif badge == "Best Paper" or badge == "Best Paper Honorable Mention" %}
+    <span class="pub-badge best-paper">{{ badge }}</span>
+  {% elsif badge == "Oral" %}
+    <span class="pub-badge oral">Oral</span>
+  {% elsif badge == "Best Student Abstract" %}
+    <span class="pub-badge best-paper">{{ badge }}</span>
+  {% else %}
+    <span class="pub-badge spotlight">{{ badge }}</span>
+  {% endif %}
+{% endfor %}

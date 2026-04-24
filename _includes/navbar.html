@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        {% for item in site.data.navigation.main %}
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

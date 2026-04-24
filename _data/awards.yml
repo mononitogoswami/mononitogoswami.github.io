@@ -1,0 +1,59 @@
+# ============================================
+# Major Awards & Honors
+# ============================================
+
+- title: "RISS Outstanding Graduate Student Mentor and Engagement Award"
+  org: "Carnegie Mellon University, Robotics Institute Graduate Student Awards"
+  year: 2025
+  type: "major"
+  description: "Selected from ~150 graduate student mentors in the RISS program."
+  url: "https://riss.ri.cmu.edu/"
+
+- title: "Robotics Institute Distinguished Dissertation Award"
+  org: "Carnegie Mellon University, Robotics Institute Graduate Student Awards"
+  year: 2025
+  type: "major"
+  description: "Selected from ~35 graduating PhD students in the Robotics Institute."
+
+- title: "Center for Machine Learning and Health (CMLH) Fellowship"
+  org: "Carnegie Mellon University"
+  year: 2021
+  type: "major"
+  description: "Competitive fellowship for PhD students in digital health. CMLH has awarded 82 fellowships total across all years, with cohorts of ~7 fellows per themed cycle."
+  url: "https://www.cs.cmu.edu/cmlh/"
+
+# ============================================
+# Paper Awards
+# ============================================
+
+- title: "Best Paper Honorable Mention"
+  org: "ICAIF 2024, Foundation Models for Time Series Workshop"
+  year: 2024
+  type: "paper"
+  description: "Recognized among top workshop submissions at ICAIF 2024."
+  paper: "TimeSeriesExam: A Time Series Understanding Exam"
+  paper_url: "https://arxiv.org/abs/2410.14752"
+
+- title: "Spotlight Paper"
+  org: "NeurIPS 2024 Workshop on Time Series in the Age of Large Models"
+  year: 2024
+  type: "paper"
+  description: "Selected for spotlight presentation among 75 accepted papers."
+  paper: "Towards Long-Context Time Series Foundation Models"
+  paper_url: "https://arxiv.org/abs/2409.13530"
+
+- title: "Best Student Abstract Presentation Award"
+  org: "AAAI Conference on Artificial Intelligence"
+  year: 2024
+  type: "paper"
+  description: "Best presentation among student abstract submissions at AAAI 2024."
+  paper: "JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-Series Interpretation"
+  paper_url: "https://ojs.aaai.org/index.php/AAAI/article/view/30423/32496"
+
+- title: "Spotlight Paper"
+  org: "International Conference on Learning Representations (ICLR)"
+  year: 2023
+  type: "paper"
+  description: "Top ~5% of accepted papers at ICLR 2023."
+  paper: "Unsupervised Model Selection for Time-series Anomaly Detection"
+  paper_url: "https://arxiv.org/abs/2210.01078"

@@ -1,0 +1,65 @@
+.navbar {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid $border-color;
+  background-color: rgba($bg-color, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: box-shadow $transition-base;
+
+  &.scrolled {
+    box-shadow: $shadow-sm;
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: $text-color;
+    letter-spacing: -0.01em;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+
+  .nav-link {
+    color: $text-muted;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border-radius: $radius-sm;
+    transition: color $transition-fast, background-color $transition-fast;
+
+    &:hover {
+      color: $text-color;
+      background-color: $bg-section;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  .navbar-toggler {
+    border: 1px solid $border-color;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    border-radius: $radius-sm;
+    transition: border-color $transition-fast;
+
+    &:hover {
+      border-color: $text-muted;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($primary, 0.15);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+---
+layout: page
+title: "Research & Publications"
+permalink: /publications/
+---
+
+<p class="publications-intro">
+  Selected from 40+ publications at ICML, ICLR, NeurIPS, AAAI, KDD, and other venues.
+  Full list on
+  <a href="{{ site.author.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> and
+  <a href="{{ site.author.semantic_scholar }}" target="_blank" rel="noopener">Semantic Scholar</a>.
+</p>
+
+{% assign themes = "Agents,Foundation Models,Evaluation Science,Healthcare & Education" | split: "," %}
+
+<!-- Sticky theme navigation -->
+<nav class="pub-theme-nav" aria-label="Research themes">
+  <ul class="pub-theme-nav-list">
+    {% for theme in themes %}
+    {% assign theme_id = theme | slugify %}
+    <li class="pub-theme-nav-item">
+      <a href="#{{ theme_id }}" class="pub-theme-nav-link">{{ theme }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<div class="publications-page">
+  {% for theme in themes %}
+  {% assign theme_id = theme | slugify %}
+  <div class="pub-theme-section" id="{{ theme_id }}">
+    <h2 class="pub-theme-heading">{{ theme }}</h2>
+    {% assign pubs = site.data.publications | where: "theme", theme | sort: "year" | reverse %}
+    {% for pub in pubs %}
+      {% include publication-entry.html pub=pub %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+// Highlight active theme nav link on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.querySelectorAll('.pub-theme-nav-link');
+  var sections = document.querySelectorAll('.pub-theme-section');
+
+  function updateActiveLink() {
+    var scrollPos = window.scrollY + 200;
+    var activeId = '';
+
+    sections.forEach(function(section) {
+      if (section.offsetTop <= scrollPos) {
+        activeId = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + activeId) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
+});
+</script>

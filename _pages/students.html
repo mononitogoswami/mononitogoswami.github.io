@@ -1,0 +1,64 @@
+---
+layout: page
+title: "Mentorship"
+permalink: /mentorship/
+---
+
+<p class="mentorship-intro">
+  I work closely with students at all levels &mdash; undergraduates, master's, and doctoral students &mdash; on problems in foundation models, evaluation science, and agents for real-world decision-making. I care about giving mentees real ownership of research questions and helping them build the judgment to tackle open problems independently. If you're interested in working together, <a href="mailto:{{ site.author.email }}">reach out</a>.
+</p>
+
+{% assign current = site.data.students.current %}
+{% assign past = site.data.students.past %}
+{% assign committees = site.data.students.committees %}
+
+{% if current.size > 0 %}
+<div class="student-section">
+  <h2>Current Mentees</h2>
+  <div class="mentee-cards">
+    {% for student in current %}
+    <div class="mentee-card">
+      <div class="mentee-header">
+        <span class="mentee-name">{% if student.url %}<a href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</span>
+        <span class="mentee-years">{{ student.years | replace: ' -- ', ' &ndash; ' }}</span>
+      </div>
+      <div class="mentee-role">{{ student.role }}, {{ student.affiliation }}</div>
+      {% if student.topic %}<div class="mentee-topic">{{ student.topic }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if past.size > 0 %}
+<div class="student-section">
+  <h2>Past Mentees</h2>
+  <div class="mentee-cards">
+    {% for student in past %}
+    <div class="mentee-card">
+      <div class="mentee-header">
+        <span class="mentee-name">{% if student.url %}<a href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</span>
+        <span class="mentee-years">{{ student.years | replace: ' -- ', ' &ndash; ' }}</span>
+      </div>
+      <div class="mentee-role">{{ student.role }}, {{ student.affiliation }}</div>
+      {% if student.topic %}<div class="mentee-topic">{{ student.topic }}</div>{% endif %}
+      {% if student.now %}<div class="mentee-now">Now: {{ student.now }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if committees.size > 0 %}
+<div class="student-section">
+  <h2>Committee Service</h2>
+  <ul class="committee-list">
+    {% for member in committees %}
+    <li class="committee-item">
+      <span class="committee-name">{% if member.url %}<a href="{{ member.url }}" target="_blank" rel="noopener">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</span>
+      <span class="committee-info">&mdash; {{ member.degree }}, {{ member.department }}, {{ member.institution }}{% if member.now %} <span class="committee-now">(now {{ member.now }})</span>{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

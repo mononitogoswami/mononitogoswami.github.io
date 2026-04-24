@@ -1,0 +1,279 @@
+// Profile section
+.profile-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: $radius-lg;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  letter-spacing: -0.02em;
+}
+
+.profile-title {
+  font-size: 0.95rem;
+  color: $text-muted;
+  margin-bottom: 0.5rem;
+}
+
+.profile-bio {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+
+  p {
+    margin-bottom: 0.65rem;
+  }
+}
+
+// Social / quick links bar
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+
+  a {
+    color: $text-muted;
+    font-size: 1.05rem;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+// News section
+.news-section {
+  padding: 1.25rem 0;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-bottom: 1px solid $border-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: $news-date-width;
+  color: $text-muted;
+  font-size: 0.82rem;
+  padding-top: 0.1rem;
+}
+
+.news-text {
+  flex: 1;
+  color: $text-color;
+}
+
+// Stack news items on narrow screens
+@media (max-width: 575px) {
+  .news-item {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .news-date {
+    width: auto;
+  }
+}
+
+.news-hidden {
+  display: none;
+
+  &.news-show {
+    display: flex;
+  }
+}
+
+.news-toggle {
+  background: none;
+  border: none;
+  color: $primary;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0 0 0;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $primary-dark;
+    text-decoration: underline;
+  }
+}
+
+// Selected publications on homepage
+.selected-pubs {
+  padding: 1.25rem 0;
+}
+
+.selected-theme-group {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.selected-theme-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $text-light;
+  margin-bottom: 0.25rem;
+  padding-left: 0;
+}
+
+.pub-description {
+  font-size: 0.85rem;
+  color: $text-muted;
+  line-height: 1.5;
+  margin-bottom: 0.15rem;
+}
+
+.selected-pub-item {
+  margin-bottom: 0;
+  padding: 0.3rem 0;
+
+  & + .selected-pub-item {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 0.93rem;
+  margin-bottom: 0;
+  color: $text-color;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-size: 0.85rem;
+  color: $text-color;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.pub-venue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 0.1rem;
+  line-height: 1.4;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  a {
+    font-size: 0.75rem;
+    color: $primary;
+    border-color: rgba($primary, 0.25);
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $primary-dark;
+      border-color: rgba($primary, 0.4);
+      text-decoration: none;
+    }
+  }
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: $primary;
+
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+// Awards section on homepage
+.awards-section {
+  padding: 1.25rem 0 $section-spacing;
+}
+
+.award-list-compact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.award-item-compact {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  & + .award-item-compact {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.award-year-compact {
+  flex-shrink: 0;
+  width: 3.5rem;
+  color: $primary;
+  font-weight: 700;
+  font-size: 0.84rem;
+  padding-top: 0.05rem;
+}
+
+.award-text-compact {
+  flex: 1;
+  color: $text-color;
+
+  strong {
+    font-weight: 600;
+  }
+
+  a {
+    color: $primary;
+    text-decoration: none;
+
+    strong {
+      color: $primary;
+    }
+
+    &:hover {
+      color: $primary-dark;
+
+      strong {
+        color: $primary-dark;
+      }
+    }
+  }
+}

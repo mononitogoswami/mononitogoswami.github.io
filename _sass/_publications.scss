@@ -1,0 +1,188 @@
+// Publications page
+
+.publications-page {
+  padding-top: 0.5rem;
+  padding-bottom: $section-spacing;
+}
+
+// Sticky theme navigation (table of contents)
+.pub-theme-nav {
+  position: sticky;
+  top: 4rem; // below the navbar
+  z-index: 100;
+  background-color: rgba($bg-color, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.85rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $border-color;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  // Fade gradient on right edge to hint at scrollability
+  mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+
+  // Hide scrollbar but keep functionality
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // Non-sticky on mobile to save vertical space
+  @media (max-width: 767px) {
+    position: static;
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+}
+
+.pub-theme-nav-list {
+  display: flex;
+  gap: 0.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pub-theme-nav-item {
+  flex-shrink: 0;
+}
+
+.pub-theme-nav-link {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: $text-muted;
+  border-radius: 2rem;
+  background-color: $bg-section;
+  border: 1px solid transparent;
+  transition: all $transition-fast;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
+    background-color: $primary-light;
+    border-color: rgba($primary, 0.15);
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $bg-color;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+// Theme sections
+.pub-theme-section {
+  margin-bottom: $section-spacing;
+  scroll-margin-top: 8rem;
+}
+
+.pub-theme-heading {
+  @include section-heading-accent;
+  font-size: 1.2rem;
+  color: $text-color;
+}
+
+// Individual publication entry
+.pub-entry {
+  margin-bottom: 0;
+  padding: 0.35rem 0;
+
+  & + .pub-entry {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.pub-entry-title {
+  font-weight: 600;
+  font-size: 0.93rem;
+  margin-bottom: 0;
+  color: $text-color;
+  line-height: 1.4;
+}
+
+.pub-entry-authors {
+  font-size: 0.85rem;
+  color: $text-color;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.pub-entry-venue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 0.1rem;
+  line-height: 1.4;
+}
+
+.pub-entry-description {
+  font-size: 0.85rem;
+  color: $text-muted;
+  line-height: 1.4;
+  margin-bottom: 0.1rem;
+}
+
+.pub-entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  a {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $primary;
+    border-color: rgba($primary, 0.25);
+    padding: 0.2em 0.6em;
+    border-radius: $radius-sm;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $primary-dark;
+      border-color: rgba($primary, 0.4);
+      text-decoration: none;
+    }
+  }
+}
+
+// Badges
+.pub-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15em 0.55em;
+  border-radius: 2rem;
+  vertical-align: middle;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  margin-left: 0.3rem;
+
+  &.spotlight {
+    background-color: rgba($badge-spotlight, 0.15);
+    color: darken($badge-spotlight, 25%);
+  }
+
+  &.best-paper {
+    background-color: rgba($badge-best-paper, 0.12);
+    color: darken($badge-best-paper, 8%);
+  }
+
+  &.oral {
+    background-color: rgba($badge-oral, 0.1);
+    color: darken($badge-oral, 8%);
+  }
+}
+
+// Intro text
+.publications-intro {
+  font-size: 0.93rem;
+  color: $text-color;
+  margin-bottom: 0.5rem;
+
+  a {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,226 @@
+# ============================================
+# Foundation Models
+# ============================================
+
+- title: "MOMENT: A Family of Open Time-series Foundation Models"
+  authors: "**Mononito Goswami**, Konrad Szafer, Arjun Choudhry, Yifu Cai, Shuo Li, Artur Dubrawski"
+  venue: "ICML"
+  year: 2024
+  venue_full: "International Conference on Machine Learning (ICML), 2024"
+  theme: "Foundation Models"
+  selected: true
+  selected_theme: "Foundation Models"
+  description: "One of the first open-source time series foundation models. 2.5M+ downloads on HuggingFace, 700+ GitHub stars."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2402.03885.pdf"
+    - label: "Code"
+      url: "https://github.com/moment-timeseries-foundation-model/moment"
+    - label: "HuggingFace"
+      url: "https://huggingface.co/AutonLab/MOMENT-1-large"
+    - label: "Data"
+      url: "https://huggingface.co/datasets/AutonLab/Timeseries-PILE"
+
+- title: "Exploring Representations and Interventions in Time Series Foundation Models"
+  authors: "Michał Wiliński, **Mononito Goswami**, Willa Potosnak, Nina Żukowska, Artur Dubrawski"
+  venue: "ICML"
+  year: 2025
+  venue_full: "International Conference on Machine Learning (ICML), 2025"
+  theme: "Foundation Models"
+  selected: true
+  selected_theme: "Foundation Models"
+  description: "First to show that time series foundation models learn interpretable concepts (trends, seasonality) despite self-supervised training, and that these representations can be targeted for intervention."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2409.12915"
+
+- title: "Chronos-2: From Univariate to Universal Forecasting"
+  authors: "Abdul Fatir Ansari, Oleksandr Shchur, Jaris Küken, Andreas Auer, Boran Han, Pedro Mercado, Syama Sundar Rangapuram, Huibin Shen, Lorenzo Stella, Xiyuan Zhang, **Mononito Goswami**, Shubham Kapoor, Danielle C. Maddix, Pablo Guerron, Tony Hu, Junming Yin, Nick Erickson, Prateek Mutalik Desai, Hao Wang, Huzefa Rangwala, George Karypis, Yuyang Wang, Michael Bohlke-Schneider"
+  venue: "Preprint"
+  year: 2025
+  venue_full: "ArXiv Preprint, 2025"
+  theme: "Foundation Models"
+  selected: false
+  description: "Extends the Chronos forecasting model to handle multivariate, covariate-conditioned, and probabilistic forecasting in a single unified architecture."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/abs/2510.15821"
+
+# ============================================
+# Evaluation Science
+# ============================================
+
+- title: "Unsupervised Model Selection for Time-series Anomaly Detection"
+  authors: "**Mononito Goswami**, Cristian Challu, Laurent Callot, Lenon Minorics, Andrey Kan"
+  venue: "ICLR"
+  year: 2023
+  venue_full: "International Conference on Learning Representations (ICLR), 2023"
+  theme: "Evaluation Science"
+  selected: true
+  selected_theme: "Evaluation Science"
+  description: "Shows that ensembles of unsupervised heuristics and weak supervision can accurately select anomaly detection models without any ground-truth labels."
+  badges:
+    - "Spotlight"
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2210.01078.pdf"
+    - label: "Code"
+      url: "https://github.com/mononitogoswami/tsad-model-selection"
+
+- title: "AQuA: A Benchmarking Tool for Label Quality Assessment"
+  authors: "**Mononito Goswami**, Vedant Sanil, Arjun Choudhry, Arvind Srinivasan, Chalisa Udompanyawit, Artur Dubrawski"
+  venue: "NeurIPS"
+  year: 2023
+  venue_full: "Neural Information Processing Systems (NeurIPS), 2023 Datasets and Benchmarks Track"
+  theme: "Evaluation Science"
+  selected: true
+  selected_theme: "Evaluation Science"
+  description: "A comprehensive benchmarking tool for evaluating label error detection methods across diverse datasets and annotation types."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2306.09467.pdf"
+    - label: "Code"
+      url: "https://github.com/autonlab/aqua"
+
+- title: "TimeSeriesExamAgent: Creating Time Series Reasoning Benchmarks at Scale"
+  authors: "Małgorzata Gwiazda, Yifu Cai, **Mononito Goswami**, Arjun Choudhry, Artur Dubrawski"
+  venue: "ICLR"
+  year: 2026
+  venue_full: "International Conference on Learning Representations (ICLR), 2026"
+  theme: "Evaluation Science"
+  selected: true
+  selected_theme: "Evaluation Science"
+  description: "Benchmark for temporal reasoning in LLMs, with scalable task generation via LLM agents and item response theory."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/abs/2604.10291"
+
+# ============================================
+# Agents
+# ============================================
+
+- title: "TimeSeriesGym: A Scalable Benchmark for (Time Series) Machine Learning Engineering Agents"
+  authors: "Yifu Cai, Xinyu Li, **Mononito Goswami**, Michał Wiliński, Gus Welter, Artur Dubrawski"
+  venue: "Preprint"
+  year: 2025
+  venue_full: "ArXiv Preprint, 2025"
+  theme: "Agents"
+  selected: true
+  selected_theme: "Agents"
+  description: "A benchmarking environment for evaluating ML engineering agents on the full time-series modeling stack, from data exploration and modeling to testing and deployment."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/abs/2505.13291"
+    - label: "Code"
+      url: "https://github.com/moment-timeseries-foundation-model/TimeSeriesGym"
+
+- title: "SpIDER: Spatially Informed Dense Embedding Retrieval for Software Issue Localization"
+  authors: "Shravan Chaudhari, Rahul Thomas Jacob, **Mononito Goswami**, Jiajun Cao, Shihab Rashid, Christian Bock"
+  venue: "Preprint"
+  year: 2025
+  venue_full: "ArXiv Preprint, 2025"
+  theme: "Agents"
+  selected: true
+  selected_theme: "Agents"
+  description: "Dense embedding retrieval for localizing code changes from natural language issue descriptions in large software repositories."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/abs/2512.16956"
+
+# ============================================
+# Healthcare & Education
+# ============================================
+
+- title: "JoLT: Jointly Learned Representations of Language and Time-Series for Clinical Time-Series Interpretation"
+  authors: "Yifu Cai, Arvind Srinivasan, **Mononito Goswami**, Arjun Choudhry, Artur Dubrawski"
+  venue: "AAAI"
+  year: 2024
+  venue_full: "AAAI Conference on Artificial Intelligence (AAAI), 2024 Student Abstract. Also at NeurIPS 2023 DGM4H Workshop."
+  theme: "Healthcare & Education"
+  selected: false
+  description: "Learns joint language-time series embeddings so clinicians can query physiological signals with natural language descriptions."
+  badges:
+    - "Best Student Abstract"
+  links:
+    - label: "Paper"
+      url: "https://ojs.aaai.org/index.php/AAAI/article/view/30423/32496"
+    - label: "OpenReview"
+      url: "https://openreview.net/pdf?id=UVF1AMBj9u"
+
+
+- title: "Counterfactual Phenotyping with Censored Time-to-Events"
+  authors: "Chirag Nagpal, **Mononito Goswami**, Keith Dufendach, Artur Dubrawski"
+  venue: "KDD"
+  year: 2022
+  venue_full: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2022"
+  theme: "Healthcare & Education"
+  selected: false
+  description: "Combines causal inference with survival analysis to discover patient phenotypes under counterfactual treatment scenarios."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2202.11089"
+
+- title: "Classifying Unstructured Clinical Notes via Automatic Weak Supervision"
+  authors: "Chufan Gao, **Mononito Goswami**, Jieshi Chen, Artur Dubrawski"
+  venue: "MLHC"
+  year: 2022
+  venue_full: "Machine Learning for Healthcare Conference (MLHC), PMLR, 2022"
+  theme: "Healthcare & Education"
+  selected: false
+  description: "Automatically generates labeling functions from clinical notes to train classifiers without manual annotation."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2206.12088"
+
+- title: "Using Weakly Supervised Machine Learning to Label Atrial Fibrillation in Real-World Intensive Care Unit Telemetry Data"
+  authors: "Sydney R. Rooney, Roman Kaufman, **Mononito Goswami**, Michael R. Pinsky, J. Kyle Miller, Salah Al-Zaiti, Artur Dubrawski, Gilles Clermont"
+  venue: "Circulation"
+  year: 2022
+  venue_full: "Circulation, 2022"
+  theme: "Healthcare & Education"
+  selected: false
+  description: "Applies weak supervision to detect atrial fibrillation episodes in noisy ICU telemetry without expert-labeled training data."
+  badges: []
+  links:
+    - label: "Paper"
+      url: "https://www.ahajournals.org/doi/abs/10.1161/circ.146.suppl_1.10198"
+
+- title: "Weak Supervision for Affordable Modeling of Electrocardiogram Data"
+  authors: "**Mononito Goswami**, Benedikt Boecking, Artur Dubrawski"
+  venue: "AMIA"
+  year: 2021
+  venue_full: "AMIA Annual Symposium Proceedings, 2021"
+  theme: "Healthcare & Education"
+  selected: false
+  description: "Applies weak supervision and data programming to build ECG classification models without manual expert labels."
+  badges: []
+  links:
+    - label: "Paper"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8861672/"
+
+
+# ============================================
+# (continued)
+# ============================================
+
+- title: "Discriminating Cognitive Disequilibrium and Flow in Problem Solving: A Semi-Supervised Approach Using Involuntary Dynamic Behavioral Signals"
+  authors: "**Mononito Goswami**, Lujie Chen, Artur Dubrawski"
+  venue: "AAAI"
+  year: 2020
+  venue_full: "AAAI Conference on Artificial Intelligence (AAAI), 2020"
+  theme: "Healthcare & Education"
+  selected: false
+  description: "Uses semi-supervised learning on involuntary behavioral signals (eye gaze, facial expressions) to detect cognitive states during problem solving."
+  badges: []
+  links:
+    - label: "Paper"
+      url: "https://ojs.aaai.org/index.php/AAAI/article/view/5378"

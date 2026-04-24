@@ -1,31 +1,32 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden-focusable">Skip to content</a>
+  {% include navbar.html %}
 
-{% include base_path %}
-
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
+  <main id="main-content" class="container">
     {{ content }}
+  </main>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+  {% include footer.html %}
 
-    {% include scripts.html %}
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-  </body>
+  <!-- Navbar scroll shadow -->
+  <script>
+    (function() {
+      var nav = document.querySelector('.navbar');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        nav.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    })();
+  </script>
+
+  {% include analytics.html %}
+</body>
 </html>

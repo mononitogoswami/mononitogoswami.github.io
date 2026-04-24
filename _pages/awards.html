@@ -1,0 +1,62 @@
+---
+layout: page
+title: "Awards & Honors"
+permalink: /awards/
+---
+
+{% assign awards = site.data.awards | sort: "year" | reverse %}
+{% assign major_awards = awards | where: "type", "major" %}
+{% assign paper_awards = awards | where: "type", "paper" %}
+
+{% if major_awards.size > 0 %}
+<div class="awards-group">
+  <h2 class="awards-group-heading">Major Awards</h2>
+  <div class="awards-major-list">
+    {% for award in major_awards %}
+    <div class="award-major-card">
+      <div class="award-major-header">
+        <span class="award-major-year">{{ award.year }}</span>
+        <div class="award-major-info">
+          <div class="award-major-title">
+            {% if award.url %}<a href="{{ award.url }}" target="_blank" rel="noopener">{{ award.title }}</a>{% else %}{{ award.title }}{% endif %}
+          </div>
+          <div class="award-major-org">{{ award.org }}</div>
+        </div>
+      </div>
+      {% if award.description %}
+      <div class="award-major-description">{{ award.description }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if paper_awards.size > 0 %}
+<div class="awards-group">
+  <h2 class="awards-group-heading">Paper Awards</h2>
+  <div class="awards-paper-list">
+    {% for award in paper_awards %}
+    <div class="award-paper-card">
+      <div class="award-paper-header">
+        <span class="award-paper-year">{{ award.year }}</span>
+        <div class="award-paper-info">
+          <div class="award-paper-title">
+            <span class="award-paper-badge">{{ award.title }}</span>
+            <span class="award-paper-org">&mdash; {{ award.org }}</span>
+          </div>
+          {% if award.paper %}
+          <div class="award-paper-name">
+            {% if award.paper_url %}<a href="{{ award.paper_url }}" target="_blank" rel="noopener">{{ award.paper }}</a>{% else %}{{ award.paper }}{% endif %}
+          </div>
+          {% endif %}
+          {% if award.description %}
+          <div class="award-paper-description">{{ award.description }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,29 @@
+{% assign news = site.data.news | sort: "date" | reverse %}
+{% assign news_limit = include.limit | default: 5 %}
+
+<ul class="news-list" id="news-list">
+  {% for item in news %}
+  <li class="news-item{% if forloop.index > news_limit %} news-hidden{% endif %}">
+    <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
+    <span class="news-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if news.size > news_limit %}
+<button class="news-toggle" id="news-toggle-btn" aria-expanded="false" aria-controls="news-list">Show more</button>
+
+<script>
+  (function() {
+    var btn = document.getElementById('news-toggle-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      var hidden = document.querySelectorAll('.news-hidden');
+      var showing = hidden[0] && hidden[0].classList.contains('news-show');
+      hidden.forEach(function(el) { el.classList.toggle('news-show'); });
+      btn.textContent = showing ? 'Show more' : 'Show less';
+      btn.setAttribute('aria-expanded', !showing);
+    });
+  })();
+</script>
+{% endif %}

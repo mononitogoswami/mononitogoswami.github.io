@@ -1,0 +1,62 @@
+- date: 2026-07-10
+  text: "Organizing [Foundation Models for Structured Data](https://icml-structured-fm-workshop.github.io/) at **ICML 2026** (Seoul). Submissions open — send us your best work!"
+
+- date: 2026-04-20
+  text: "Our [Time Series in the Age of Large Models](https://tsalm-workshop.github.io/) workshop at **ICLR 2026** (Rio de Janeiro) wrapped up with 75 accepted papers."
+
+- date: 2026-04-01
+  text: "Our paper [TimeSeriesExamAgent](https://arxiv.org/abs/2604.10291), on using LLM agents to generate temporal reasoning benchmarks at scale, accepted at **ICLR 2026**."
+
+- date: 2025-10-17
+  text: "[Chronos-2](https://arxiv.org/abs/2510.15821) is out -- the first zero-shot forecasting model that handles covariates. Already surpassed **11M downloads**."
+
+- date: 2025-07-25
+  text: "Our [ICML 2025 Workshop on Foundation Models for Structured Data](https://icml-structured-fm-workshop.github.io/) drew 99 submissions and 500+ attendees."
+
+- date: 2025-07-15
+  text: "Spoke on the [Breaking Into Industry](https://icml.cc/virtual/2025/49692) panel at **ICML 2025** about making the leap from academia to industry research."
+
+- date: 2025-07-01
+  text: "New work on [understanding and steering representations inside time series foundation models](https://arxiv.org/pdf/2409.12915) accepted at **ICML 2025**."
+
+- date: 2025-06-01
+  text: "Joined **Amazon Web Services** as an Applied Scientist, leading development of the [AWS DevOps Agent](https://aws.amazon.com/devops-agent/)."
+
+- date: 2025-05-15
+  text: "Defended my **Ph.D.** at Carnegie Mellon and received the **Robotics Institute Distinguished Dissertation Award** (1 of 35 recipients)."
+
+- date: 2025-05-01
+  text: "[TimeSeriesGym](https://arxiv.org/abs/2505.13291) released -- a scalable benchmark for evaluating ML engineering agents."
+
+- date: 2024-10-01
+  text: "Three papers at **NeurIPS 2024** workshops, including a Spotlight for [TimeSeriesExam](https://arxiv.org/pdf/2410.14752). Also received **Best Paper Honorable Mention** at ICAIF 2024."
+
+- date: 2024-10-01
+  text: "[MOMENT](https://huggingface.co/AutonLab/MOMENT-1-large) crossed **2.2 million downloads** on HuggingFace."
+
+- date: 2024-07-01
+  text: "Spent the summer at [Google Research (Athena)](https://research.google/teams/athena/) as a Student Researcher."
+
+- date: 2024-05-01
+  text: "[MOMENT](https://arxiv.org/pdf/2402.03885) accepted at **ICML 2024**."
+
+- date: 2024-03-25
+  text: "Co-organized the [AAAI Spring Symposium on Clinical Foundation Models](https://clinicalfoundationmodels.github.io/) at Stanford."
+
+- date: 2024-01-01
+  text: "[JoLT](https://ojs.aaai.org/index.php/AAAI/article/view/30423) won **Best Student Abstract** at **AAAI 2024**."
+
+- date: 2023-09-01
+  text: "[AQuA](https://arxiv.org/pdf/2306.09467.pdf), our data-centric benchmark for time series anomaly detection, accepted at **NeurIPS 2023** Datasets & Benchmarks."
+
+- date: 2023-01-01
+  text: "Our work on [unsupervised model selection for anomaly detection](https://arxiv.org/pdf/2210.01078.pdf) accepted as a **Spotlight** at **ICLR 2023**."
+
+- date: 2022-05-01
+  text: "Started as an Applied Scientist Intern at **AWS AI Labs**."
+
+- date: 2021-09-01
+  text: "Awarded the **Center for Machine Learning and Health (CMLH) Fellowship**."
+
+- date: 2020-08-01
+  text: "Started my **Ph.D. in Robotics** at Carnegie Mellon, advised by [Artur Dubrawski](https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/)."
