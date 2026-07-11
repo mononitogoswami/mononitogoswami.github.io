@@ -4,9 +4,11 @@ title: "Mentorship"
 permalink: /mentorship/
 ---
 
-<p class="mentorship-intro">
-  I work closely with students at all levels &mdash; undergraduates, master's, and doctoral students &mdash; on problems in foundation models, evaluation science, and agents for real-world decision-making. I care about giving mentees real ownership of research questions and helping them build the judgment to tackle open problems independently. If you're interested in working together, <a href="mailto:{{ site.author.email }}">reach out</a>.
-</p>
+<div class="mentorship-intro">
+  <p>Mentorship, to me, is gratitude put into practice.</p>
+  <p>I enjoy collaborating with students at all levels on open-ended research problems and helping them develop ideas into strong, independent projects. If you're interested in working together, <a href="mailto:{{ site.author.email }}">reach out</a>.</p>
+  <p class="office-hours"><strong>Office hours.</strong> I'm happy to chat about research with students and fellow researchers. I've set aside <strong>Fridays, 4:00&ndash;5:00 PM (PST)</strong> for this &mdash; please reach out by email. If that time absolutely doesn't work, I'm happy to find another.</p>
+</div>
 
 {% assign current = site.data.students.current %}
 {% assign past = site.data.students.past %}
@@ -20,9 +22,9 @@ permalink: /mentorship/
     <div class="mentee-card">
       <div class="mentee-header">
         <span class="mentee-name">{% if student.url %}<a href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</span>
+        <span class="mentee-meta">{{ student.role }}, {{ student.affiliation }}</span>
         <span class="mentee-years">{{ student.years | replace: ' -- ', ' &ndash; ' }}</span>
       </div>
-      <div class="mentee-role">{{ student.role }}, {{ student.affiliation }}</div>
       {% if student.topic %}<div class="mentee-topic">{{ student.topic }}</div>{% endif %}
     </div>
     {% endfor %}
@@ -38,11 +40,10 @@ permalink: /mentorship/
     <div class="mentee-card">
       <div class="mentee-header">
         <span class="mentee-name">{% if student.url %}<a href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</span>
+        <span class="mentee-meta">{{ student.role }}, {{ student.affiliation }}{% if student.now %} &middot; now {{ student.now }}{% endif %}</span>
         <span class="mentee-years">{{ student.years | replace: ' -- ', ' &ndash; ' }}</span>
       </div>
-      <div class="mentee-role">{{ student.role }}, {{ student.affiliation }}</div>
       {% if student.topic %}<div class="mentee-topic">{{ student.topic }}</div>{% endif %}
-      {% if student.now %}<div class="mentee-now">Now: {{ student.now }}</div>{% endif %}
     </div>
     {% endfor %}
   </div>

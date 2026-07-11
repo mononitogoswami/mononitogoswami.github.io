@@ -164,6 +164,23 @@
   line-height: 1.7;
   color: $text-color;
   margin-bottom: $section-spacing;
+
+  p {
+    margin-bottom: 0.85rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .office-hours {
+    margin-top: 1.1rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    background-color: rgba($primary, 0.03);
+    border-left: 2px solid $primary;
+    border-radius: $radius-sm;
+  }
 }
 
 .student-section {
@@ -183,7 +200,7 @@
 }
 
 .mentee-card {
-  padding: 0.9rem 1.1rem;
+  padding: 0.55rem 1.1rem;
   border-radius: $radius-sm;
   transition: background-color $transition-fast;
 
@@ -199,8 +216,8 @@
 .mentee-header {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 0.15rem;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
 }
 
 .mentee-name {
@@ -218,31 +235,27 @@
   }
 }
 
+// Role, affiliation, and current position collapsed onto one inline line
+.mentee-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.87rem;
+  color: $text-muted;
+}
+
 .mentee-years {
   font-size: 0.82rem;
   color: $text-light;
   white-space: nowrap;
   flex-shrink: 0;
-  margin-left: 1rem;
-}
-
-.mentee-role {
-  font-size: 0.87rem;
-  color: $text-muted;
-  margin-bottom: 0.2rem;
+  margin-left: auto;
 }
 
 .mentee-topic {
   font-size: 0.87rem;
   color: $text-color;
   line-height: 1.5;
-}
-
-.mentee-now {
-  font-size: 0.84rem;
-  color: $text-muted;
-  font-weight: 500;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 // Committee list

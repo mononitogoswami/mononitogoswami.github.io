@@ -1,21 +1,38 @@
 # Mentorship
 
 current:
+  - name: "Xinyu (Rachel) Li"
+    role: "Ph.D. Student, School of Computer Science"
+    affiliation: "Carnegie Mellon University"
+    topic: "Pushing the boundaries of test-time scaling with recursive language models"
+    url: "https://rachellxy.github.io/"
+    years: "2025 -- Present"
+
+past:
+  - name: "Shravan Chaudhari"
+    role: "Applied Scientist Intern"
+    affiliation: "Amazon"
+    topic: "Dense embedding retrieval for software issue localization (SpIDER)"
+    url: "https://shra1-25.github.io/"
+    now: "Ph.D. student at Johns Hopkins University"
+    years: "2025"
+
   - name: "Malgorzata Gwiazda"
     role: "Ph.D. Student, Robotics Institute"
     affiliation: "Carnegie Mellon University"
     topic: "Time series reasoning benchmarks and evaluation of foundation models"
     url: "https://www.linkedin.com/in/malgorzata-gwiazda-ab01a4330/"
-    years: "2025 -- Present"
+    now: "Ph.D. student at CMU RI"
+    years: "2025"
 
   - name: "Michal Wilinski"
     role: "Ph.D. Student, Robotics Institute"
     affiliation: "Carnegie Mellon University"
     topic: "Representations, interventions, and long-context modeling in time series foundation models"
     url: "https://michal-wilinski.com"
-    years: "2024 -- Present"
+    now: "Ph.D. student at CMU RI"
+    years: "2024 -- 2025"
 
-past:
   - name: "Willa Potosnak"
     role: "Ph.D. Student, Robotics Institute"
     affiliation: "Carnegie Mellon University"
