@@ -22,7 +22,7 @@ permalink: /mentorship/
     <div class="mentee-card">
       <div class="mentee-header">
         <span class="mentee-name">{% if student.url %}<a href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</span>
-        <span class="mentee-meta">{{ student.role }}, {{ student.affiliation }}</span>
+        <span class="mentee-meta">{{ student.role }}{% if student.affiliation and student.affiliation != "Carnegie Mellon University" %}, {{ student.affiliation }}{% endif %}</span>
         <span class="mentee-years">{{ student.years | replace: ' -- ', ' &ndash; ' }}</span>
       </div>
       {% if student.topic %}<div class="mentee-topic">{{ student.topic }}</div>{% endif %}
@@ -40,7 +40,7 @@ permalink: /mentorship/
     <div class="mentee-card">
       <div class="mentee-header">
         <span class="mentee-name">{% if student.url %}<a href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</span>
-        <span class="mentee-meta">{{ student.role }}, {{ student.affiliation }}{% if student.now %} &middot; now {{ student.now }}{% endif %}</span>
+        <span class="mentee-meta">{{ student.role }}{% if student.affiliation and student.affiliation != "Carnegie Mellon University" %}, {{ student.affiliation }}{% endif %}{% if student.now %} &middot; now {{ student.now }}{% endif %}</span>
         <span class="mentee-years">{{ student.years | replace: ' -- ', ' &ndash; ' }}</span>
       </div>
       {% if student.topic %}<div class="mentee-topic">{{ student.topic }}</div>{% endif %}

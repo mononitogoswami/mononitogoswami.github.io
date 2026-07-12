@@ -4,7 +4,7 @@ current:
   - name: "Xinyu (Rachel) Li"
     role: "Ph.D. Student, School of Computer Science"
     affiliation: "Carnegie Mellon University"
-    topic: "Pushing the boundaries of test-time scaling with recursive language models"
+    topic: "Scaling test-time compute through recursive language models"
     url: "https://rachellxy.github.io/"
     years: "2025 -- Present"
 
@@ -42,7 +42,7 @@ past:
     years: "2024 -- 2025"
 
   - name: "Nina Zukowska"
-    role: "Robotics Institute Summer Scholar (RISS)"
+    role: "RISS"
     affiliation: "Carnegie Mellon University"
     topic: "Long-context time series foundation models and representation analysis"
     url: "https://www.linkedin.com/in/nina-zukowska/"
@@ -50,7 +50,7 @@ past:
     years: "2024 -- 2025"
 
   - name: "Konrad Szafer"
-    role: "Robotics Institute Summer Scholar (RISS)"
+    role: "RISS"
     affiliation: "Carnegie Mellon University"
     topic: "MOMENT: open time series foundation models (ICML 2024)"
     url: "https://konradszafer.github.io/"
@@ -90,7 +90,7 @@ past:
     years: "2022 -- 2023"
 
   - name: "Arnab Dey"
-    role: "Robotics Institute Summer Scholar (RISS)"
+    role: "RISS"
     affiliation: "Carnegie Mellon University"
     topic: "Weakly supervised classification of clinical vital sign alerts (AMIA 2022)"
     url: "https://www.linkedin.com/in/arnabdey0/"
