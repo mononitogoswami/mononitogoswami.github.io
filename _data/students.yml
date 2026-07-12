@@ -18,7 +18,7 @@ past:
     years: "2025"
 
   - name: "Malgorzata Gwiazda"
-    role: "Ph.D. Student, Robotics Institute"
+    role: "RISS"
     affiliation: "Carnegie Mellon University"
     topic: "Time series reasoning benchmarks and evaluation of foundation models"
     url: "https://www.linkedin.com/in/malgorzata-gwiazda-ab01a4330/"
@@ -26,7 +26,7 @@ past:
     years: "2025"
 
   - name: "Michal Wilinski"
-    role: "Ph.D. Student, Robotics Institute"
+    role: "RISS"
     affiliation: "Carnegie Mellon University"
     topic: "Representations, interventions, and long-context modeling in time series foundation models"
     url: "https://michal-wilinski.com"
@@ -38,7 +38,6 @@ past:
     affiliation: "Carnegie Mellon University"
     topic: "Compositional reasoning and long-context attention in time series foundation models"
     url: "https://potosnakw.github.io/"
-    now: "Ph.D. student at CMU RI"
     years: "2024 -- 2025"
 
   - name: "Nina Zukowska"
@@ -58,16 +57,16 @@ past:
     years: "2023 -- 2024"
 
   - name: "Arjun Choudhry"
-    role: "Research Mentee"
-    affiliation: "Carnegie Mellon University"
+    role: "Research Intern"
+    affiliation: "Auton Lab"
     topic: "Time series foundation models, evaluation benchmarks, and federated learning"
     url: "https://arjun7m.github.io/"
     now: "Ph.D. student at Georgia Tech"
     years: "2023 -- 2025"
 
   - name: "Yifu Cai"
-    role: "Research Mentee"
-    affiliation: "Carnegie Mellon University"
+    role: "Research Intern"
+    affiliation: "Auton Lab"
     topic: "Time series reasoning, clinical AI, and ML engineering agents"
     url: "https://yifu-cai.com/"
     now: "Quant Researcher at Millennium"
