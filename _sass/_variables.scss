@@ -1,26 +1,37 @@
-// Colors — warm, professional palette
-$primary: #2563eb;           // refined blue
-$primary-light: #dbeafe;     // very light blue for backgrounds
-$primary-dark: #1d4ed8;      // darker blue for hover states
-$accent: #0f766e;            // teal accent for variety
-$accent-light: #ccfbf1;      // light teal
+// Palette — colorhunt d6d46d / f4dfb6 / de8f5f / 9a4444
+$olive: #D6D46D;             // highlighter, decorative accents only (too light for text)
+$sand: #F4DFB6;              // tints, chips, figure surfaces
+$terracotta: #DE8F5F;        // hover rules, progress bar, decorative strokes (not text: 2.5:1)
+$brick: #9A4444;             // links and primary accent (6.2:1 on $bg-color)
 
-$text-color: #1e293b;        // warm dark slate (not pure black)
-$text-muted: #64748b;        // warm medium gray
-$text-light: #6b7280;        // tertiary text (WCAG AA compliant ~4.6:1)
-$bg-color: #ffffff;
-$bg-warm: #fafaf9;           // very subtle warm background
-$bg-section: #f8fafc;        // alternating section background
-$border-color: #e2e8f0;      // softer border
-$border-light: #f1f5f9;      // very subtle border
+// Chart marks (validated with the dataviz checks against $bg-color; olive re-stepped darker)
+$chart-1: $brick;
+$chart-2: $terracotta;
+$chart-3: #8A8820;
+
+$primary: $brick;
+$primary-light: #FBF0DA;     // light sand for backgrounds
+$primary-dark: #7A3333;      // hover state for links
+$accent: $terracotta;
+$accent-light: rgba($sand, 0.55);
+
+$text-color: #2E2420;        // warm ink
+$text-muted: #6B5B53;        // secondary text (6.3:1)
+$text-light: #7A675C;        // tertiary text (5.2:1)
+$bg-color: #FFFCF7;          // warm paper
+$bg-warm: #FBF4E6;           // footer and cards
+$bg-section: #F8EEDC;        // hover washes, pills
+$border-color: #EADCC4;
+$border-light: #F3E9D7;
 
 // Badge colors
-$badge-spotlight: #f59e0b;
-$badge-best-paper: #059669;
-$badge-oral: #2563eb;
+$badge-spotlight: #9A4F25;   // deep terracotta
+$badge-best-paper: #5E5A12;  // deep olive
+$badge-oral: $brick;
 
 // Typography
 $font-family-base: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
 $font-size-base: 1rem;
 $line-height-base: 1.7;
 
@@ -35,11 +46,12 @@ $news-date-width: 100px;
 // Transitions
 $transition-fast: 0.18s ease;
 $transition-base: 0.25s ease;
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
-// Shadows
-$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+// Shadows (warm-tinted)
+$shadow-sm: 0 1px 2px rgba(46, 36, 32, 0.05);
+$shadow-md: 0 4px 10px -2px rgba(46, 36, 32, 0.08), 0 2px 4px -2px rgba(46, 36, 32, 0.05);
+$shadow-lg: 0 10px 20px -6px rgba(46, 36, 32, 0.12), 0 4px 6px -4px rgba(46, 36, 32, 0.05);
 
 // Border radius
 $radius-sm: 0.375rem;
@@ -48,7 +60,8 @@ $radius-lg: 0.75rem;
 
 // Mixins
 @mixin section-heading-accent($width: 2.5rem) {
-  font-weight: 700;
+  font-family: $font-family-serif;
+  font-weight: 600;
   margin-bottom: 1.25rem;
   padding-bottom: 0.35rem;
   border-bottom: 1px solid $border-color;

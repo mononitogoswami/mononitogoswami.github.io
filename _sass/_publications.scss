@@ -83,14 +83,23 @@
 
 .pub-theme-heading {
   @include section-heading-accent;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
   color: $text-color;
 }
 
 // Individual publication entry
 .pub-entry {
   margin-bottom: 0;
-  padding: 0.35rem 0;
+  padding: 0.35rem 0.6rem;
+  margin-left: -0.6rem;
+  margin-right: -0.6rem;
+  border-radius: $radius-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($sand, 0.22);
+  }
 
   & + .pub-entry {
     border-top: 1px solid $border-light;

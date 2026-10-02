@@ -1,0 +1,638 @@
+// ============================================
+// Research page: intro, featured projects, interactive figures
+// ============================================
+
+.research-intro {
+  max-width: 46rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  .research-lede {
+    font-family: $font-family-serif;
+    font-size: 1.35rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+}
+
+// Jump chips to each featured project
+.lever-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.1rem 0 0.5rem;
+}
+
+.lever-chip {
+  display: flex;
+  flex-direction: column;
+  min-width: 8.5rem;
+  padding: 0.5rem 0.85rem 0.45rem;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  background-color: $bg-color;
+  color: $text-color;
+  transition: transform 0.3s $ease-out, background-color $transition-fast, border-color $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+    color: $text-color;
+    background-color: rgba($sand, 0.35);
+    border-color: $terracotta;
+    transform: translateY(-2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:hover, &:focus-visible { transform: none; }
+  }
+}
+
+.lever-chip-kicker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.lever-chip-name {
+  font-family: $font-family-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.lever-chip-quiet .lever-chip-kicker {
+  color: $text-light;
+}
+
+// Featured project
+.feature {
+  margin-top: 2.6rem;
+  scroll-margin-top: 5rem;
+}
+
+.feature-kicker {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 0.1rem;
+}
+
+.feature-title {
+  font-size: 1.65rem;
+  margin: 0 0 0.4rem;
+}
+
+.feature-claim {
+  max-width: 46rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+}
+
+.feature-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+// ---------- figure card ----------
+.fig {
+  --c1: #{$chart-1};
+  --c2: #{$chart-2};
+  --c3: #{$chart-3};
+  --ink: #{$text-color};
+  --muted: #{$text-light};
+  --surface: #{$bg-color};
+
+  margin: 0 0 1rem;
+  padding: 1.05rem 1.2rem 0.85rem;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+
+  @media (max-width: 575px) {
+    padding: 0.9rem 0.8rem 0.75rem;
+  }
+}
+
+.fig-title {
+  font-family: $font-family-serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.15rem;
+}
+
+.fig-sub {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: $text-muted;
+  margin-bottom: 0.6rem;
+}
+
+.fig-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin-bottom: 0.55rem;
+}
+
+.fig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: $primary;
+  background-color: rgba($sand, 0.45);
+  border: 1px solid rgba($terracotta, 0.45);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($sand, 0.8);
+    border-color: $terracotta;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+
+  &.is-on {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+.fig-btn-icon {
+  font-size: 0.7rem;
+}
+
+.fig-readout {
+  font-size: 0.84rem;
+  color: $text-muted;
+  font-variant-numeric: tabular-nums;
+}
+
+// Segmented control
+.fig-seg {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.fig-seg-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $text-muted;
+  background-color: $bg-section;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: color $transition-fast, background-color $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    color: $primary;
+    border-color: rgba($terracotta, 0.5);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  &[aria-pressed="true"] {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+// Range slider
+.fig-slider {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: $text-muted;
+  margin: 0;
+
+  input[type="range"] {
+    width: 11rem;
+    accent-color: $primary;
+    cursor: pointer;
+  }
+
+  output {
+    min-width: 2.6rem;
+    color: $text-color;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+// Legend
+.fig-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 0.8rem;
+  color: $text-muted;
+  margin-bottom: 0.25rem;
+
+  &:empty { display: none; }
+}
+
+.fig-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fig-legend-key {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.fig-legend-line { width: 14px; height: 2px; border-radius: 2px; }
+.fig-legend-rect { width: 10px; height: 10px; border-radius: 2px; }
+.fig-legend-dot { width: 9px; height: 9px; border-radius: 50%; }
+.fig-legend-ring { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid; background: transparent; }
+.fig-legend-diamond { width: 7px; height: 7px; transform: rotate(45deg); margin: 0 1px; }
+.fig-legend-dash {
+  width: 16px;
+  height: 0;
+  border-top: 1.5px dashed $text-color;
+  background: none !important;
+}
+
+// Chart canvas
+.fig-chart {
+  position: relative;
+  width: 100%;
+
+  svg {
+    display: block;
+    overflow: visible;
+    font-family: $font-family-base;
+  }
+}
+
+.fig-tick {
+  font-size: 11.5px;
+  fill: $text-light;
+  font-variant-numeric: tabular-nums;
+}
+
+.fig-axis-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  fill: $text-muted;
+}
+
+.fig-cat {
+  font-size: 12px;
+  font-weight: 600;
+  fill: $text-muted;
+}
+
+// Row labels that sit over gridlines get a surface halo
+.fig-cat-left {
+  paint-order: stroke;
+  stroke: $bg-color;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.fig-grid { stroke: $border-light; stroke-width: 1; }
+.fig-axis { stroke: $border-color; stroke-width: 1; }
+.fig-guide { stroke: $border-color; stroke-width: 1; opacity: 0.8; }
+.fig-band { fill: rgba($sand, 0.5); }
+
+.fig-band-label {
+  font-size: 11px;
+  font-weight: 600;
+  fill: $badge-spotlight;
+}
+
+.fig-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.fig-dot {
+  stroke: $bg-color;
+  stroke-width: 2;
+}
+
+.fig-leader {
+  fill: none;
+  stroke: $text-light;
+  stroke-width: 1;
+}
+
+.fig-end-label {
+  font-size: 12px;
+  fill: $text-muted;
+  font-variant-numeric: tabular-nums;
+
+  &.strong {
+    font-weight: 700;
+    fill: $text-color;
+  }
+}
+
+.fig-cap-label {
+  font-size: 12px;
+  font-weight: 700;
+  fill: $text-color;
+  font-variant-numeric: tabular-nums;
+  paint-order: stroke;
+  stroke: $bg-color;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.fig-whisker {
+  fill: none;
+  stroke: rgba($text-color, 0.55);
+  stroke-width: 1;
+}
+
+.fig-bracket {
+  fill: none;
+  stroke: $text-light;
+  stroke-width: 1;
+}
+
+.fig-ref {
+  stroke: $text-color;
+  stroke-width: 1.25;
+  stroke-dasharray: 5 4;
+}
+
+.fig-ref-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  fill: $text-color;
+  paint-order: stroke;
+  stroke: $bg-color;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.fig-ev-ok { fill: $text-color; stroke: $bg-color; stroke-width: 1.5; }
+.fig-ev-no { fill: $bg-color; stroke: $text-light; stroke-width: 1.5; }
+.fig-ev-mut { fill: $text-light; stroke: $bg-color; stroke-width: 1; }
+
+.fig-cursor { stroke: $terracotta; stroke-width: 1.5; }
+.fig-crosshair { stroke: $text-color; stroke-opacity: 0.35; stroke-width: 1; }
+.fig-drop { stroke: $chart-1; stroke-opacity: 0.35; stroke-width: 1; }
+.fig-connector { stroke: $border-color; stroke-width: 3; stroke-linecap: round; }
+
+.fig-overlay { cursor: crosshair; }
+.fig-clickable { cursor: pointer; }
+
+.fig-overlay,
+.fig-hit {
+  outline: none;
+
+  &:focus-visible {
+    stroke: $primary;
+    stroke-width: 2;
+  }
+}
+
+.fig-callout {
+  font-size: 0.86rem;
+  color: $text-color;
+  margin: 0.35rem 0 0.2rem;
+
+  strong { font-variant-numeric: tabular-nums; }
+}
+
+// SCOUT stat tile + response bar
+.fig-split {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin: 0.2rem 0 0.6rem;
+
+  @media (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fig-stat-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $text-light;
+}
+
+.fig-stat-value {
+  font-family: $font-family-base;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: $text-color;
+}
+
+.fig-stat-delta {
+  font-size: 0.8rem;
+  color: $text-muted;
+}
+
+.fig-resp-track {
+  display: flex;
+  gap: 2px;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: rgba($sand, 0.5);
+}
+
+.fig-resp-seg {
+  height: 100%;
+  transition: width 0.45s $ease-out;
+
+  &:first-child { border-radius: 7px 0 0 7px; }
+
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+
+.fig-resp-keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.9rem;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: $text-muted;
+  font-variant-numeric: tabular-nums;
+}
+
+.fig-resp-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  i {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+  }
+}
+
+.fig-resp-budget {
+  color: $text-light;
+}
+
+// Data table toggle
+.fig-table {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+
+  summary {
+    display: inline-block;
+    cursor: pointer;
+    color: $text-muted;
+    font-weight: 600;
+
+    &:hover { color: $primary; }
+  }
+
+  &[open] summary { margin-bottom: 0.4rem; }
+}
+
+.fig-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  display: block;
+  overflow-x: auto;
+
+  th, td {
+    padding: 0.2rem 0.6rem 0.2rem 0;
+    border-bottom: 1px solid $border-light;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  th {
+    font-weight: 600;
+    color: $text-muted;
+    white-space: nowrap;
+  }
+}
+
+.fig-caption {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: $text-muted;
+  margin-top: 0.5rem;
+}
+
+// Tooltip (one per page, position: fixed)
+.fig-tip {
+  position: fixed;
+  z-index: 2000;
+  max-width: 320px;
+  padding: 0.5rem 0.7rem;
+  font-family: $font-family-base;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: $text-color;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  box-shadow: $shadow-lg;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+
+  &.on { opacity: 1; }
+}
+
+.fig-tip-title {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.fig-tip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.fig-tip-key {
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.fig-tip-key-line { width: 12px; height: 2px; border-radius: 2px; }
+.fig-tip-key-rect { width: 9px; height: 9px; border-radius: 2px; }
+.fig-tip-key-dot { width: 8px; height: 8px; border-radius: 50%; }
+.fig-tip-key-ring { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid; }
+
+.fig-tip-val {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.fig-tip-label {
+  color: $text-muted;
+}
+
+.fig-tip-note {
+  margin-top: 0.3rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid $border-light;
+  font-size: 0.76rem;
+  color: $text-muted;
+
+  & + .fig-tip-note {
+    margin-top: 0.1rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+// Publications list below the featured work
+.pub-list-section {
+  margin-top: 3rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.pub-list-heading {
+  @include section-heading-accent;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+@media print {
+  .fig-controls, .fig-tip, .lever-nav { display: none !important; }
+  .fig { box-shadow: none; break-inside: avoid; }
+}

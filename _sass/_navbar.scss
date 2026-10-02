@@ -14,9 +14,23 @@
     box-shadow: $shadow-sm;
   }
 
+  // Reading progress hairline along the bottom edge
+  .nav-progress {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, $olive, $terracotta 55%, $brick);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+  }
+
   .navbar-brand {
-    font-weight: 700;
-    font-size: 1.15rem;
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
     color: $text-color;
     letter-spacing: -0.01em;
     transition: color $transition-fast;
@@ -28,22 +42,43 @@
   }
 
   .nav-link {
+    position: relative;
     color: $text-muted;
     font-size: 0.92rem;
     font-weight: 500;
     padding: 0.5rem 0.9rem;
     border-radius: $radius-sm;
-    transition: color $transition-fast, background-color $transition-fast;
+    transition: color $transition-fast;
+
+    // Underline grows from the center on hover; stays drawn on the active page
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0.9rem;
+      right: 0.9rem;
+      bottom: 0.3rem;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $terracotta;
+      transform: scaleX(0);
+      transition: transform 0.3s $ease-out;
+    }
 
     &:hover {
       color: $text-color;
-      background-color: $bg-section;
       text-decoration: none;
+
+      &::after { transform: scaleX(1); }
     }
 
     &.active {
       color: $primary;
       font-weight: 600;
+
+      &::after {
+        transform: scaleX(1);
+        background-color: $primary;
+      }
     }
   }
 

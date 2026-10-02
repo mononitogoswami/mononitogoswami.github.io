@@ -1,6 +1,6 @@
 # Site Settings
 title: "Mononito Goswami"
-description: "Applied Scientist at Amazon · PhD in Robotics, Carnegie Mellon University"
+description: "Senior Applied Scientist at Amazon. I study how large language models improve: in training, at test time, and through the harnesses they run in."
 url: "https://mononito.com"
 baseurl: ""
 repository: "mononitogoswami/mononitogoswami.github.io"
@@ -10,7 +10,7 @@ author:
   name: "Mononito Goswami"
   email: "mononitogoswami98@gmail.com"
   avatar: "/images/mononitogoswami.jpeg"
-  bio: "Applied Scientist at Amazon"
+  bio: "Senior Applied Scientist at Amazon"
   location: "Seattle, WA"
   google_scholar: "https://scholar.google.co.in/citations?user=TgQ72t0AAAAJ&hl=en&oi=ao"
   semantic_scholar: "https://www.semanticscholar.org/author/Mononito-Goswami/147478215"

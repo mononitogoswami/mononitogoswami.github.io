@@ -1,0 +1,60 @@
+# Recent work shown as cards on the home page.
+# `text` is raw HTML so <mark class="hl sweep"> can carry the CV's \hl highlights.
+# `spark` is an optional tiny trend line (values in %, plotted in order); `spark_ref` draws a reference hairline.
+
+- key: milo
+  name: "MILO"
+  lever: "Harness"
+  topic: "Recursive self-improvement"
+  venue: "Preprint 2026"
+  text: 'Automated harness discovery through <mark class="hl sweep">orchestrated multi-agent evolution</mark>, achieving state-of-the-art results on Terminal-Bench 2.1, PaperBench, and DeepSWE.'
+  # Population best pass-rate on Terminal-Bench 2.1 (gpt-oss-120b), rounds 0-28
+  spark: [45.0, 46.7, 46.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 50.7, 52.0, 52.0, 53.6, 54.3, 55.6, 55.6, 56.7, 56.7, 56.7, 56.7, 59.9, 59.9]
+  spark_steps: true
+  spark_caption: "Search stalls, then the orchestrator intervenes: best pass-rate 45.0 → 59.9 over 28 rounds"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2609.38349"
+    - label: "Project page"
+      url: "https://jprithwish.github.io/MILO/"
+
+- key: hermes
+  name: "Hermes"
+  lever: "Test-time compute"
+  topic: "Test-time scaling"
+  venue: "Preprint 2026"
+  text: '<mark class="hl sweep">Flexible context management for long-horizon test-time scaling</mark> through a parameterized delegation/digestion harness and an SFT+RL framework for learning adaptive context reuse.'
+  # Qwen3-4B under Hermes on 238 AIME + HMMT problems: Base, SFT, SFT+RL; reference = one 56K-token context
+  spark: [16.2, 39.9, 47.3]
+  spark_ref: 41.8
+  spark_caption: "Extra contexts hurt the untrained model (16.2%), then beat one 56K context after training (47.3 vs 41.8)"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2609.38332"
+    - label: "Project page"
+      url: "https://rachellxy.github.io/blog/2026/hermes"
+
+- key: scout
+  name: "SCOUT"
+  lever: "Training"
+  topic: "On-policy distillation"
+  venue: "Preprint 2026"
+  text: 'Identifies <mark class="hl sweep">teacher-side off-policy degradation in on-policy distillation</mark> and mitigates it by adapting teachers to student-generated prefixes with RL.'
+  # Teacher accuracy (AIME 2025) when continuing 0-90% student prefixes
+  spark: [47.5, 46.67, 44.17, 39.17, 39.58, 36.67, 35.62, 34.79, 32.29, 30.21]
+  spark_caption: "The teacher's accuracy falls from 47.5% to 30.2% as it continues longer student prefixes"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/pdf/2609.38360"
+    - label: "Project page"
+      url: "https://shrango.github.io/scout/"
+
+- key: spider
+  name: "SpIDER"
+  lever: "Agents"
+  topic: "Issue localization"
+  venue: "EMNLP 2026"
+  text: 'Retrieval and reasoning framework for software issue localization, combining structural graph exploration with LLM-based reasoning to improve localization accuracy.'
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/pdf/2512.16956"

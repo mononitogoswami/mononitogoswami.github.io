@@ -1,4 +1,38 @@
 # ============================================
+# Post-Training & Test-Time Scaling
+# ============================================
+
+- title: "Hermes: Learning Contextual Reasoning Unlocks Test-Time Scaling"
+  authors: "Xinyu Li, **Mononito Goswami**, Hao Liu, Nikos Kanakaris, Langlin Huang, Prithwish Jana, Patrick Blöbaum, Purak Jain"
+  venue: "Preprint"
+  year: 2026
+  venue_full: "ArXiv Preprint, 2026"
+  theme: "Post-Training & Test-Time Scaling"
+  selected: false
+  description: "Flexible context management for long-horizon test-time scaling: a parameterized delegation/digestion harness, and an SFT+RL recipe (Hermes-Learn) that teaches a 4B model adaptive context reuse."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/abs/2609.38332"
+    - label: "Project page"
+      url: "https://rachellxy.github.io/blog/2026/hermes"
+
+- title: "SCOUT: On the Off-Policy Teacher in On-Policy Distillation"
+  authors: "Langlin Huang, Hao Liu, **Mononito Goswami**, Xinyu Li, Prithwish Jana, Nikos Kanakaris, Patrick Blöbaum, Purak Jain"
+  venue: "Preprint"
+  year: 2026
+  venue_full: "ArXiv Preprint, 2026"
+  theme: "Post-Training & Test-Time Scaling"
+  selected: false
+  description: "Identifies teacher-side off-policy degradation in on-policy distillation and mitigates it by adapting the teacher to student-generated prefixes with RL."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2609.38360"
+    - label: "Project page"
+      url: "https://shrango.github.io/scout/"
+
+# ============================================
 # Foundation Models
 # ============================================
 
@@ -105,6 +139,21 @@
 # Agents
 # ============================================
 
+- title: "MILO: Automated Harness Discovery via Orchestrated Multi-Agent Evolution"
+  authors: "Prithwish Jana, **Mononito Goswami**, Hao Liu, Xinyu Li, Langlin Huang, Zhehui Huang, Zhishen Huang, Patrick Blöbaum, Anoop Deoras, Purak Jain, Nikos Kanakaris, Sahika Genc"
+  venue: "Preprint"
+  year: 2026
+  venue_full: "ArXiv Preprint, 2026"
+  theme: "Agents"
+  selected: false
+  description: "Automated harness discovery through orchestrated multi-agent evolution: the search co-evolves the harness and its own strategy, reaching state-of-the-art results on Terminal-Bench 2.1, PaperBench, and DeepSWE."
+  badges: []
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/abs/2609.38349"
+    - label: "Project page"
+      url: "https://jprithwish.github.io/MILO/"
+
 - title: "TimeSeriesGym: A Scalable Benchmark for (Time Series) Machine Learning Engineering Agents"
   authors: "Yifu Cai, Xinyu Li, **Mononito Goswami**, Michał Wiliński, Gus Welter, Artur Dubrawski"
   venue: "Preprint"
@@ -122,14 +171,13 @@
       url: "https://github.com/moment-timeseries-foundation-model/TimeSeriesGym"
 
 - title: "SpIDER: Spatially Informed Dense Embedding Retrieval for Software Issue Localization"
-  authors: "Shravan Chaudhari, Rahul Thomas Jacob, **Mononito Goswami**, Jiajun Cao, Shihab Rashid, Christian Bock"
-  venue: "Preprint"
-  year: 2025
-  venue_full: "ArXiv Preprint, 2025"
+  authors: "Shravan Chaudhari, Rahul Thomas Jacob, Jiajun Cao, Shihab Rashid, **Mononito Goswami**, Christian Bock"
+  venue: "EMNLP"
+  year: 2026
+  venue_full: "Conference on Empirical Methods in Natural Language Processing (EMNLP), 2026"
   theme: "Agents"
-  selected: true
-  selected_theme: "Agents"
-  description: "Dense embedding retrieval for localizing code changes from natural language issue descriptions in large software repositories."
+  selected: false
+  description: "Retrieval and reasoning framework for software issue localization, combining structural graph exploration with LLM-based reasoning to improve localization accuracy."
   badges: []
   links:
     - label: "PDF"

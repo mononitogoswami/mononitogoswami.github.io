@@ -1,5 +1,20 @@
+- date: 2026-10-01
+  text: "Promoted to **Senior Applied Scientist** at Amazon."
+
+- date: 2026-09-29
+  text: "New work on **recursive self-improvement**: [MILO](https://arxiv.org/abs/2609.38349) co-evolves an agent's harness and its own search strategy, with an orchestrator that diagnoses stalled search and intervenes. State-of-the-art results on Terminal-Bench 2.1, PaperBench, and DeepSWE. [Project page](https://jprithwish.github.io/MILO/)"
+
+- date: 2026-09-28
+  text: "New work on **test-time scaling**: [Hermes](https://arxiv.org/abs/2609.38332) lets the model decide how to use each fresh context window, and Hermes-Learn teaches a 4B model to do it well enough to beat one 56K-token context on the same budget. [Project page](https://rachellxy.github.io/blog/2026/hermes)"
+
+- date: 2026-09-27
+  text: "New work on **on-policy distillation**: [SCOUT](https://arxiv.org/pdf/2609.38360) shows that the teacher in OPD is itself off-policy, and adapts it to student-written prefixes with RL, giving the best distilled student in every setting we tested. [Project page](https://shrango.github.io/scout/)"
+
+- date: 2026-08-31
+  text: "[SpIDER](https://arxiv.org/abs/2512.16956), retrieval and reasoning for software issue localization, accepted at **EMNLP 2026**."
+
 - date: 2026-07-10
-  text: "Organizing [Foundation Models for Structured Data](https://icml-structured-fm-workshop.github.io/) at **ICML 2026** (Seoul). Submissions open — send us your best work!"
+  text: "Our [Foundation Models for Structured Data](https://icml-structured-fm-workshop.github.io/) workshop returned to **ICML 2026** in Seoul."
 
 - date: 2026-04-20
   text: "Our [Time Series in the Age of Large Models](https://tsalm-workshop.github.io/) workshop at **ICLR 2026** (Rio de Janeiro) wrapped up with 75 accepted papers."
@@ -20,7 +35,7 @@
   text: "New work on [understanding and steering representations inside time series foundation models](https://arxiv.org/pdf/2409.12915) accepted at **ICML 2025**."
 
 - date: 2025-06-01
-  text: "Joined **Amazon Web Services** as an Applied Scientist, leading development of the [AWS DevOps Agent](https://aws.amazon.com/devops-agent/)."
+  text: "Joined **Amazon Web Services** as an Applied Scientist II, leading development of the [AWS DevOps Agent](https://aws.amazon.com/devops-agent/)."
 
 - date: 2025-05-15
   text: "Defended my **Ph.D.** at Carnegie Mellon and received the **Robotics Institute Distinguished Dissertation Award** (selected from ~35 graduating PhD students)."

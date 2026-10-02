@@ -4,7 +4,29 @@
   padding-bottom: 1rem;
 }
 
+.profile-photo-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 280px;
+
+  // Offset sand block behind the photo; drifts slightly on hover
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: $radius-lg;
+    background: linear-gradient(135deg, $sand, rgba($olive, 0.6));
+    transform: translate(10px, 10px);
+    transition: transform 0.5s $ease-out;
+  }
+
+  &:hover::before {
+    transform: translate(14px, 14px);
+  }
+}
+
 .profile-photo {
+  position: relative;
   width: 100%;
   max-width: 280px;
   height: auto;
@@ -13,8 +35,9 @@
 }
 
 .profile-name {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-family: $font-family-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
   margin-bottom: 0.1rem;
   letter-spacing: -0.02em;
 }
@@ -32,6 +55,207 @@
 
   p {
     margin-bottom: 0.65rem;
+  }
+
+  .profile-lede {
+    font-family: $font-family-serif;
+    font-size: 1.22rem;
+    line-height: 1.45;
+    font-weight: 500;
+    color: $text-color;
+    margin: 0.4rem 0 0.8rem;
+    padding-left: 0.85rem;
+    border-left: 3px solid $terracotta;
+  }
+}
+
+// Recent work cards
+.recent-work {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.95rem 1.1rem 0.85rem;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+
+  // Thin warm rule along the top edge, drawn in on hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 1.1rem;
+    right: 1.1rem;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, $olive, $terracotta, $brick);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.45s $ease-out;
+  }
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+    border-color: darken($border-color, 6%);
+
+    &::before { transform: scaleX(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:hover, &:focus-within { transform: none; }
+  }
+}
+
+// Hover transitions plus the scroll reveal (staggered by --delay); beats the generic .reveal rule
+.work-card,
+.js .work-card.reveal {
+  transition: transform 0.35s $ease-out, box-shadow 0.35s $ease-out, border-color 0.35s $ease-out,
+    opacity 0.6s $ease-out var(--delay, 0ms), translate 0.6s $ease-out var(--delay, 0ms);
+}
+
+.work-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.5rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $text-light;
+}
+
+.work-lever {
+  color: $primary;
+}
+
+.work-topic::before {
+  content: '·';
+  margin-right: 0.5rem;
+  color: $text-light;
+}
+
+.work-venue {
+  margin-left: auto;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-size: 0.74rem;
+  color: $text-muted;
+  background-color: $bg-section;
+  border-radius: 2rem;
+  padding: 0.05rem 0.55rem;
+}
+
+.work-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.2rem 0 0.25rem;
+}
+
+.work-text {
+  font-size: 0.89rem;
+  line-height: 1.55;
+  color: $text-color;
+  margin-bottom: 0.5rem;
+}
+
+.work-spark {
+  margin: auto 0 0.45rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 44px;
+    overflow: visible;
+  }
+
+  figcaption {
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: $text-muted;
+    margin-top: 0.2rem;
+  }
+}
+
+// Sparkline marks (drawn by assets/js/site.js)
+.spark-line {
+  fill: none;
+  stroke: $chart-1;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.spark-area {
+  fill: rgba($chart-1, 0.1);
+  stroke: none;
+}
+
+.spark-ref {
+  stroke: $text-light;
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.spark-ref-label,
+.spark-end-label {
+  font-family: $font-family-base;
+  font-size: 11px;
+  fill: $text-muted;
+}
+
+.spark-end-label {
+  font-weight: 700;
+  fill: $text-color;
+}
+
+.spark-dot {
+  fill: $chart-1;
+  stroke: $bg-color;
+  stroke-width: 2;
+}
+
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  margin-top: auto;
+
+  .work-figure-link {
+    margin-left: auto;
+    color: $text-muted;
+
+    span {
+      display: inline-block;
+      transition: transform $transition-base;
+    }
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+
+      span { transform: translateX(3px); }
+    }
   }
 }
 
@@ -91,6 +315,38 @@
   color: $text-color;
 }
 
+// Small dot on news from the last ~60 days
+.news-item.is-new .news-date::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  background-color: $terracotta;
+  vertical-align: 0.12em;
+  box-shadow: 0 0 0 0 rgba($terracotta, 0.5);
+  animation: news-pulse 2.4s ease-out 3;
+}
+
+@keyframes news-pulse {
+  0% { box-shadow: 0 0 0 0 rgba($terracotta, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba($terracotta, 0); }
+  100% { box-shadow: 0 0 0 0 rgba($terracotta, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-item.is-new .news-date::after { animation: none; }
+}
+
+.news-item {
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($sand, 0.25);
+  }
+}
+
 // Stack news items on narrow screens
 @media (max-width: 575px) {
   .news-item {
@@ -141,6 +397,7 @@
 }
 
 .selected-theme-label {
+  font-family: $font-family-base;
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
