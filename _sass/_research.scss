@@ -244,8 +244,6 @@ $text-col: 46rem;
   --ink: #{$text-color};
   --muted: #{$text-light};
   --surface: #{$surface};
-  --olive: #{$olive};
-  --sand: #{$sand};
 
   @include card;
   position: relative;
@@ -335,214 +333,18 @@ $text-col: 46rem;
 .fig-legend-outline { width: 14px; height: 10px; border-radius: 3px; border: 1.5px solid; background: transparent !important; }
 .fig-legend-dashline { width: 16px; height: 0; border-top: 1.5px dashed; background: none !important; }
 
-// ---------- approach step player ----------
-.ap {
-  display: grid;
-  grid-template-columns: minmax(14rem, 17rem) minmax(0, 1fr);
-  gap: 1.25rem;
-  align-items: start;
+// ---------- embedded project-page animations (embeds/) ----------
+.embed {
+  margin: 0 -0.25rem;
 
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-
-    .ap-stage-wrap { order: -1; }
-  }
-}
-
-.ap-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.ap-step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  width: 100%;
-  padding: 0.6rem 0.85rem 0.65rem;
-  text-align: left;
-  font-family: $font-family-base;
-  background-color: $surface;
-  border: 1px solid $border-color;
-  border-radius: $radius-md + 0.1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: border-color $transition-fast, box-shadow $transition-fast;
-
-  &:hover { border-color: rgba($brick, 0.35); }
-  &:focus-visible { outline: 2px solid $primary; outline-offset: 2px; }
-
-  &[aria-current="step"] {
-    border-color: rgba($brick, 0.6);
-    box-shadow: 0 0 0 3px rgba($brick, 0.07);
-
-    .ap-step-head { color: $brick; }
-    .ap-step-desc { display: block; }
-  }
-}
-
-.ap-step-head {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: $text-light;
-}
-
-.ap-step-tag {
-  padding: 0.05rem 0.45rem;
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
-  color: $text-muted;
-  background-color: $bg-section;
-  border-radius: 1rem;
-
-  &.ours {
-    color: $brick;
-    background-color: rgba($brick, 0.08);
-  }
-}
-
-.ap-step-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: $text-color;
-}
-
-.ap-step-desc {
-  display: none;
-  margin-top: 0.25rem;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: $text-muted;
-}
-
-// Progress bar while autoplay is on this step
-.ap-step-bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: $brick;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-}
-
-.ap-step.is-running .ap-step-bar {
-  animation: ap-progress var(--ap-dur, 3800ms) linear forwards;
-}
-
-@keyframes ap-progress {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-
-.ap-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 0.35rem;
-}
-
-.ap-hint {
-  font-size: 0.76rem;
-  color: $text-light;
-}
-
-.ap-stage {
-  background-color: #F7EFE2;
-  border: 1px solid $border-light;
-  border-radius: $radius-lg;
-  padding: 0.6rem;
-
-  svg {
+  iframe {
     display: block;
     width: 100%;
-    height: auto;
-    overflow: visible;
-    font-family: $font-family-base;
+    border: 0;
+    background: transparent;
+    transition: height 0.25s ease;
   }
 }
-
-.ap-legend {
-  margin-top: 0.6rem;
-}
-
-// Stage elements: shown per step by research-approach.js
-.ps-el {
-  opacity: 0;
-  transition: opacity 0.45s ease var(--d, 0ms), transform 0.45s $ease-out var(--d, 0ms);
-
-  &.on { opacity: 1; }
-  &.on.dim { opacity: 0.22; }
-}
-
-.ps-pop {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  transform: translateY(6px) scale(0.92);
-
-  &.on { transform: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ps-el, .ps-pop { transition: none; }
-  .ps-pop { transform: none; }
-  .ap-step.is-running .ap-step-bar { animation: none; }
-}
-
-// Stage typography (viewBox units; large enough to stay legible when scaled down)
-.ap-label { font-size: 15px; fill: $text-color; }
-.ap-label-small { font-size: 13.5px; fill: $text-light; }
-.ap-label-strong { font-size: 16px; font-weight: 700; fill: $text-color; }
-.ap-label-olive { font-size: 14px; font-weight: 700; fill: $olive-ink; }
-.ap-label-teacher { font-size: 14px; font-weight: 700; fill: $terracotta-ink; }
-.ap-label-brick { font-size: 14px; font-weight: 700; fill: $brick; }
-.ap-answer { font-size: 17px; font-weight: 800; fill: $brick; }
-.ap-label-tight { font-size: 12.5px; }
-.ap-mark-ok { font-size: 20px; font-weight: 800; fill: $text-color; }
-.ap-mark-no { font-size: 20px; font-weight: 800; fill: $text-light; }
-.ap-report-ok { font-size: 18px; font-weight: 800; fill: $text-color; }
-.ap-report-no { font-size: 18px; font-weight: 800; fill: $text-light; }
-
-// Stage shapes
-.ap-box { fill: $surface; stroke: rgba(70, 45, 20, 0.35); stroke-width: 1.5; }
-.ap-box-brick { stroke: $brick; }
-.ap-box-root { stroke: $brick; stroke-width: 2; }
-.ap-box-sub { stroke: $text-light; stroke-dasharray: 5 4; }
-.ap-box-next { fill: none; stroke: $terracotta; stroke-width: 1.5; stroke-dasharray: 5 4; }
-.ap-box-orch { stroke: $text-color; }
-.ap-box.hot, .ap-box-root.hot, .ap-box-orch.hot { fill: #FCEFEA; stroke: $brick; stroke-width: 2.5; }
-.ap-teacher { stroke: transparent; stroke-width: 3; transition: stroke 0.3s ease, opacity 0.45s ease; }
-.ap-teacher.hot { stroke: $brick; }
-.ap-island { fill: rgba($sand, 0.28); stroke: rgba(70, 45, 20, 0.12); }
-.ap-mini { fill: $surface; stroke: rgba(70, 45, 20, 0.2); }
-.ap-mini-line { fill: none; stroke: $text-color; stroke-width: 2; stroke-linejoin: round; }
-
-.ap-supervise { stroke: $chart-teacher; stroke-width: 1.25; stroke-dasharray: 3 3; }
-.ap-cut { stroke: $brick; stroke-width: 1.5; stroke-dasharray: 4 4; }
-.ap-branch { fill: none; stroke: rgba(70, 45, 20, 0.35); stroke-width: 1.5; }
-.ap-flow { fill: none; stroke: $brick; stroke-width: 1.75; stroke-linecap: round; }
-.ap-flow-strong { stroke-width: 2.5; }
-.ap-flow-teacher { stroke: $chart-teacher; }
-.ap-edge { stroke: rgba(70, 45, 20, 0.4); stroke-width: 1.75; }
-.ap-watch { fill: none; stroke: $text-light; stroke-width: 1.25; stroke-dasharray: 2 4; }
-.ap-graft { fill: none; stroke: $brick; stroke-width: 2.25; stroke-dasharray: 6 4; }
-.ap-ring { fill: none; stroke: $brick; stroke-width: 2.5; }
-
-.ap-node-ok { fill: $text-color; stroke: $surface; stroke-width: 2; }
-.ap-node-no { fill: $surface; stroke: $text-light; stroke-width: 2; }
-.ap-node-eval { fill: $terracotta; stroke: $surface; stroke-width: 2; }
-.ap-node-best { fill: $text-color; stroke: $surface; stroke-width: 2; }
-.ap-node-best.hot { stroke: $brick; stroke-width: 4; }
-.ap-node-graft { fill: $brick; stroke: $surface; stroke-width: 2.5; }
 
 // ---------- results ----------
 .results {
@@ -583,6 +385,6 @@ $text-col: 46rem;
 }
 
 @media print {
-  .ap-controls, .lever-nav { display: none !important; }
+  .embed { display: none !important; }
   .fig-card { box-shadow: none; break-inside: avoid; width: auto; margin-left: 0; }
 }

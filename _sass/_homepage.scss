@@ -12,7 +12,33 @@
   }
 }
 
+.profile-photo-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 240px;
+
+  // Offset sand-and-olive block behind the photo; drifts slightly on hover
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: $radius-xl;
+    background: linear-gradient(135deg, $sand, rgba($olive, 0.75));
+    transform: translate(12px, 12px);
+    transition: transform 0.5s $ease-out;
+  }
+
+  &:hover::before {
+    transform: translate(16px, 16px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before { transition: none; }
+  }
+}
+
 .profile-photo {
+  position: relative;
   width: 100%;
   max-width: 240px;
   height: auto;

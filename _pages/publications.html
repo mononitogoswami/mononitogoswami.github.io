@@ -5,7 +5,7 @@ title: "Research"
 hide_title: true
 body_class: "research-page"
 scripts:
-  - /assets/js/research-approach.js
+  - /assets/js/research-embeds.js
 ---
 
 <header class="research-head reveal">
@@ -44,7 +44,7 @@ scripts:
 
 <!-- ============ 01 · MILO ============ -->
 <section class="highlight" id="milo">
-  <div class="fig-card hl-box reveal" id="ap-milo">
+  <div class="fig-card hl-box reveal">
     <header class="hl-head">
       <span class="hl-num">01</span>
       <div class="hl-head-text">
@@ -57,7 +57,7 @@ scripts:
       </div>
     </header>
     <div class="prose hl-lead"><p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. MILO searches for better harnesses with islands that evolve in parallel, and an <strong>orchestrator</strong> agent that watches the whole search, diagnoses stalls and intervenes.</p></div>
-    <div class="ap" data-role="approach"></div>
+    <div class="embed"><iframe src="{{ '/embeds/milo/' | relative_url }}" title="MILO interactive demo: a real harness search played back round by round" data-embed="milo" loading="lazy" style="height: 760px"></iframe></div>
     <div class="results">
       <p class="results-label">Results</p>
       <ul>
@@ -66,13 +66,13 @@ scripts:
         <li>On Terminal-Bench every island stalls for nine rounds; the orchestrator&rsquo;s interventions lift the best pass rate from 45.0% to 59.9% at the lowest token cost of any method. Evolved harnesses also transfer to Frontier-Bench without further search.</li>
       </ul>
     </div>
-    <p class="fig-note">Animation adapted from the method section of the <a href="https://jprithwish.github.io/MILO/#method" target="_blank" rel="noopener">MILO project page</a>.</p>
+    <p class="fig-note">Interactive demo from the <a href="https://jprithwish.github.io/MILO/#demos" target="_blank" rel="noopener">MILO project page</a>.</p>
   </div>
 </section>
 
 <!-- ============ 02 · Hermes ============ -->
 <section class="highlight" id="hermes">
-  <div class="fig-card hl-box reveal" id="ap-hermes">
+  <div class="fig-card hl-box reveal">
     <header class="hl-head">
       <span class="hl-num">02</span>
       <div class="hl-head-text">
@@ -84,8 +84,8 @@ scripts:
         <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
       </div>
     </header>
-    <div class="prose hl-lead"><p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model, and <strong>Hermes-Learn</strong> (SFT, then RL) teaches a 4B model to make them. Below, Qwen3-4B after Hermes-Learn works through AIME 2026, problem 4.</p></div>
-    <div class="ap" data-role="approach"></div>
+    <div class="prose hl-lead"><p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model, and <strong>Hermes-Learn</strong> (SFT, then RL) teaches a 4B model to make them.</p></div>
+    <div class="embed"><iframe src="{{ '/embeds/hermes.html' | relative_url }}" title="Hermes overview: how the model uses each fresh context, step by step" data-embed="hermes" loading="lazy" style="height: 660px"></iframe></div>
     <div class="results">
       <p class="results-label">Results</p>
       <ul>
@@ -94,13 +94,13 @@ scripts:
         <li>It generalizes: deeper delegation than in training reaches 55.6%, Hermes lifts other test-time scaling methods (DeepSeekMath Agent 15.1% &rarr; 52.5%), and the recipe transfers to Olmo-3-7B (4.8% &rarr; 40.6%).</li>
       </ul>
     </div>
-    <p class="fig-note">Animation adapted from the overview and rollouts on the <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Hermes project page</a>.</p>
+    <p class="fig-note">Interactive overview from the <a href="https://rachellxy.github.io/blog/2026/hermes#hermes" target="_blank" rel="noopener">Hermes project page</a>.</p>
   </div>
 </section>
 
 <!-- ============ 03 · SCOUT ============ -->
 <section class="highlight" id="scout">
-  <div class="fig-card hl-box reveal" id="ap-scout">
+  <div class="fig-card hl-box reveal">
     <header class="hl-head">
       <span class="hl-num">03</span>
       <div class="hl-head-text">
@@ -113,7 +113,7 @@ scripts:
       </div>
     </header>
     <div class="prose hl-lead"><p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token. But the teacher was trained to continue its own reasoning, and the deeper into a student&rsquo;s response it reads, the worse it does. SCOUT trains the teacher to continue student-written prefixes.</p></div>
-    <div class="ap" data-role="approach"></div>
+    <div class="embed"><iframe src="{{ '/embeds/scout.html' | relative_url }}" title="SCOUT method walkthrough: training the teacher on student prefixes" data-embed="scout" loading="lazy" style="height: 560px"></iframe></div>
     <div class="results">
       <p class="results-label">Results</p>
       <ul>
@@ -122,7 +122,7 @@ scripts:
         <li>It stacks with other OPD improvements: added to OPTR, it gains another 2.5 points on math.</li>
       </ul>
     </div>
-    <p class="fig-note">Animation adapted from the method figure on the <a href="https://shrango.github.io/scout/#method" target="_blank" rel="noopener">SCOUT project page</a>.</p>
+    <p class="fig-note">Interactive method walkthrough from the <a href="https://shrango.github.io/scout/#method" target="_blank" rel="noopener">SCOUT project page</a>.</p>
   </div>
 </section>
 
