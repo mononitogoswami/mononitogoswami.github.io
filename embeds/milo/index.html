@@ -1091,7 +1091,14 @@
 
 
 <script src="app.js?v=202610010237" defer></script>
-
+<style>
+          .embed-target { border: 0 !important; background: transparent !important; box-shadow: none !important; }
+          .chart-head, .embed-target > figcaption, .demo-restart, .demo-speed { display: none !important; }
+          .embed-target .legend { justify-content: center; border: 0 !important; padding: 0 0 4px !important; }
+          .demo-status { font: 600 13px/1.4 Inter, system-ui, sans-serif; color: #52514e; text-align: center; margin: 2px 0 0; font-variant-numeric: tabular-nums; }
+          .demo-status b { color: #b4321f; }
+          .demo-ctl { padding-top: 4px !important; }
+        </style>
 <style>
   html, body { background: transparent !important; margin: 0 !important; padding: 0 !important; min-height: 0 !important; }
   html { overflow-y: hidden; }
@@ -1138,5 +1145,27 @@
   setTimeout(report, 300);
 })();
 </script>
-</body>
+<script>window.addEventListener("load", function () { 
+          var svg = document.querySelector('.demo-svg');
+          if (svg) {
+            var vb = svg.viewBox.baseVal, panel = null;
+            Array.prototype.forEach.call(svg.querySelectorAll('rect'), function (r) {
+              if (+r.getAttribute('height') === 108 && +r.getAttribute('rx') === 12) panel = r;
+            });
+            if (panel) svg.setAttribute('viewBox', '0 0 ' + vb.width + ' ' + (+panel.getAttribute('y') - 6));
+            var texts = Array.prototype.slice.call(svg.querySelectorAll('text'));
+            var status = document.createElement('p'); status.className = 'demo-status';
+            svg.parentNode.insertBefore(status, svg.nextSibling);
+            var update = function () {
+              var ro = texts.filter(function (t) { return /POPULATION BEST/.test(t.textContent); })[0];
+              var tag = texts.filter(function (t) { return /^ORCHESTRATOR/.test(t.textContent); })[0];
+              if (!ro) return;
+              var m = ro.textContent.match(/ROUND (\d+) \/ (\d+).*BEST ([\d.]+)%/);
+              if (!m) return;
+              status.innerHTML = (tag ? '<b>Orchestrator steps in</b> · ' : '') + 'Round ' + m[1] + ' of ' + m[2] + ' · best pass-rate ' + m[3] + '%';
+            };
+            new MutationObserver(update).observe(svg, { subtree: true, characterData: true, childList: true });
+            update();
+          }
+         });</script></body>
 </html>

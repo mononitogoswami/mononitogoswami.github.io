@@ -3305,7 +3305,16 @@ HERMES.rollouts = [
 </script>
 
 
-
+<style>
+          #ov-phases, #fig-overview > figcaption { display: none !important; }
+          .ov-panel { border: 0 !important; padding: 0 !important; background: transparent !important; box-shadow: none !important; }
+          .ov-top { justify-content: flex-start; margin-bottom: 0 !important; }
+          #ov-narr { font-size: 0 !important; min-height: 0 !important; height: auto !important; padding: 8px 0 0 !important; margin: 0 !important; background: transparent !important; border: 0 !important; }
+          #ov-narr .bn { font-size: 12px !important; }
+          #ov-narr > b:first-of-type { font-size: 16px !important; margin-left: 8px; }
+          #ov-narr > b:not(:first-of-type) { display: none !important; }
+          .ov-top { display: flex; align-items: center; gap: 12px; }
+        </style>
 <style>
   html, body { background: transparent !important; margin: 0 !important; padding: 0 !important; min-height: 0 !important; }
   html { overflow-y: hidden; }
@@ -3352,5 +3361,8 @@ HERMES.rollouts = [
   setTimeout(report, 300);
 })();
 </script>
-</body>
+<script>window.addEventListener("load", function () { 
+          var top = document.querySelector('.ov-top'), narr = document.getElementById('ov-narr');
+          if (top && narr) top.appendChild(narr);       // phase name sits next to the play button
+         });</script></body>
 </html>

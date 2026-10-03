@@ -9,8 +9,7 @@ scripts:
 ---
 
 <header class="research-head reveal">
-  <p class="kicker">Research</p>
-  <h1 class="research-title">Research highlights</h1>
+  <h1 class="research-title">Research Highlights</h1>
   <p class="prose research-lead">How AI systems learn to reason, and how that process can be measured and shaped.</p>
 </header>
 
@@ -19,60 +18,51 @@ scripts:
 <!-- ============ 01 · MILO ============ -->
 <section class="highlight" id="milo">
   <div class="fig-card hl-box reveal">
-    <header class="hl-head">
-      <span class="hl-num">01</span>
-      <div class="hl-head-text">
-        <h2 class="hl-title">Recursive self-improvement</h2>
-        <p class="hl-paper"><strong>MILO</strong> &middot; Automated harness discovery via orchestrated multi-agent evolution</p>
-      </div>
+    <p class="hl-kicker"><span class="hl-num">01</span> Recursive Self-Improvement &middot; MILO</p>
+    <h2 class="hl-title">When Search Stalls, the Orchestrator Steps In</h2>
+    <div class="prose hl-lead"><p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. MILO searches for better harnesses with islands that evolve in parallel, and an <strong>orchestrator</strong> agent that watches the whole search, diagnoses stalls and intervenes.</p></div>
+    <div class="embed"><iframe src="{{ '/embeds/milo/' | relative_url }}" title="MILO interactive demo: a harness search played back round by round" data-embed="milo" loading="lazy" style="height: 600px"></iframe></div>
+    <div class="hl-foot">
+      <p class="fig-note">Interactive demo from the <a href="https://jprithwish.github.io/MILO/#demos" target="_blank" rel="noopener">MILO project page</a>.</p>
       <div class="hl-links">
         <a href="https://arxiv.org/abs/2609.38349" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
         <a href="https://jprithwish.github.io/MILO/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
       </div>
-    </header>
-    <div class="prose hl-lead"><p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. MILO searches for better harnesses with islands that evolve in parallel, and an <strong>orchestrator</strong> agent that watches the whole search, diagnoses stalls and intervenes.</p></div>
-    <div class="embed"><iframe src="{{ '/embeds/milo/' | relative_url }}" title="MILO interactive demo: a real harness search played back round by round" data-embed="milo" loading="lazy" style="height: 760px"></iframe></div>
-    <p class="fig-note">Interactive demo from the <a href="https://jprithwish.github.io/MILO/#demos" target="_blank" rel="noopener">MILO project page</a>.</p>
+    </div>
   </div>
 </section>
 
 <!-- ============ 02 · Hermes ============ -->
 <section class="highlight" id="hermes">
   <div class="fig-card hl-box reveal">
-    <header class="hl-head">
-      <span class="hl-num">02</span>
-      <div class="hl-head-text">
-        <h2 class="hl-title">Test-time scaling</h2>
-        <p class="hl-paper"><strong>Hermes</strong> &middot; Learning contextual reasoning unlocks test-time scaling &middot; co-first author</p>
-      </div>
+    <p class="hl-kicker"><span class="hl-num">02</span> Test-Time Scaling &middot; Hermes &middot; co-first author</p>
+    <h2 class="hl-title">The Model Decides How to Use Each Fresh Context</h2>
+    <div class="prose hl-lead"><p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model, and <strong>Hermes-Learn</strong> (SFT, then RL) teaches a 4B model to make them.</p></div>
+    <div class="embed"><iframe src="{{ '/embeds/hermes.html' | relative_url }}" title="Hermes overview: how the model uses each fresh context, phase by phase" data-embed="hermes" loading="lazy" style="height: 560px"></iframe></div>
+    <div class="hl-foot">
+      <p class="fig-note">Interactive overview from the <a href="https://rachellxy.github.io/blog/2026/hermes#hermes" target="_blank" rel="noopener">Hermes project page</a>.</p>
       <div class="hl-links">
         <a href="https://arxiv.org/abs/2609.38332" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
         <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
       </div>
-    </header>
-    <div class="prose hl-lead"><p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model, and <strong>Hermes-Learn</strong> (SFT, then RL) teaches a 4B model to make them.</p></div>
-    <div class="embed"><iframe src="{{ '/embeds/hermes.html' | relative_url }}" title="Hermes overview: how the model uses each fresh context, step by step" data-embed="hermes" loading="lazy" style="height: 660px"></iframe></div>
-    <p class="fig-note">Interactive overview from the <a href="https://rachellxy.github.io/blog/2026/hermes#hermes" target="_blank" rel="noopener">Hermes project page</a>.</p>
+    </div>
   </div>
 </section>
 
 <!-- ============ 03 · SCOUT ============ -->
 <section class="highlight" id="scout">
   <div class="fig-card hl-box reveal">
-    <header class="hl-head">
-      <span class="hl-num">03</span>
-      <div class="hl-head-text">
-        <h2 class="hl-title">On-policy distillation</h2>
-        <p class="hl-paper"><strong>SCOUT</strong> &middot; On the off-policy teacher in on-policy distillation</p>
-      </div>
+    <p class="hl-kicker"><span class="hl-num">03</span> On-Policy Distillation &middot; SCOUT</p>
+    <h2 class="hl-title">The Teacher Learns to Continue the Student&rsquo;s Prefixes</h2>
+    <div class="prose hl-lead"><p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token. But the teacher was trained to continue its own reasoning, and the deeper into a student&rsquo;s response it reads, the worse it does. SCOUT trains the teacher to continue student-written prefixes.</p></div>
+    <div class="embed"><iframe src="{{ '/embeds/scout.html' | relative_url }}" title="SCOUT method walkthrough: training the teacher on student prefixes" data-embed="scout" loading="lazy" style="height: 440px"></iframe></div>
+    <div class="hl-foot">
+      <p class="fig-note">Interactive method walkthrough from the <a href="https://shrango.github.io/scout/#method" target="_blank" rel="noopener">SCOUT project page</a>.</p>
       <div class="hl-links">
         <a href="https://arxiv.org/pdf/2609.38360" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
         <a href="https://shrango.github.io/scout/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
       </div>
-    </header>
-    <div class="prose hl-lead"><p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token. But the teacher was trained to continue its own reasoning, and the deeper into a student&rsquo;s response it reads, the worse it does. SCOUT trains the teacher to continue student-written prefixes.</p></div>
-    <div class="embed"><iframe src="{{ '/embeds/scout.html' | relative_url }}" title="SCOUT method walkthrough: training the teacher on student prefixes" data-embed="scout" loading="lazy" style="height: 560px"></iframe></div>
-    <p class="fig-note">Interactive method walkthrough from the <a href="https://shrango.github.io/scout/#method" target="_blank" rel="noopener">SCOUT project page</a>.</p>
+    </div>
   </div>
 </section>
 

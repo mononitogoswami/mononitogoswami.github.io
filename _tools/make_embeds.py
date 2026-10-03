@@ -24,24 +24,85 @@ SPECS = [
         'url': 'https://shrango.github.io/scout/',
         'target': "document.getElementById('diagram').closest('.card') || document.getElementById('diagram').parentNode",
         'head': "<script>try { localStorage.setItem('scout-theme', 'light'); } catch (e) {}</script>",
-        'css': '',
+        # Diagram and legend only: no step list, curriculum slider or caption
+        'css': '''
+          .embed-target { border: 0 !important; padding: 0 !important; background: transparent !important; }
+          .method-grid { display: block !important; }
+          .curriculum, .embed-target p.caption, .player > span { display: none !important; }
+          .diagram-wrap { position: relative; max-width: 760px; margin: 0 auto !important; }
+          .diagram-legend { justify-content: center; max-width: 760px; margin: 8px auto 0 !important; }
+          .diagram-wrap > .player { position: absolute; top: 10px; right: 10px; z-index: 2; margin: 0 !important; width: auto !important; height: auto !important; }
+          .diagram-wrap > .player svg { width: 14px !important; height: 14px !important; }
+          .diagram-wrap > .player .tbl-btn { background: #fff; }
+        ''',
         # The page's own on-screen check misses once the rest of the page is hidden; start the
         # walkthrough here (its observer still pauses it when the box scrolls out of view)
-        'post': "setTimeout(function () { var b = document.getElementById('step-play'); if (b && /Play/.test(b.textContent)) b.click(); }, 700);",
+        'post': '''
+          var steps = document.getElementById('steps'), b = document.getElementById('step-play'), wrap = document.querySelector('.diagram-wrap');
+          if (b && wrap) wrap.appendChild(b.closest('.player') || b);   // keep play/pause on the diagram itself
+          if (steps) steps.parentNode.style.display = 'none';
+          setTimeout(function () { if (b && /Play/.test(b.textContent)) b.click(); }, 700);
+        ''',
     },
     {
         'name': 'hermes',
         'url': 'https://rachellxy.github.io/blog/2026/hermes',
         'target': "document.getElementById('fig-overview')",
         'head': '',
-        'css': '',
+        # Diagram, play button and the phase name only: no phase pills, narration or caption
+        'css': '''
+          #ov-phases, #fig-overview > figcaption { display: none !important; }
+          .ov-panel { border: 0 !important; padding: 0 !important; background: transparent !important; box-shadow: none !important; }
+          .ov-top { justify-content: flex-start; margin-bottom: 0 !important; }
+          #ov-narr { font-size: 0 !important; min-height: 0 !important; height: auto !important; padding: 8px 0 0 !important; margin: 0 !important; background: transparent !important; border: 0 !important; }
+          #ov-narr .bn { font-size: 12px !important; }
+          #ov-narr > b:first-of-type { font-size: 16px !important; margin-left: 8px; }
+          #ov-narr > b:not(:first-of-type) { display: none !important; }
+          .ov-top { display: flex; align-items: center; gap: 12px; }
+        ''',
+        'post': '''
+          var top = document.querySelector('.ov-top'), narr = document.getElementById('ov-narr');
+          if (top && narr) top.appendChild(narr);       // phase name sits next to the play button
+        ''',
     },
     {
         'name': 'milo',
         'url': 'https://jprithwish.github.io/MILO/',
         'target': "document.getElementById('demo').closest('figure') || document.getElementById('demo')",
         'head': '',
-        'css': '',
+        # Lineage trees, pass-rate chart, legend and play/scrub only; the narration panel is cropped
+        # out of the SVG and replaced by a one-line readout
+        'css': '''
+          .embed-target { border: 0 !important; background: transparent !important; box-shadow: none !important; }
+          .chart-head, .embed-target > figcaption, .demo-restart, .demo-speed { display: none !important; }
+          .embed-target .legend { justify-content: center; border: 0 !important; padding: 0 0 4px !important; }
+          .demo-status { font: 600 13px/1.4 Inter, system-ui, sans-serif; color: #52514e; text-align: center; margin: 2px 0 0; font-variant-numeric: tabular-nums; }
+          .demo-status b { color: #b4321f; }
+          .demo-ctl { padding-top: 4px !important; }
+        ''',
+        'post': '''
+          var svg = document.querySelector('.demo-svg');
+          if (svg) {
+            var vb = svg.viewBox.baseVal, panel = null;
+            Array.prototype.forEach.call(svg.querySelectorAll('rect'), function (r) {
+              if (+r.getAttribute('height') === 108 && +r.getAttribute('rx') === 12) panel = r;
+            });
+            if (panel) svg.setAttribute('viewBox', '0 0 ' + vb.width + ' ' + (+panel.getAttribute('y') - 6));
+            var texts = Array.prototype.slice.call(svg.querySelectorAll('text'));
+            var status = document.createElement('p'); status.className = 'demo-status';
+            svg.parentNode.insertBefore(status, svg.nextSibling);
+            var update = function () {
+              var ro = texts.filter(function (t) { return /POPULATION BEST/.test(t.textContent); })[0];
+              var tag = texts.filter(function (t) { return /^ORCHESTRATOR/.test(t.textContent); })[0];
+              if (!ro) return;
+              var m = ro.textContent.match(/ROUND (\d+) \/ (\d+).*BEST ([\d.]+)%/);
+              if (!m) return;
+              status.innerHTML = (tag ? '<b>Orchestrator steps in</b> · ' : '') + 'Round ' + m[1] + ' of ' + m[2] + ' · best pass-rate ' + m[3] + '%';
+            };
+            new MutationObserver(update).observe(svg, { subtree: true, characterData: true, childList: true });
+            update();
+          }
+        ''',
         # local copies of the page's own assets, kept next to the embed
         'assets': ['style.css', 'static/demo-run.js', 'demo.js', 'app.js'],
         'drop_scripts': ['einstein', 'googletagmanager', 'gtag('],
