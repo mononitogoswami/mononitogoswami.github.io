@@ -3,10 +3,10 @@
 # ============================================
 
 - title: "Hermes: Learning Contextual Reasoning Unlocks Test-Time Scaling"
-  authors: "Xinyu Li, **Mononito Goswami**, Hao Liu, Nikos Kanakaris, Langlin Huang, Prithwish Jana, Patrick Blöbaum, Purak Jain"
+  authors: "Xinyu Li<sup>*</sup>, **Mononito Goswami**<sup>*</sup>, Hao Liu, Nikos Kanakaris, Langlin Huang, Prithwish Jana, Patrick Blöbaum, Purak Jain"
   venue: "Preprint"
   year: 2026
-  venue_full: "ArXiv Preprint, 2026"
+  venue_full: "ArXiv Preprint, 2026 &middot; <sup>*</sup>Equal contribution"
   theme: "Post-Training & Test-Time Scaling"
   selected: true
   selected_theme: "Post-Training & Test-Time Scaling"
