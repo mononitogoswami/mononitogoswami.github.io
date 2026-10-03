@@ -1,8 +1,8 @@
 .navbar {
   padding-top: 0.85rem;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid $border-color;
-  background-color: rgba($bg-color, 0.95);
+  border-bottom: 1px solid $border-light;
+  background-color: rgba($bg-color, 0.86);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   position: sticky;
@@ -28,9 +28,9 @@
   }
 
   .navbar-brand {
-    font-family: $font-family-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-size: 1.05rem;
     color: $text-color;
     letter-spacing: -0.01em;
     transition: color $transition-fast;
@@ -44,7 +44,7 @@
   .nav-link {
     position: relative;
     color: $text-muted;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     font-weight: 500;
     padding: 0.5rem 0.9rem;
     border-radius: $radius-sm;
@@ -72,7 +72,7 @@
     }
 
     &.active {
-      color: $primary;
+      color: $text-color;
       font-weight: 600;
 
       &::after {

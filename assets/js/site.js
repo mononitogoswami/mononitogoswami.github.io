@@ -4,6 +4,8 @@
 (function () {
   'use strict';
 
+  // Tell the inline failsafe in head.html that the reveal script is running
+  window.__siteReady = true;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var SVGNS = 'http://www.w3.org/2000/svg';
 

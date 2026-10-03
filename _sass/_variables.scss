@@ -1,68 +1,94 @@
-// Palette — colorhunt d6d46d / f4dfb6 / de8f5f / 9a4444
-$olive: #D6D46D;             // highlighter, decorative accents only (too light for text)
-$sand: #F4DFB6;              // tints, chips, figure surfaces
-$terracotta: #DE8F5F;        // hover rules, progress bar, decorative strokes (not text: 2.5:1)
-$brick: #9A4444;             // links and primary accent (6.2:1 on $bg-color)
+// Palette — colorhunt d6d46d / f4dfb6 / de8f5f / 9a4444, used as accents on neutral warm surfaces
+$olive: #D6D46D;             // highlighter only (too light for text or marks)
+$sand: #F4DFB6;              // soft tints
+$terracotta: #DE8F5F;        // decorative strokes, progress bar (not text: 2.5:1)
+$brick: #9A4444;             // links, kickers, primary accent (6.4:1 on $surface)
 
-// Chart marks (validated with the dataviz checks against $bg-color; olive re-stepped darker)
-$chart-1: $brick;
-$chart-2: $terracotta;
-$chart-3: #8A8820;
+// Chart marks — validated with the dataviz checks against $surface
+$chart-1: $brick;            // the method / series of interest
+$chart-2: $terracotta;       // second series (needs labels: 2.5:1)
+$chart-3: #8A8820;           // olive re-stepped dark enough for marks
+$chart-teacher: #C46A35;     // deeper terracotta for single teacher lines (3:1+)
+$chart-base: #8E8A80;        // de-emphasis gray for baselines (emphasis pattern)
+
+// Text-safe accent variants for prose
+$olive-ink: #5E5A12;
+$terracotta-ink: #9A4F25;
 
 $primary: $brick;
-$primary-light: #FBF0DA;     // light sand for backgrounds
-$primary-dark: #7A3333;      // hover state for links
+$primary-light: #F6EDE7;
+$primary-dark: #7A3333;
 $accent: $terracotta;
-$accent-light: rgba($sand, 0.55);
 
-$text-color: #2E2420;        // warm ink
-$text-muted: #6B5B53;        // secondary text (6.3:1)
-$text-light: #7A675C;        // tertiary text (5.2:1)
-$bg-color: #FFFCF7;          // warm paper
-$bg-warm: #FBF4E6;           // footer and cards
-$bg-section: #F8EEDC;        // hover washes, pills
-$border-color: #EADCC4;
-$border-light: #F3E9D7;
+$text-color: #1F1A17;        // warm ink
+$text-muted: #554C45;        // secondary text
+$text-light: #716760;        // tertiary text
+$bg-color: #F8F2E7;          // page: warm paper, a light tint of $sand
+$surface: #FFFDF9;           // cards and figures
+$bg-warm: #F1E7D6;           // footer
+$bg-section: #F3EADB;        // pills, hover washes
+$border-color: rgba(70, 45, 20, 0.13);
+$border-light: rgba(70, 45, 20, 0.08);
 
 // Badge colors
-$badge-spotlight: #9A4F25;   // deep terracotta
-$badge-best-paper: #5E5A12;  // deep olive
+$badge-spotlight: $terracotta-ink;
+$badge-best-paper: $olive-ink;
 $badge-oral: $brick;
 
 // Typography
-$font-family-base: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-$font-family-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-$font-size-base: 1rem;
-$line-height-base: 1.7;
+$font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+$font-size-base: 0.95rem;
+$line-height-base: 1.6;
 
 // Layout
 $container-max-width: 960px;
+$wide-max-width: 1080px;
 $profile-photo-size: 200px;
 
 // Spacing
 $section-spacing: 2rem;
-$news-date-width: 100px;
+$news-date-width: 92px;
 
 // Transitions
 $transition-fast: 0.18s ease;
 $transition-base: 0.25s ease;
 $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
-// Shadows (warm-tinted)
-$shadow-sm: 0 1px 2px rgba(46, 36, 32, 0.05);
-$shadow-md: 0 4px 10px -2px rgba(46, 36, 32, 0.08), 0 2px 4px -2px rgba(46, 36, 32, 0.05);
-$shadow-lg: 0 10px 20px -6px rgba(46, 36, 32, 0.12), 0 4px 6px -4px rgba(46, 36, 32, 0.05);
+// Shadows
+$shadow-sm: 0 1px 2px rgba(20, 20, 10, 0.04);
+$shadow-card: 0 1px 2px rgba(20, 20, 10, 0.04), 0 8px 24px -12px rgba(20, 20, 10, 0.12);
+$shadow-md: 0 1px 2px rgba(20, 20, 10, 0.05), 0 12px 28px -12px rgba(20, 20, 10, 0.18);
+$shadow-lg: 0 10px 30px -10px rgba(20, 20, 10, 0.22), 0 2px 6px rgba(20, 20, 10, 0.06);
 
 // Border radius
 $radius-sm: 0.375rem;
 $radius-md: 0.5rem;
-$radius-lg: 0.75rem;
+$radius-lg: 0.875rem;
+$radius-xl: 1.25rem;
 
 // Mixins
 @mixin section-heading-accent($width: 2.5rem) {
-  font-family: $font-family-serif;
-  font-weight: 600;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.35rem;
+  font-family: $font-family-base;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1px solid $border-color;
+}
+
+@mixin kicker {
+  font-family: $font-family-base;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+@mixin card {
+  background-color: $surface;
+  border: 1px solid $border-color;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
 }

@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="page-content">
-  {% if page.title %}
+<div class="page-content{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  {% if page.title and page.hide_title != true %}
   <h1 class="page-title">{{ page.title }}</h1>
   {% endif %}
   {{ content }}

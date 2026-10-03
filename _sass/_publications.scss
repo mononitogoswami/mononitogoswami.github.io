@@ -62,14 +62,13 @@
   text-decoration: none;
 
   &:hover {
-    color: $primary;
-    background-color: $primary-light;
-    border-color: rgba($primary, 0.15);
+    color: $text-color;
+    border-color: rgba($primary, 0.3);
     text-decoration: none;
   }
 
   &.active {
-    color: $bg-color;
+    color: #fff;
     background-color: $primary;
     border-color: $primary;
   }
@@ -98,7 +97,7 @@
   transition: background-color $transition-fast;
 
   &:hover {
-    background-color: rgba($sand, 0.22);
+    background-color: rgba($sand, 0.3);
   }
 
   & + .pub-entry {
@@ -115,15 +114,15 @@
 }
 
 .pub-entry-authors {
-  font-size: 0.85rem;
-  color: $text-color;
+  font-size: 0.84rem;
+  color: $text-muted;
   margin-bottom: 0;
   line-height: 1.4;
 }
 
 .pub-entry-venue {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.84rem;
+  font-weight: 500;
   color: $text-color;
   margin-bottom: 0.1rem;
   line-height: 1.4;
@@ -142,16 +141,18 @@
   gap: 0.35rem;
 
   a {
-    font-size: 0.75rem;
+    font-size: 0.74rem;
     font-weight: 500;
-    color: $primary;
-    border-color: rgba($primary, 0.25);
-    padding: 0.2em 0.6em;
+    color: $text-color;
+    background-color: $surface;
+    border-color: $border-color;
+    padding: 0.18em 0.6em;
     border-radius: $radius-sm;
-    transition: color $transition-fast;
+    transition: color $transition-fast, border-color $transition-fast;
 
     &:hover {
-      color: $primary-dark;
+      color: $primary;
+      background-color: $surface;
       border-color: rgba($primary, 0.4);
       text-decoration: none;
     }
@@ -170,18 +171,18 @@
   margin-left: 0.3rem;
 
   &.spotlight {
-    background-color: rgba($badge-spotlight, 0.15);
-    color: darken($badge-spotlight, 25%);
+    background-color: rgba($terracotta, 0.18);
+    color: $badge-spotlight;
   }
 
   &.best-paper {
-    background-color: rgba($badge-best-paper, 0.12);
-    color: darken($badge-best-paper, 8%);
+    background-color: rgba($olive, 0.35);
+    color: $badge-best-paper;
   }
 
   &.oral {
     background-color: rgba($badge-oral, 0.1);
-    color: darken($badge-oral, 8%);
+    color: $badge-oral;
   }
 }
 

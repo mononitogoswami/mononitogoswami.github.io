@@ -4,7 +4,7 @@ layout: default
 
 <!-- Profile Section -->
 <section class="profile-section reveal">
-  <div class="row align-items-center">
+  <div class="row align-items-start">
     <div class="col-md-8 order-1">
       <h1 class="profile-name">{{ site.author.name }}</h1>
       <p class="profile-title">{{ site.author.bio }} &middot; {{ site.author.location }}</p>
@@ -13,8 +13,8 @@ layout: default
       </div>
       {% include social-links.html %}
     </div>
-    <div class="col-md-4 order-2 text-center mb-3 mb-md-0">
-      <div class="profile-photo-frame"><img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-photo"></div>
+    <div class="col-md-4 order-2 text-center mb-3 mb-md-0 pt-md-2">
+      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-photo">
     </div>
   </div>
 </section>
@@ -27,8 +27,7 @@ layout: default
     {% for item in site.data.highlights %}
     <article class="work-card reveal" style="--delay: {{ forloop.index0 | times: 70 }}ms">
       <div class="work-kicker">
-        <span class="work-lever">{{ item.lever }}</span>
-        <span class="work-topic">{{ item.topic }}</span>
+        <span>{{ item.lever }} &middot; {{ item.topic }}</span>
         <span class="work-venue">{{ item.venue }}</span>
       </div>
       <h3 class="work-name">{{ item.name }}</h3>

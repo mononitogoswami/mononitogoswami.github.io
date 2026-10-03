@@ -1,146 +1,173 @@
 ---
 layout: page
-title: "Research"
 permalink: /publications/
+title: "Research"
+hide_title: true
+body_class: "research-page"
 scripts:
   - /assets/js/research-figures.js
 ---
 
-<div class="research-intro reveal">
-  <p class="research-lede">How do language models get better, and what stops them?</p>
-  <p>A language model system improves through three levers: the <strong>harness</strong> it runs in, the <strong>compute</strong> it spends at test time, and the <strong>weights</strong> it learns in training. Each project below starts with a measurement that exposes what limits one lever, then builds a method aimed at that mechanism. The figures are interactive and are rebuilt from the numbers in each paper.</p>
-</div>
+<header class="research-head reveal">
+  <p class="kicker">Research</p>
+  <h1 class="research-title">How do language models get better, and what stops them?</h1>
+  <div class="prose research-lead">
+    <p>A language model system improves through three levers: the <strong>harness</strong> it runs in, the <strong>compute</strong> it spends at test time, and the <strong>weights</strong> it learns in training. Each project below starts with a measurement that exposes what limits one lever, then builds a method aimed at that mechanism.</p>
+  </div>
+  <nav class="lever-nav" aria-label="Research highlights">
+    <a href="#milo" class="lever-chip"><span class="lever-num">01</span><span class="lever-name">MILO</span><span class="lever-what">Harness</span></a>
+    <a href="#hermes" class="lever-chip"><span class="lever-num">02</span><span class="lever-name">Hermes</span><span class="lever-what">Test-time compute</span></a>
+    <a href="#scout" class="lever-chip"><span class="lever-num">03</span><span class="lever-name">SCOUT</span><span class="lever-what">Training</span></a>
+    <a href="#publications" class="lever-chip lever-chip-quiet"><span class="lever-num">&rarr;</span><span class="lever-name">Publications</span><span class="lever-what">Full list</span></a>
+  </nav>
+</header>
 
-<nav class="lever-nav reveal" aria-label="Featured projects">
-  <a href="#milo" class="lever-chip"><span class="lever-chip-kicker">Harness</span><span class="lever-chip-name">MILO</span></a>
-  <a href="#hermes" class="lever-chip"><span class="lever-chip-kicker">Test-time compute</span><span class="lever-chip-name">Hermes</span></a>
-  <a href="#scout" class="lever-chip"><span class="lever-chip-kicker">Training</span><span class="lever-chip-name">SCOUT</span></a>
-  <a href="#publications" class="lever-chip lever-chip-quiet"><span class="lever-chip-kicker">Everything</span><span class="lever-chip-name">Publications</span></a>
-</nav>
-
-<!-- ============ MILO ============ -->
-<section class="feature" id="milo">
-  <header class="feature-head reveal">
-    <p class="feature-kicker">Harness &middot; Recursive self-improvement</p>
-    <h2 class="feature-title">MILO</h2>
-    <p class="feature-claim">Automated harness discovery usually stalls because the search strategy is fixed. MILO co-evolves the harness <em>and</em> its own search: an orchestrator diagnoses stalled islands and intervenes by grafting lineages and reassigning mutators. It reaches state-of-the-art results on Terminal-Bench&nbsp;2.1, PaperBench and DeepSWE.</p>
-  </header>
-
-  <figure class="fig reveal" id="fig-milo">
-    <div class="fig-head">
-      <p class="fig-title">The Search Stalls, the Orchestrator Intervenes</p>
-      <p class="fig-sub">Population pass-rate per island on Terminal-Bench&nbsp;2.1 with gpt-oss-120b, over 28 rounds of evolution. Hover any round to see what the orchestrator did.</p>
+<!-- ============ 01 · MILO ============ -->
+<section class="highlight" id="milo">
+  <div class="highlight-text reveal">
+    <p class="kicker">01 &middot; Harness &middot; MILO</p>
+    <h2 class="highlight-title">When harness search stalls, let the search rewrite itself</h2>
+    <div class="prose">
+      <p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. Automated harness search usually fixes its strategy in advance, so it plateaus. MILO co-evolves the harness <em>and</em> its own search. Islands of harnesses evolve in parallel, and an <strong>orchestrator</strong> diagnoses stalls and intervenes by grafting lineages and reassigning mutators.</p>
+      <p>It sets state-of-the-art results on Terminal-Bench&nbsp;2.1, PaperBench and DeepSWE. Drag through the 28 rounds of one search run below.</p>
     </div>
+  </div>
+
+  <figure class="fig-card reveal" id="fig-milo">
+    <div class="fig-top">
+      <div>
+        <p class="fig-label">Figure 1 &middot; MILO</p>
+        <p class="fig-title">Every island stalls, until the orchestrator intervenes</p>
+      </div>
+      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
+    </div>
+    <div class="fig-stats" data-role="stats"></div>
     <div class="fig-controls">
-      <button type="button" class="fig-btn" data-action="replay" aria-label="Replay the search round by round"><span class="fig-btn-icon" aria-hidden="true">&#9654;</span> Replay the search</button>
-      <span class="fig-readout" data-role="round" aria-live="polite"></span>
+      <label class="fig-slider">
+        <span class="fig-slider-label">Round</span>
+        <input type="range" min="0" max="28" step="1" value="28" data-role="slider" aria-label="Evolution round">
+        <output data-role="slider-val">28</output>
+      </label>
+      <button type="button" class="fig-btn" data-action="play"><span class="fig-btn-icon" aria-hidden="true">&#9654;</span> Replay</button>
     </div>
-    <div class="fig-legend" data-role="legend"></div>
-    <div class="fig-chart" data-role="chart"></div>
-    <details class="fig-table">
-      <summary>Data table</summary>
-      <div data-role="table"></div>
-    </details>
-    <figcaption class="fig-caption">All three islands are flat in rounds 6&ndash;14. Rejected grafts stay in memory as negative evidence; the graft admitted at round 15, the mutator reassignments, and the grafts at round 21 restart progress. The weakest seed, island 3 (39.2%), ends with the population best of 59.9%. Data from the <a href="https://jprithwish.github.io/MILO/#dynamics" target="_blank" rel="noopener">MILO project page</a>.</figcaption>
+    <div class="fig-body">
+      <div class="fig-legend" data-role="legend"></div>
+      <div class="fig-chart" data-role="chart"></div>
+    </div>
+    <div class="fig-table" data-role="table" hidden></div>
+    <figcaption class="fig-note">Population pass-rate per island on Terminal-Bench&nbsp;2.1 with gpt-oss-120b. Rejected grafts stay in memory as negative evidence. The weakest seed, island 3 (39.2%), ends with the population best of 59.9%. Data from the <a href="https://jprithwish.github.io/MILO/#dynamics" target="_blank" rel="noopener">MILO project page</a>.</figcaption>
   </figure>
 
-  <div class="feature-links">
-    <a href="https://arxiv.org/abs/2609.38349" target="_blank" rel="noopener">Paper</a>
-    <a href="https://jprithwish.github.io/MILO/" target="_blank" rel="noopener">Project page, with a round-by-round demo</a>
+  <div class="highlight-links">
+    <a href="https://arxiv.org/abs/2609.38349" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
+    <a href="https://jprithwish.github.io/MILO/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
   </div>
 </section>
 
-<!-- ============ Hermes ============ -->
-<section class="feature" id="hermes">
-  <header class="feature-head reveal">
-    <p class="feature-kicker">Test-time compute &middot; Contextual reasoning</p>
-    <h2 class="feature-title">Hermes</h2>
-    <p class="feature-claim">Spreading test-time compute over many context windows means deciding what each fresh context should do and what to carry back. Hermes leaves those choices to the model. Out of the box, a 4B model gets <em>worse</em> with extra contexts; after Hermes-Learn (SFT then RL), it beats a single context with the same total token budget on all four math benchmarks.</p>
-  </header>
+<!-- ============ 02 · Hermes ============ -->
+<section class="highlight" id="hermes">
+  <div class="highlight-text reveal">
+    <p class="kicker">02 &middot; Test-time compute &middot; Hermes</p>
+    <h2 class="highlight-title">Extra context is a liability until the model learns to use it</h2>
+    <div class="prose">
+      <p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model. Out of the box, a 4B model gets <span class="t-base">worse</span> with more contexts. After <span class="t-brick">Hermes-Learn</span> (SFT, then RL), it beats a single context with the same total token budget on all four math benchmarks.</p>
+    </div>
+  </div>
 
-  <figure class="fig reveal" id="fig-hermes">
-    <div class="fig-head">
-      <p class="fig-title">Extra Context Goes From Liability to Asset</p>
-      <p class="fig-sub">Qwen3-4B, % solved averaged over 16 attempts per problem. One 8K-token context compared with Hermes (at most 7 &times; 8K contexts), before and after training. Whiskers: &plusmn;1 sd over 3 seeds.</p>
+  <figure class="fig-card reveal" id="fig-hermes">
+    <div class="fig-top">
+      <div>
+        <p class="fig-label">Figure 2 &middot; Hermes</p>
+        <p class="fig-title">Extra context goes from liability to asset</p>
+      </div>
+      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
     </div>
     <div class="fig-controls">
       <div class="fig-seg" role="group" aria-label="Benchmark" data-role="tabs"></div>
     </div>
-    <div class="fig-legend" data-role="legend"></div>
-    <div class="fig-chart" data-role="chart"></div>
-    <p class="fig-callout" data-role="callout" aria-live="polite"></p>
-    <details class="fig-table">
-      <summary>Data table</summary>
-      <div data-role="table"></div>
-    </details>
-    <figcaption class="fig-caption">GRPO trains single-context reasoning only, so its single-context score rises while its Hermes score does not move. Hermes-Learn barely moves single-context accuracy on the pooled set (37.1 &rarr; 36.4), so the gain comes from using contexts, not from better mathematics. Data from the <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Hermes project page</a> (paper Table 3).</figcaption>
+    <div class="fig-stats" data-role="stats"></div>
+    <div class="fig-body">
+      <div class="fig-legend" data-role="legend"></div>
+      <div class="fig-chart" data-role="chart"></div>
+    </div>
+    <div class="fig-table" data-role="table" hidden></div>
+    <figcaption class="fig-note">Qwen3-4B-Instruct-2507, % solved averaged over 16 attempts per problem; whiskers &plusmn;1 sd over 3 seeds. Hermes uses at most 7 &times; 8K contexts. GRPO trains single-context reasoning only, so its Hermes score does not move. Data from the <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Hermes project page</a> (paper Table 3).</figcaption>
   </figure>
 
-  <div class="feature-links">
-    <a href="https://arxiv.org/abs/2609.38332" target="_blank" rel="noopener">Paper</a>
-    <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Project page, with rollouts to step through</a>
+  <div class="highlight-links">
+    <a href="https://arxiv.org/abs/2609.38332" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
+    <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
   </div>
 </section>
 
-<!-- ============ SCOUT ============ -->
-<section class="feature" id="scout">
-  <header class="feature-head reveal">
-    <p class="feature-kicker">Training &middot; On-policy distillation</p>
-    <h2 class="feature-title">SCOUT</h2>
-    <p class="feature-claim">In on-policy distillation the student writes the response and the teacher grades every token. On-policy for the student is off-policy for the teacher: the deeper into a student's response, the less the text looks like anything the teacher would write. SCOUT measures this degradation directly, then trains the teacher with RL to continue student-generated prefixes.</p>
-  </header>
-
-  <figure class="fig reveal" id="fig-scout">
-    <div class="fig-head">
-      <p class="fig-title">The Longer the Student's Prefix, the Worse the Teacher Continues It</p>
-      <p class="fig-sub">Cut a student response partway and ask the teacher to finish it. AIME 2025, all 30 problems; Qwen3-1.7B student, Qwen3-4B-Instruct-2507 teacher. Drag the slider to hand the teacher a longer prefix.</p>
+<!-- ============ 03 · SCOUT ============ -->
+<section class="highlight" id="scout">
+  <div class="highlight-text reveal">
+    <p class="kicker">03 &middot; Training &middot; SCOUT</p>
+    <h2 class="highlight-title">On-policy for the student is off-policy for the teacher</h2>
+    <div class="prose">
+      <p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token of it. But the teacher was trained to continue <em>its own</em> reasoning. The deeper into a student's response, the further the text drifts from anything the teacher would write.</p>
+      <p>You can measure this directly: cut a student response partway and ask the teacher to finish it. SCOUT then trains the teacher with RL to continue student-written prefixes.</p>
     </div>
+  </div>
+
+  <figure class="fig-card reveal" id="fig-scout">
+    <div class="fig-top">
+      <div>
+        <p class="fig-label">Figure 3 &middot; SCOUT</p>
+        <p class="fig-title">The longer the student's prefix, the worse the teacher continues it</p>
+      </div>
+      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
+    </div>
+    <div class="fig-stats" data-role="stats"></div>
     <div class="fig-controls">
       <label class="fig-slider">
-        <span>Student prefix</span>
-        <input type="range" min="0" max="90" step="10" value="30" data-role="slider" aria-describedby="scout-prefix-val">
-        <output id="scout-prefix-val" data-role="slider-val">30%</output>
+        <span class="fig-slider-label">Prefix</span>
+        <input type="range" min="0" max="90" step="10" value="0" data-role="slider" aria-label="Share of the student response given to the teacher">
+        <output data-role="slider-val">0%</output>
       </label>
-      <button type="button" class="fig-btn" data-action="sweep"><span class="fig-btn-icon" aria-hidden="true">&#9654;</span> Sweep</button>
+      <button type="button" class="fig-btn" data-action="play"><span class="fig-btn-icon" aria-hidden="true">&#9654;</span> Sweep</button>
     </div>
-    <div class="fig-split">
-      <div class="fig-stat" data-role="stat"></div>
-      <div class="fig-response" data-role="response"></div>
+    <div class="fig-body">
+      <p class="fig-panel-title">Can the teacher finish the student's solution?</p>
+      <p class="fig-panel-sub">Accuracy when the teacher continues from the cut</p>
+      <div class="fig-chart" data-role="chart"></div>
+      <p class="fig-panel-title">Is it just running out of tokens?</p>
+      <p class="fig-panel-sub">No. The teacher's continuation uses less than half of its budget throughout.</p>
+      <div class="fig-budget" data-role="budget"></div>
     </div>
-    <div class="fig-chart" data-role="chart"></div>
-    <details class="fig-table">
-      <summary>Data table</summary>
-      <div data-role="table"></div>
-    </details>
-    <figcaption class="fig-caption">Accuracy falls from 47.5% to 30.2% as the prefix grows. It is not a token budget effect: the continuation uses less than half of the 16,384-token budget throughout. Data from the <a href="https://shrango.github.io/scout/#problem" target="_blank" rel="noopener">SCOUT project page</a>.</figcaption>
+    <div class="fig-table" data-role="table" hidden></div>
+    <figcaption class="fig-note">AIME 2025, all 30 problems. Qwen3-1.7B student (non-thinking mode), Qwen3-4B-Instruct-2507 teacher. Data from the <a href="https://shrango.github.io/scout/#problem" target="_blank" rel="noopener">SCOUT project page</a>.</figcaption>
   </figure>
 
-  <figure class="fig fig-compact reveal" id="fig-scout-result">
-    <div class="fig-head">
-      <p class="fig-title">Adapting the Teacher Gives the Best Distilled Student in Every Setting</p>
-      <p class="fig-sub">Student accuracy averaged over benchmarks, mean of 3 training runs. Standard OPD compared with SCOUT, which adds teacher RL on student prefixes.</p>
+  <figure class="fig-card reveal" id="fig-scout-result">
+    <div class="fig-top">
+      <div>
+        <p class="fig-label">Figure 4 &middot; SCOUT</p>
+        <p class="fig-title">Adapting the teacher gives the best distilled student in every setting</p>
+      </div>
+      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
     </div>
-    <div class="fig-legend" data-role="legend"></div>
-    <div class="fig-chart" data-role="chart"></div>
-    <details class="fig-table">
-      <summary>Data table</summary>
-      <div data-role="table"></div>
-    </details>
-    <figcaption class="fig-caption">Math averages six benchmarks (AIME24/25, AMC23, HMMT, OlympiadBench, MATH500); code averages LiveCodeBench v5, HumanEval+ and MBPP. Data from the SCOUT paper (Tables 1&ndash;3; run-level means from appendix Tables 10&ndash;13).</figcaption>
+    <div class="fig-body">
+      <div class="fig-legend" data-role="legend"></div>
+      <div class="fig-chart" data-role="chart"></div>
+    </div>
+    <div class="fig-table" data-role="table" hidden></div>
+    <figcaption class="fig-note">Student accuracy averaged over each setting's benchmarks (six for math, three for code), mean of 3 training runs. Data from the SCOUT paper, Tables 1&ndash;3 and appendix Tables 10&ndash;13.</figcaption>
   </figure>
 
-  <div class="feature-links">
-    <a href="https://arxiv.org/pdf/2609.38360" target="_blank" rel="noopener">Paper</a>
-    <a href="https://shrango.github.io/scout/" target="_blank" rel="noopener">Project page, with every setting and ablation</a>
+  <div class="highlight-links">
+    <a href="https://arxiv.org/pdf/2609.38360" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
+    <a href="https://shrango.github.io/scout/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
   </div>
 </section>
 
 <!-- ============ Publications ============ -->
 <section class="pub-list-section" id="publications">
-  <h2 class="pub-list-heading">Publications</h2>
+  <p class="kicker">Publications</p>
+  <h2 class="highlight-title">All publications</h2>
   <p class="publications-intro">
-    Selected publications at ICML, ICLR, NeurIPS, EMNLP, AAAI, KDD, and other venues.
-    Full list on
+    At ICML, ICLR, NeurIPS, EMNLP, AAAI, KDD, and other venues. Full list on
     <a href="{{ site.author.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> and
     <a href="{{ site.author.semantic_scholar }}" target="_blank" rel="noopener">Semantic Scholar</a>.
   </p>
