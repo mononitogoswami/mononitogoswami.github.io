@@ -7,7 +7,7 @@ layout: default
   <div class="row align-items-start">
     <div class="col-md-8 order-1">
       <h1 class="profile-name">{{ site.author.name }}</h1>
-      <p class="profile-title">{{ site.author.bio }} &middot; {{ site.author.location }}</p>
+      <p class="profile-title">{{ site.author.bio }}</p>
       <div class="profile-bio">
         {{ content }}
       </div>
@@ -18,39 +18,6 @@ layout: default
     </div>
   </div>
 </section>
-
-<!-- Recent Work -->
-{% if site.data.highlights.size > 0 %}
-<section class="recent-work">
-  <h2 class="section-heading">Recent Work</h2>
-  <div class="work-grid">
-    {% for item in site.data.highlights %}
-    <article class="work-card reveal" style="--delay: {{ forloop.index0 | times: 70 }}ms">
-      <div class="work-kicker">
-        <span>{{ item.lever }} &middot; {{ item.topic }}</span>
-        <span class="work-venue">{{ item.venue }}</span>
-      </div>
-      <h3 class="work-name">{{ item.name }}</h3>
-      <p class="work-text">{{ item.text }}</p>
-      {% if item.spark %}
-      <figure class="work-spark">
-        <svg class="spark" data-values="{{ item.spark | join: ',' }}"{% if item.spark_ref %} data-ref="{{ item.spark_ref }}"{% endif %}{% if item.spark_steps %} data-steps="true"{% endif %} role="img" aria-label="{{ item.spark_caption | escape }}"></svg>
-        <figcaption>{{ item.spark_caption }}</figcaption>
-      </figure>
-      {% endif %}
-      <div class="work-links">
-        {% for link in item.links %}
-        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-        {% endfor %}
-        {% if item.spark %}
-        <a href="{{ '/publications/' | relative_url }}#{{ item.key }}" class="work-figure-link">Explore the figure <span aria-hidden="true">&rarr;</span></a>
-        {% endif %}
-      </div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
 
 <!-- News Section -->
 {% if site.data.news.size > 0 %}
@@ -66,7 +33,7 @@ layout: default
 <section class="selected-pubs reveal">
   <h2 class="section-heading">Selected Publications</h2>
 
-  {% assign sel_themes = "Agents,Foundation Models,Evaluation Science" | split: "," %}
+  {% assign sel_themes = "Post-Training & Test-Time Scaling,Agents,Foundation Models,Evaluation Science" | split: "," %}
   {% for sel_theme in sel_themes %}
     {% assign theme_pubs = selected | where: "selected_theme", sel_theme | sort: "year" | reverse %}
     {% if theme_pubs.size > 0 %}

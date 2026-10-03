@@ -34,12 +34,11 @@
     margin-bottom: 0.8rem;
   }
 
-  .profile-lede {
-    font-family: $font-family-serif;
-    font-size: 1.38rem;
-    line-height: 1.4;
+  // The opening sentence reads as the lede
+  p:first-child {
+    font-size: 1.22rem;
+    line-height: 1.5;
     color: $text-color;
-    margin: 0 0 0.9rem;
   }
 }
 
@@ -59,165 +58,6 @@
       color: $primary;
       text-decoration: none;
       transform: translateY(-1px);
-    }
-  }
-}
-
-// ---------- Recent work cards ----------
-.recent-work {
-  padding: 2rem 0 0.5rem;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.work-card {
-  @include card;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 1.15rem 1.3rem 1rem;
-  border-radius: $radius-lg;
-  color: $text-color;
-
-  &:hover,
-  &:focus-within {
-    transform: translateY(-2px);
-    box-shadow: $shadow-md;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &:hover, &:focus-within { transform: none; }
-  }
-}
-
-// Hover transitions plus the staggered scroll reveal; beats the generic .reveal rule
-.work-card,
-.reveal-ready .work-card.reveal {
-  transition: transform 0.35s $ease-out, box-shadow 0.35s $ease-out,
-    opacity 0.6s $ease-out var(--delay, 0ms), translate 0.6s $ease-out var(--delay, 0ms);
-}
-
-.work-kicker {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  @include kicker;
-  font-size: 0.68rem;
-}
-
-.work-venue {
-  margin-left: auto;
-  color: $text-light;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-
-.work-name {
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin: 0.3rem 0 0.3rem;
-}
-
-.work-text {
-  font-family: $font-family-serif;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  color: #3A3936;
-  margin-bottom: 0.7rem;
-}
-
-.work-spark {
-  margin: auto 0 0.7rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid $border-light;
-
-  svg {
-    display: block;
-    width: 100%;
-    height: 40px;
-    overflow: visible;
-  }
-
-  figcaption {
-    font-size: 0.74rem;
-    line-height: 1.4;
-    color: $text-light;
-    margin-top: 0.35rem;
-  }
-}
-
-// Sparkline marks (drawn by assets/js/site.js)
-.spark-line {
-  fill: none;
-  stroke: $chart-1;
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-.spark-area {
-  fill: rgba($chart-1, 0.08);
-  stroke: none;
-}
-
-.spark-ref {
-  stroke: $text-light;
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-}
-
-.spark-ref-label,
-.spark-end-label {
-  font-family: $font-family-base;
-  font-size: 11px;
-  fill: $text-light;
-  font-variant-numeric: tabular-nums;
-}
-
-.spark-end-label {
-  font-weight: 700;
-  fill: $text-color;
-}
-
-.spark-dot {
-  fill: $chart-1;
-  stroke: $surface;
-  stroke-width: 2;
-}
-
-.work-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.25rem 1rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  margin-top: auto;
-
-  .work-figure-link {
-    margin-left: auto;
-    color: $text-muted;
-
-    span {
-      display: inline-block;
-      transition: transform $transition-base;
-    }
-
-    &:hover {
-      color: $primary;
-      text-decoration: none;
-
-      span { transform: translateX(3px); }
     }
   }
 }

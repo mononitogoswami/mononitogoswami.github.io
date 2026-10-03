@@ -5,167 +5,130 @@ title: "Research"
 hide_title: true
 body_class: "research-page"
 scripts:
-  - /assets/js/research-figures.js
+  - /assets/js/research-approach.js
 ---
 
 <header class="research-head reveal">
   <p class="kicker">Research</p>
-  <h1 class="research-title">How do language models get better, and what stops them?</h1>
-  <div class="prose research-lead">
-    <p>A language model system improves through three levers: the <strong>harness</strong> it runs in, the <strong>compute</strong> it spends at test time, and the <strong>weights</strong> it learns in training. Each project below starts with a measurement that exposes what limits one lever, then builds a method aimed at that mechanism.</p>
-  </div>
-  <nav class="lever-nav" aria-label="Research highlights">
-    <a href="#milo" class="lever-chip"><span class="lever-num">01</span><span class="lever-name">MILO</span><span class="lever-what">Harness</span></a>
-    <a href="#hermes" class="lever-chip"><span class="lever-num">02</span><span class="lever-name">Hermes</span><span class="lever-what">Test-time compute</span></a>
-    <a href="#scout" class="lever-chip"><span class="lever-num">03</span><span class="lever-name">SCOUT</span><span class="lever-what">Training</span></a>
-    <a href="#publications" class="lever-chip lever-chip-quiet"><span class="lever-num">&rarr;</span><span class="lever-name">Publications</span><span class="lever-what">Full list</span></a>
-  </nav>
+  <h1 class="research-title">Research highlights</h1>
+  <p class="prose research-lead">How AI systems learn to reason, and how that process can be measured and shaped.</p>
 </header>
+
+<div class="hl-cards">
+  <a href="#milo" class="hl-card reveal" style="--accent: var(--c1); --delay: 0ms">
+    <span class="hl-card-kicker">01 &middot; MILO</span>
+    <span class="hl-card-title">Recursive self-improvement</span>
+    <span class="hl-card-q">Can agents reason about the progress of evolutionary search, and intervene when it stalls?</span>
+    <span class="hl-card-stat">20&times;</span>
+    <span class="hl-card-stat-label">DeepSWE pass rate over the initial harness, with gpt-oss-120b</span>
+    <span class="hl-card-cta">See the approach <span aria-hidden="true">&darr;</span></span>
+  </a>
+  <a href="#hermes" class="hl-card reveal" style="--accent: var(--c2); --delay: 80ms">
+    <span class="hl-card-kicker">02 &middot; Hermes</span>
+    <span class="hl-card-title">Test-time scaling</span>
+    <span class="hl-card-q">Can small models learn to reason across contexts and benefit from more test-time compute?</span>
+    <span class="hl-card-stat">16.2 &rarr; 47.3%</span>
+    <span class="hl-card-stat-label">Qwen3-4B with Hermes, before and after Hermes-Learn</span>
+    <span class="hl-card-cta">See the approach <span aria-hidden="true">&darr;</span></span>
+  </a>
+  <a href="#scout" class="hl-card reveal" style="--accent: var(--c3); --delay: 160ms">
+    <span class="hl-card-kicker">03 &middot; SCOUT</span>
+    <span class="hl-card-title">On-policy distillation</span>
+    <span class="hl-card-q">Can teacher models learn to teach better by adapting to their students?</span>
+    <span class="hl-card-stat">4 of 4</span>
+    <span class="hl-card-stat-label">settings where SCOUT gives the best distilled student</span>
+    <span class="hl-card-cta">See the approach <span aria-hidden="true">&darr;</span></span>
+  </a>
+</div>
+<p class="hl-all"><a href="#publications">All publications <span aria-hidden="true">&darr;</span></a></p>
 
 <!-- ============ 01 · MILO ============ -->
 <section class="highlight" id="milo">
-  <div class="highlight-text reveal">
-    <p class="kicker">01 &middot; Harness &middot; MILO</p>
-    <h2 class="highlight-title">When harness search stalls, let the search rewrite itself</h2>
-    <div class="prose">
-      <p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. Automated harness search usually fixes its strategy in advance, so it plateaus. MILO co-evolves the harness <em>and</em> its own search. Islands of harnesses evolve in parallel, and an <strong>orchestrator</strong> diagnoses stalls and intervenes by grafting lineages and reassigning mutators.</p>
-      <p>It sets state-of-the-art results on Terminal-Bench&nbsp;2.1, PaperBench and DeepSWE. Drag through the 28 rounds of one search run below.</p>
-    </div>
-  </div>
-
-  <figure class="fig-card reveal" id="fig-milo">
-    <div class="fig-top">
-      <div>
-        <p class="fig-label">Figure 1 &middot; MILO</p>
-        <p class="fig-title">Every island stalls, until the orchestrator intervenes</p>
+  <div class="fig-card hl-box reveal" id="ap-milo">
+    <header class="hl-head">
+      <span class="hl-num">01</span>
+      <div class="hl-head-text">
+        <h2 class="hl-title">Recursive self-improvement</h2>
+        <p class="hl-paper"><strong>MILO</strong> &middot; Automated harness discovery via orchestrated multi-agent evolution</p>
       </div>
-      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
+      <div class="hl-links">
+        <a href="https://arxiv.org/abs/2609.38349" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
+        <a href="https://jprithwish.github.io/MILO/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
+      </div>
+    </header>
+    <div class="prose hl-lead"><p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. MILO searches for better harnesses with islands that evolve in parallel, and an <strong>orchestrator</strong> agent that watches the whole search, diagnoses stalls and intervenes.</p></div>
+    <div class="ap" data-role="approach"></div>
+    <div class="results">
+      <p class="results-label">Results</p>
+      <ul>
+        <li><strong>State-of-the-art</strong> on Terminal-Bench 2.1, PaperBench and DeepSWE, against 8 expert-designed harnesses and 6 search methods given the same seeds and a 72-hour budget.</li>
+        <li>With gpt-oss-120b it lifts DeepSWE pass rate to <strong>15.6%, 20&times; its initial harness</strong>, while prior search stays below 1%.</li>
+        <li>On Terminal-Bench every island stalls for nine rounds; the orchestrator&rsquo;s interventions lift the best pass rate from 45.0% to 59.9% at the lowest token cost of any method. Evolved harnesses also transfer to Frontier-Bench without further search.</li>
+      </ul>
     </div>
-    <div class="fig-stats" data-role="stats"></div>
-    <div class="fig-controls">
-      <label class="fig-slider">
-        <span class="fig-slider-label">Round</span>
-        <input type="range" min="0" max="28" step="1" value="28" data-role="slider" aria-label="Evolution round">
-        <output data-role="slider-val">28</output>
-      </label>
-      <button type="button" class="fig-btn" data-action="play"><span class="fig-btn-icon" aria-hidden="true">&#9654;</span> Replay</button>
-    </div>
-    <div class="fig-body">
-      <div class="fig-legend" data-role="legend"></div>
-      <div class="fig-chart" data-role="chart"></div>
-    </div>
-    <div class="fig-table" data-role="table" hidden></div>
-    <figcaption class="fig-note">Population pass-rate per island on Terminal-Bench&nbsp;2.1 with gpt-oss-120b. Rejected grafts stay in memory as negative evidence. The weakest seed, island 3 (39.2%), ends with the population best of 59.9%. Data from the <a href="https://jprithwish.github.io/MILO/#dynamics" target="_blank" rel="noopener">MILO project page</a>.</figcaption>
-  </figure>
-
-  <div class="highlight-links">
-    <a href="https://arxiv.org/abs/2609.38349" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
-    <a href="https://jprithwish.github.io/MILO/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
+    <p class="fig-note">Animation adapted from the method section of the <a href="https://jprithwish.github.io/MILO/#method" target="_blank" rel="noopener">MILO project page</a>.</p>
   </div>
 </section>
 
 <!-- ============ 02 · Hermes ============ -->
 <section class="highlight" id="hermes">
-  <div class="highlight-text reveal">
-    <p class="kicker">02 &middot; Test-time compute &middot; Hermes</p>
-    <h2 class="highlight-title">Extra context is a liability until the model learns to use it</h2>
-    <div class="prose">
-      <p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model. Out of the box, a 4B model gets <span class="t-base">worse</span> with more contexts. After <span class="t-brick">Hermes-Learn</span> (SFT, then RL), it beats a single context with the same total token budget on all four math benchmarks.</p>
-    </div>
-  </div>
-
-  <figure class="fig-card reveal" id="fig-hermes">
-    <div class="fig-top">
-      <div>
-        <p class="fig-label">Figure 2 &middot; Hermes</p>
-        <p class="fig-title">Extra context goes from liability to asset</p>
+  <div class="fig-card hl-box reveal" id="ap-hermes">
+    <header class="hl-head">
+      <span class="hl-num">02</span>
+      <div class="hl-head-text">
+        <h2 class="hl-title">Test-time scaling</h2>
+        <p class="hl-paper"><strong>Hermes</strong> &middot; Learning contextual reasoning unlocks test-time scaling</p>
       </div>
-      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
+      <div class="hl-links">
+        <a href="https://arxiv.org/abs/2609.38332" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
+        <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
+      </div>
+    </header>
+    <div class="prose hl-lead"><p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model, and <strong>Hermes-Learn</strong> (SFT, then RL) teaches a 4B model to make them. Below, Qwen3-4B after Hermes-Learn works through AIME 2026, problem 4.</p></div>
+    <div class="ap" data-role="approach"></div>
+    <div class="results">
+      <p class="results-label">Results</p>
+      <ul>
+        <li>Untrained, Qwen3-4B gets <em>worse</em> with Hermes: <strong>37.1% &rarr; 16.2%</strong> on 238 AIME and HMMT problems.</li>
+        <li>After Hermes-Learn it reaches <strong>47.3%</strong>, beating one 56K-token context with the same total budget (41.8%), and it beats that baseline on all four math benchmarks.</li>
+        <li>It generalizes: deeper delegation than in training reaches 55.6%, Hermes lifts other test-time scaling methods (DeepSeekMath Agent 15.1% &rarr; 52.5%), and the recipe transfers to Olmo-3-7B (4.8% &rarr; 40.6%).</li>
+      </ul>
     </div>
-    <div class="fig-controls">
-      <div class="fig-seg" role="group" aria-label="Benchmark" data-role="tabs"></div>
-    </div>
-    <div class="fig-stats" data-role="stats"></div>
-    <div class="fig-body">
-      <div class="fig-legend" data-role="legend"></div>
-      <div class="fig-chart" data-role="chart"></div>
-    </div>
-    <div class="fig-table" data-role="table" hidden></div>
-    <figcaption class="fig-note">Qwen3-4B-Instruct-2507, % solved averaged over 16 attempts per problem; whiskers &plusmn;1 sd over 3 seeds. Hermes uses at most 7 &times; 8K contexts. GRPO trains single-context reasoning only, so its Hermes score does not move. Data from the <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Hermes project page</a> (paper Table 3).</figcaption>
-  </figure>
-
-  <div class="highlight-links">
-    <a href="https://arxiv.org/abs/2609.38332" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
-    <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
+    <p class="fig-note">Animation adapted from the overview and rollouts on the <a href="https://rachellxy.github.io/blog/2026/hermes" target="_blank" rel="noopener">Hermes project page</a>.</p>
   </div>
 </section>
 
 <!-- ============ 03 · SCOUT ============ -->
 <section class="highlight" id="scout">
-  <div class="highlight-text reveal">
-    <p class="kicker">03 &middot; Training &middot; SCOUT</p>
-    <h2 class="highlight-title">On-policy for the student is off-policy for the teacher</h2>
-    <div class="prose">
-      <p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token of it. But the teacher was trained to continue <em>its own</em> reasoning. The deeper into a student's response, the further the text drifts from anything the teacher would write.</p>
-      <p>You can measure this directly: cut a student response partway and ask the teacher to finish it. SCOUT then trains the teacher with RL to continue student-written prefixes.</p>
-    </div>
-  </div>
-
-  <figure class="fig-card reveal" id="fig-scout">
-    <div class="fig-top">
-      <div>
-        <p class="fig-label">Figure 3 &middot; SCOUT</p>
-        <p class="fig-title">The longer the student's prefix, the worse the teacher continues it</p>
+  <div class="fig-card hl-box reveal" id="ap-scout">
+    <header class="hl-head">
+      <span class="hl-num">03</span>
+      <div class="hl-head-text">
+        <h2 class="hl-title">On-policy distillation</h2>
+        <p class="hl-paper"><strong>SCOUT</strong> &middot; On the off-policy teacher in on-policy distillation</p>
       </div>
-      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
-    </div>
-    <div class="fig-stats" data-role="stats"></div>
-    <div class="fig-controls">
-      <label class="fig-slider">
-        <span class="fig-slider-label">Prefix</span>
-        <input type="range" min="0" max="90" step="10" value="0" data-role="slider" aria-label="Share of the student response given to the teacher">
-        <output data-role="slider-val">0%</output>
-      </label>
-      <button type="button" class="fig-btn" data-action="play"><span class="fig-btn-icon" aria-hidden="true">&#9654;</span> Sweep</button>
-    </div>
-    <div class="fig-body">
-      <p class="fig-panel-title">Can the teacher finish the student's solution?</p>
-      <p class="fig-panel-sub">Accuracy when the teacher continues from the cut</p>
-      <div class="fig-chart" data-role="chart"></div>
-      <p class="fig-panel-title">Is it just running out of tokens?</p>
-      <p class="fig-panel-sub">No. The teacher's continuation uses less than half of its budget throughout.</p>
-      <div class="fig-budget" data-role="budget"></div>
-    </div>
-    <div class="fig-table" data-role="table" hidden></div>
-    <figcaption class="fig-note">AIME 2025, all 30 problems. Qwen3-1.7B student (non-thinking mode), Qwen3-4B-Instruct-2507 teacher. Data from the <a href="https://shrango.github.io/scout/#problem" target="_blank" rel="noopener">SCOUT project page</a>.</figcaption>
-  </figure>
-
-  <figure class="fig-card reveal" id="fig-scout-result">
-    <div class="fig-top">
-      <div>
-        <p class="fig-label">Figure 4 &middot; SCOUT</p>
-        <p class="fig-title">Adapting the teacher gives the best distilled student in every setting</p>
+      <div class="hl-links">
+        <a href="https://arxiv.org/pdf/2609.38360" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
+        <a href="https://shrango.github.io/scout/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
       </div>
-      <button type="button" class="fig-table-btn" data-action="table" aria-pressed="false"><i class="fas fa-table" aria-hidden="true"></i> Table</button>
+    </header>
+    <div class="prose hl-lead"><p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token. But the teacher was trained to continue its own reasoning, and the deeper into a student&rsquo;s response it reads, the worse it does. SCOUT trains the teacher to continue student-written prefixes.</p></div>
+    <div class="ap" data-role="approach"></div>
+    <div class="results">
+      <p class="results-label">Results</p>
+      <ul>
+        <li>The problem is measurable: the teacher&rsquo;s accuracy falls from <strong>47.5% to 30.2%</strong> as it continues longer student prefixes (AIME 2025).</li>
+        <li>SCOUT gives the <strong>best distilled student in all four settings</strong>: +2.2 points over OPD on math and +3.1 on code (Qwen3-4B &rarr; 1.7B), +2.6 with an RL-trained 8B teacher, and +1.2 across model families (Skywork-7B &rarr; DeepSeek-1.5B).</li>
+        <li>It stacks with other OPD improvements: added to OPTR, it gains another 2.5 points on math.</li>
+      </ul>
     </div>
-    <div class="fig-body">
-      <div class="fig-legend" data-role="legend"></div>
-      <div class="fig-chart" data-role="chart"></div>
-    </div>
-    <div class="fig-table" data-role="table" hidden></div>
-    <figcaption class="fig-note">Student accuracy averaged over each setting's benchmarks (six for math, three for code), mean of 3 training runs. Data from the SCOUT paper, Tables 1&ndash;3 and appendix Tables 10&ndash;13.</figcaption>
-  </figure>
-
-  <div class="highlight-links">
-    <a href="https://arxiv.org/pdf/2609.38360" target="_blank" rel="noopener">Paper <span aria-hidden="true">&nearr;</span></a>
-    <a href="https://shrango.github.io/scout/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&nearr;</span></a>
+    <p class="fig-note">Animation adapted from the method figure on the <a href="https://shrango.github.io/scout/#method" target="_blank" rel="noopener">SCOUT project page</a>.</p>
   </div>
 </section>
 
 <!-- ============ Publications ============ -->
 <section class="pub-list-section" id="publications">
-  <p class="kicker">Publications</p>
-  <h2 class="highlight-title">All publications</h2>
+  <h2 class="highlight-title">Publications</h2>
   <p class="publications-intro">
     At ICML, ICLR, NeurIPS, EMNLP, AAAI, KDD, and other venues. Full list on
     <a href="{{ site.author.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> and

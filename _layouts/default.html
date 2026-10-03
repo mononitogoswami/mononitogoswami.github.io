@@ -16,7 +16,7 @@
   <!-- Bootstrap 5.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-  <!-- Navbar shadow, reading progress, scroll reveal, sparklines -->
+  <!-- Navbar shadow, reading progress, scroll reveal -->
   <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   {% for script in page.scripts %}
   <script src="{{ script | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

@@ -1,14 +1,21 @@
 # Mentorship
 
 current:
+  - name: "Tuhina Tripathi"
+    role: "Ph.D. Student"
+    affiliation: "University of Massachusetts Amherst"
+    topic: "Preference-based reinforcement learning and aligning LLMs with human feedback"
+    url: "https://tuhina2313.github.io/"
+    years: "2026 -- Present"
+
+past:
   - name: "Xinyu (Rachel) Li"
     role: "Ph.D. Student, School of Computer Science"
     affiliation: "Carnegie Mellon University"
-    topic: "Scaling test-time compute through recursive language models"
+    topic: "Scaling test-time compute through recursive language models (Hermes)"
     url: "https://rachellxy.github.io/"
-    years: "2025 -- Present"
+    years: "2025 -- 2026"
 
-past:
   - name: "Shravan Chaudhari"
     role: "Applied Scientist Intern"
     affiliation: "Amazon"

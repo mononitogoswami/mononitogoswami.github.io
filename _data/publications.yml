@@ -8,7 +8,8 @@
   year: 2026
   venue_full: "ArXiv Preprint, 2026"
   theme: "Post-Training & Test-Time Scaling"
-  selected: false
+  selected: true
+  selected_theme: "Post-Training & Test-Time Scaling"
   description: "Flexible context management for long-horizon test-time scaling: a parameterized delegation/digestion harness, and an SFT+RL recipe (Hermes-Learn) that teaches a 4B model adaptive context reuse."
   badges: []
   links:
@@ -23,7 +24,8 @@
   year: 2026
   venue_full: "ArXiv Preprint, 2026"
   theme: "Post-Training & Test-Time Scaling"
-  selected: false
+  selected: true
+  selected_theme: "Post-Training & Test-Time Scaling"
   description: "Identifies teacher-side off-policy degradation in on-policy distillation and mitigates it by adapting the teacher to student-generated prefixes with RL."
   badges: []
   links:
@@ -145,7 +147,8 @@
   year: 2026
   venue_full: "ArXiv Preprint, 2026"
   theme: "Agents"
-  selected: false
+  selected: true
+  selected_theme: "Agents"
   description: "Automated harness discovery through orchestrated multi-agent evolution: the search co-evolves the harness and its own strategy, reaching state-of-the-art results on Terminal-Bench 2.1, PaperBench, and DeepSWE."
   badges: []
   links:
@@ -176,7 +179,8 @@
   year: 2026
   venue_full: "Conference on Empirical Methods in Natural Language Processing (EMNLP), 2026"
   theme: "Agents"
-  selected: false
+  selected: true
+  selected_theme: "Agents"
   description: "Retrieval and reasoning framework for software issue localization, combining structural graph exploration with LLM-based reasoning to improve localization accuracy."
   badges: []
   links:
