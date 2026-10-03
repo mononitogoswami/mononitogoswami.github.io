@@ -14,32 +14,6 @@ scripts:
   <p class="prose research-lead">How AI systems learn to reason, and how that process can be measured and shaped.</p>
 </header>
 
-<div class="hl-cards">
-  <a href="#milo" class="hl-card reveal" style="--accent: var(--c1); --delay: 0ms">
-    <span class="hl-card-kicker">01 &middot; MILO</span>
-    <span class="hl-card-title">Recursive self-improvement</span>
-    <span class="hl-card-q">Can agents reason about the progress of evolutionary search, and intervene when it stalls?</span>
-    <span class="hl-card-stat">20&times;</span>
-    <span class="hl-card-stat-label">DeepSWE pass rate over the initial harness, with gpt-oss-120b</span>
-    <span class="hl-card-cta">See the approach <span aria-hidden="true">&darr;</span></span>
-  </a>
-  <a href="#hermes" class="hl-card reveal" style="--accent: var(--c2); --delay: 80ms">
-    <span class="hl-card-kicker">02 &middot; Hermes</span>
-    <span class="hl-card-title">Test-time scaling</span>
-    <span class="hl-card-q">Can small models learn to reason across contexts and benefit from more test-time compute?</span>
-    <span class="hl-card-stat">16.2 &rarr; 47.3%</span>
-    <span class="hl-card-stat-label">Qwen3-4B with Hermes, before and after Hermes-Learn</span>
-    <span class="hl-card-cta">See the approach <span aria-hidden="true">&darr;</span></span>
-  </a>
-  <a href="#scout" class="hl-card reveal" style="--accent: var(--c3); --delay: 160ms">
-    <span class="hl-card-kicker">03 &middot; SCOUT</span>
-    <span class="hl-card-title">On-policy distillation</span>
-    <span class="hl-card-q">Can teacher models learn to teach better by adapting to their students?</span>
-    <span class="hl-card-stat">4 of 4</span>
-    <span class="hl-card-stat-label">settings where SCOUT gives the best distilled student</span>
-    <span class="hl-card-cta">See the approach <span aria-hidden="true">&darr;</span></span>
-  </a>
-</div>
 <p class="hl-all"><a href="#publications">All publications <span aria-hidden="true">&darr;</span></a></p>
 
 <!-- ============ 01 · MILO ============ -->
@@ -58,14 +32,6 @@ scripts:
     </header>
     <div class="prose hl-lead"><p>An agent is a model plus a <strong>harness</strong>: the prompts, tools, memory and control flow around it. MILO searches for better harnesses with islands that evolve in parallel, and an <strong>orchestrator</strong> agent that watches the whole search, diagnoses stalls and intervenes.</p></div>
     <div class="embed"><iframe src="{{ '/embeds/milo/' | relative_url }}" title="MILO interactive demo: a real harness search played back round by round" data-embed="milo" loading="lazy" style="height: 760px"></iframe></div>
-    <div class="results">
-      <p class="results-label">Results</p>
-      <ul>
-        <li><strong>State-of-the-art</strong> on Terminal-Bench 2.1, PaperBench and DeepSWE, against 8 expert-designed harnesses and 6 search methods given the same seeds and a 72-hour budget.</li>
-        <li>With gpt-oss-120b it lifts DeepSWE pass rate to <strong>15.6%, 20&times; its initial harness</strong>, while prior search stays below 1%.</li>
-        <li>On Terminal-Bench every island stalls for nine rounds; the orchestrator&rsquo;s interventions lift the best pass rate from 45.0% to 59.9% at the lowest token cost of any method. Evolved harnesses also transfer to Frontier-Bench without further search.</li>
-      </ul>
-    </div>
     <p class="fig-note">Interactive demo from the <a href="https://jprithwish.github.io/MILO/#demos" target="_blank" rel="noopener">MILO project page</a>.</p>
   </div>
 </section>
@@ -86,14 +52,6 @@ scripts:
     </header>
     <div class="prose hl-lead"><p>Spreading test-time compute over many context windows means deciding what each fresh context should do and what it hands back. Hermes leaves those decisions to the model, and <strong>Hermes-Learn</strong> (SFT, then RL) teaches a 4B model to make them.</p></div>
     <div class="embed"><iframe src="{{ '/embeds/hermes.html' | relative_url }}" title="Hermes overview: how the model uses each fresh context, step by step" data-embed="hermes" loading="lazy" style="height: 660px"></iframe></div>
-    <div class="results">
-      <p class="results-label">Results</p>
-      <ul>
-        <li>Untrained, Qwen3-4B gets <em>worse</em> with Hermes: <strong>37.1% &rarr; 16.2%</strong> on 238 AIME and HMMT problems.</li>
-        <li>After Hermes-Learn it reaches <strong>47.3%</strong>, beating one 56K-token context with the same total budget (41.8%), and it beats that baseline on all four math benchmarks.</li>
-        <li>It generalizes: deeper delegation than in training reaches 55.6%, Hermes lifts other test-time scaling methods (DeepSeekMath Agent 15.1% &rarr; 52.5%), and the recipe transfers to Olmo-3-7B (4.8% &rarr; 40.6%).</li>
-      </ul>
-    </div>
     <p class="fig-note">Interactive overview from the <a href="https://rachellxy.github.io/blog/2026/hermes#hermes" target="_blank" rel="noopener">Hermes project page</a>.</p>
   </div>
 </section>
@@ -114,14 +72,6 @@ scripts:
     </header>
     <div class="prose hl-lead"><p>In on-policy distillation the <span class="t-olive">student writes</span> the response and a stronger <span class="t-terra">teacher scores</span> every token. But the teacher was trained to continue its own reasoning, and the deeper into a student&rsquo;s response it reads, the worse it does. SCOUT trains the teacher to continue student-written prefixes.</p></div>
     <div class="embed"><iframe src="{{ '/embeds/scout.html' | relative_url }}" title="SCOUT method walkthrough: training the teacher on student prefixes" data-embed="scout" loading="lazy" style="height: 560px"></iframe></div>
-    <div class="results">
-      <p class="results-label">Results</p>
-      <ul>
-        <li>The problem is measurable: the teacher&rsquo;s accuracy falls from <strong>47.5% to 30.2%</strong> as it continues longer student prefixes (AIME 2025).</li>
-        <li>SCOUT gives the <strong>best distilled student in all four settings</strong>: +2.2 points over OPD on math and +3.1 on code (Qwen3-4B &rarr; 1.7B), +2.6 with an RL-trained 8B teacher, and +1.2 across model families (Skywork-7B &rarr; DeepSeek-1.5B).</li>
-        <li>It stacks with other OPD improvements: added to OPTR, it gains another 2.5 points on math.</li>
-      </ul>
-    </div>
     <p class="fig-note">Interactive method walkthrough from the <a href="https://shrango.github.io/scout/#method" target="_blank" rel="noopener">SCOUT project page</a>.</p>
   </div>
 </section>

@@ -8,7 +8,7 @@ $text-col: 46rem;
   padding-top: 2.5rem;
 }
 
-// The mixin is defined here because the header, the cards and the boxes all share the wide column
+// The header and the boxes share the wide column
 @mixin breakout {
   // Break out of the 960px column on wide screens, like the SCOUT page
   @media (min-width: 1140px) {
@@ -42,115 +42,6 @@ $text-col: 46rem;
 .t-olive { color: $olive-ink; font-weight: 600; }
 .t-terra { color: $terracotta-ink; font-weight: 600; }
 .t-base { color: $text-muted; font-weight: 600; }
-
-// ---------- research highlight cards (top of page) ----------
-
-.hl-cards {
-  --c1: #{$chart-1};
-  --c2: #{$chart-2};
-  --c3: #{$chart-3};
-
-  @include breakout;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.75rem;
-
-  @media (max-width: 767px) { grid-template-columns: 1fr; }
-}
-
-.hl-card {
-  @include card;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 1.4rem 1.2rem;
-  overflow: hidden;
-  color: $text-color;
-
-  // Accent band in the card's colour
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background-color: var(--accent);
-  }
-
-  &:hover,
-  &:focus-visible {
-    color: $text-color;
-    text-decoration: none;
-    transform: translateY(-3px);
-    box-shadow: $shadow-md;
-
-    .hl-card-cta span { transform: translateY(2px); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &:hover, &:focus-visible { transform: none; }
-  }
-}
-
-.hl-card,
-.reveal-ready .hl-card.reveal {
-  transition: transform 0.35s $ease-out, box-shadow 0.35s $ease-out,
-    opacity 0.6s $ease-out var(--delay, 0ms), translate 0.6s $ease-out var(--delay, 0ms);
-}
-
-.hl-card-kicker {
-  @include kicker;
-  font-size: 0.68rem;
-  color: $text-light;
-}
-
-.hl-card-title {
-  margin: 0.35rem 0 0.55rem;
-  font-size: 1.45rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-}
-
-.hl-card-q {
-  font-family: $font-family-serif;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  color: #4A423C;
-  margin-bottom: 1.1rem;
-}
-
-.hl-card-stat {
-  margin-top: auto;
-  padding-top: 0.9rem;
-  border-top: 1px solid $border-light;
-  font-size: 2.15rem;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
-  color: $brick;
-}
-
-.hl-card-stat-label {
-  margin-top: 0.2rem;
-  font-size: 0.78rem;
-  line-height: 1.4;
-  color: $text-light;
-}
-
-.hl-card-cta {
-  margin-top: 0.9rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: $brick;
-
-  span {
-    display: inline-block;
-    transition: transform $transition-base;
-  }
-}
 
 .hl-all {
   margin-top: 1rem;
@@ -215,7 +106,6 @@ $text-col: 46rem;
 }
 
 .hl-lead {
-  max-width: $text-col;
   margin-bottom: 1.25rem;
   font-size: 1.06rem;
   color: #4A423C;
@@ -344,35 +234,6 @@ $text-col: 46rem;
     background: transparent;
     transition: height 0.25s ease;
   }
-}
-
-// ---------- results ----------
-.results {
-  max-width: $text-col;
-  margin: 1.5rem 0 0;
-
-  ul {
-    margin: 0;
-    padding-left: 1.1rem;
-  }
-
-  li {
-    font-family: $font-family-serif;
-    font-size: 1.02rem;
-    line-height: 1.6;
-    color: #4A423C;
-    margin-bottom: 0.4rem;
-
-    &::marker { color: $brick; }
-
-    strong { color: $text-color; font-weight: 600; }
-  }
-}
-
-.results-label {
-  @include kicker;
-  color: $text-light;
-  margin-bottom: 0.45rem;
 }
 
 // ---------- publications list ----------
