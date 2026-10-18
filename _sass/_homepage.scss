@@ -69,13 +69,6 @@
   p {
     margin-bottom: 0.7rem;
   }
-
-  // The opening paragraph reads as a lede, only slightly larger
-  p:first-child {
-    font-size: 1.06rem;
-    line-height: 1.55;
-    color: $text-color;
-  }
 }
 
 // Social / quick links bar
