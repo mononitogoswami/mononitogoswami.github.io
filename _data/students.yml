@@ -4,7 +4,7 @@ current:
   - name: "Tuhina Tripathi"
     role: "Ph.D. Student"
     affiliation: "University of Massachusetts Amherst"
-    topic: "Preference-based reinforcement learning and aligning LLMs with human feedback"
+    topic: "Chain-of-thought monitorability in latent reasoning models"
     url: "https://tuhina2313.github.io/"
     years: "2026 -- Present"
 
